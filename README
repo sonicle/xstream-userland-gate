@@ -151,7 +151,7 @@ Building the Bits
     can fail - in this case subsequent single-job (sequential) builds should
     succeed to complete the missing build products.
 
-    It is worth noting that the OpenIndiana Hipster build server uses the
+    It is worth noting that the XStreamOS userland build server uses the
     'COMPONENT_BUILD_ARGS=-j4' option by default for moderate parallelization
     of its builds.
 
