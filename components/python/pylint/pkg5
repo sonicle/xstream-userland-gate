@@ -1,0 +1,34 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/flaky",
+        "library/python/hypothesis",
+        "library/python/isort",
+        "library/python/mccabe",
+        "library/python/pluggy",
+        "library/python/py",
+        "library/python/pytest",
+        "library/python/pytest-benchmark",
+        "library/python/pytest-reporter",
+        "runtime/python-27",
+        "runtime/python-39",
+        "runtime/ruby"
+    ],
+    "fmris": [
+        "developer/python/pylint",
+        "developer/python/pylint-39"
+    ],
+    "name": "pylint"
+}

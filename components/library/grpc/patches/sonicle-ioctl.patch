@@ -1,0 +1,13 @@
+--- grpc-1.18.0/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc	Thu Jan 17 11:36:15 2019
++++ grpc-1.18.0/src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver_posix.cc.new	Thu Jan 17 11:45:54 2019
+@@ -24,6 +24,10 @@
+ #include <string.h>
+ #include <sys/ioctl.h>
+ 
++#include <unistd.h>
++#include <stropts.h>
++#include <sys/filio.h>
++
+ #include "src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver.h"
+ 
+ #include <grpc/support/alloc.h>

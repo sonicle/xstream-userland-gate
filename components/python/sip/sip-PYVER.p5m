@@ -1,0 +1,155 @@
+#
+# CDDL HEADER START
+#
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+#
+# You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+# or http://www.opensolaris.org/os/licensing.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+# If applicable, add the following below this CDDL HEADER, with the
+# fields enclosed by brackets "[]" replaced with your own identifying
+# information: Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
+#
+# Copyright 2020 Gabriele Bulfon - Sonicle S.r.l.
+#
+
+<transform file path=.*\.py$ -> default pkg.tmp.autopyc false>
+
+set name=pkg.fmri value=pkg:/library/python/sip-$(PYV)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="SIP - C/C++ Bindings Generator for Python v3"
+set name=pkg.description value="SIP - C/C++ Bindings Generator for Python v3"
+set name=info.classification value="org.opensolaris.category.2008:Development/Python"
+set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
+set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+
+license LICENSE-GPL3 license="GPLv3"
+
+# force a dependency on the Python runtime
+depend fmri=__TBD pkg.debug.depend.file=python$(PYVER) \
+       pkg.debug.depend.path=usr/bin type=require
+# force a dependency on the sip package
+depend fmri=library/python/sip@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION) \
+    type=require
+
+depend fmri=library/python/toml-$(PYV) type=require
+depend fmri=library/python/packaging-$(PYV) type=require
+depend fmri=library/python/pyparsing-$(PYV) type=require
+depend fmri=library/python/six-$(PYV) type=require
+
+<transform file path=.*/bin/ -> set pkg.depend.bypass-generate .*metadata.* >
+
+dir path=usr
+dir path=usr/bin
+dir path=usr/lib
+dir path=usr/lib/python$(PYVER)
+dir path=usr/lib/python$(PYVER)/vendor-packages
+dir path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/__pycache__
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distinfo
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distinfo/__pycache__
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/legacy
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/legacy/__pycache__
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/__pycache__
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools
+dir path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/__pycache__
+
+file path=usr/bin/sip-build-$(PYVER)
+link path=usr/bin/sip-build target=sip-build-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip-distinfo-$(PYVER)
+link path=usr/bin/sip-distinfo target=sip-distinfo-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip-install-$(PYVER)
+link path=usr/bin/sip-install target=sip-install-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip-module-$(PYVER)
+link path=usr/bin/sip-module target=sip-module-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip-sdist-$(PYVER)
+link path=usr/bin/sip-sdist target=sip-sdist-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip-wheel-$(PYVER)
+link path=usr/bin/sip-wheel target=sip-wheel-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/bin/sip5-$(PYVER)
+link path=usr/bin/sip5 target=sip5-$(PYVER) \
+    mediator=python3 mediator-version=$(PYVER)
+
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/PKG-INFO
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/SOURCES.txt
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/dependency_links.txt
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/entry_points.txt
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/requires.txt
+file path=usr/lib/python$(PYVER)/vendor-packages/sip-5.2.0-py$(PYVER).egg-info/top_level.txt
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/__init__.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/abstract_builder.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/abstract_project.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/api.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/argument_parser.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/bindings.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/buildable.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/builder.py
+#file usr/lib/python$(PYVER)/vendor-packages/sipbuild/code_generator.cpython-$(PYV)m.so path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/code_generator.so
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/code_generator.so pkg.linted=true
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/configurable.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distinfo/__init__.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distinfo/distinfo.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distinfo/main.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/distutils_builder.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/exceptions.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/helpers.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/installable.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/legacy/__init__.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/legacy/sip5.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/__init__.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/abi_version.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/main.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/module.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/MANIFEST.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/README.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/apiversions.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/array.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/array.h
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/bool.cpp
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/descriptors.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/int_convertors.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/objmap.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/pyproject.toml
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/qtlib.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/setup.cfg.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/setup.py.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/sip.h.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/sip.pyi
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/sip.rst.in
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/sipint.h
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/siplib.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/threads.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/module/source/12.7/voidptr.c
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/project.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/py_versions.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/pyproject.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/__init__.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/build.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/install.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/sdist.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/tools/wheel.py
+file path=usr/lib/python$(PYVER)/vendor-packages/sipbuild/version.py

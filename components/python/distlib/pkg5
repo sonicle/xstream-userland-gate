@@ -1,0 +1,38 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/flaky-35",
+        "library/python/flaky-37",
+        "library/python/flaky-39",
+        "library/python/pyparsing-35",
+        "library/python/pyparsing-37",
+        "library/python/pyparsing-39",
+        "library/python/sortedcontainers-35",
+        "library/python/sortedcontainers-37",
+        "library/python/sortedcontainers-39",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby"
+    ],
+    "fmris": [
+        "library/python/distlib-35",
+        "library/python/distlib-37",
+        "library/python/distlib-39",
+        "library/python/distlib"
+    ],
+    "name": "distlib"
+}

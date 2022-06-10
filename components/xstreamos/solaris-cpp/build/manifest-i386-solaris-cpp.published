@@ -1,0 +1,19 @@
+set name=pkg.fmri value=pkg:/developer/macro/cpp@5.11,5.11-2020.1.1.0
+set name=pkg.summary value="Solaris cpp"
+set name=pkg.description value="Solaris cpp"
+set name=com.oracle.info.name value=solaris-cpp
+set name=com.oracle.info.version value=5.11
+set name=info.classification value=org.opensolaris.category.2008:Development/C
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+dir  path=usr/ccs owner=root group=bin mode=0755
+dir  path=usr/ccs/bin owner=root group=bin mode=0755
+dir  path=usr/ccs/lib owner=root group=bin mode=0755
+link path=usr/ccs/lib/cpp target=../../lib/cpp
+dir  path=usr/lib owner=root group=bin mode=0755
+file files/cpp path=usr/lib/cpp owner=root group=bin mode=755 preserve=overwrite
+license solaris-cpp.license license=cpp
+depend type=require fmri=pkg:/system/library@0.5.11-1.2020.1.1.0

@@ -1,0 +1,28 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "runtime/python-27",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/whither-37",
+        "library/python/whither-39",
+        "library/python/whither"
+    ],
+    "name": "whither"
+}

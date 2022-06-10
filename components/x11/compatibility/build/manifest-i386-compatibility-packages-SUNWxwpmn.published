@@ -1,0 +1,35 @@
+set name=pkg.fmri \
+    value=pkg:/compatibility/packages/SUNWxwpmn@0.5.11,5.11-2020.1.1.2
+set name=pkg.summary value="X Window System programmers man pages group"
+set name=pkg.description \
+    value="A group package that provides the same core set of X11 developer manual pages as the SUNWxwpmn and SUNWxorg-devel-docs packages for prior Solaris releases"
+set name=com.oracle.info.name value=x11-compatibility
+set name=com.oracle.info.version value=0.5.11
+set name=info.classification value=org.opensolaris.category.2008:Development/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+legacy pkg=SUNWxwpmn arch=i386 category=system \
+    desc="X Window System programmers reference manual pages" \
+    hotline="Please contact your local service provider" \
+    name="X Window System programmers man pages" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+depend type=require fmri=pkg:/x11/library/libx11 facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxau facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxcomposite facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxevie facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxext facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxfixes facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxft facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxi facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxinerama facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxmu facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxp facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxrandr facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxscrnsaver facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxtst facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxv facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/toolkit/libxt facet.doc.man=true

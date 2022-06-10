@@ -1,0 +1,47 @@
+--- dbus-1.12.12/dbus/dbus-sysdeps-util-unix.c.~1~	2017-10-30 15:26:18.000000000 +0000
++++ dbus-1.12.12/dbus/dbus-sysdeps-util-unix.c	2019-04-21 13:08:53.440237361 +0000
+@@ -51,6 +51,10 @@
+ #include <dirent.h>
+ #include <sys/un.h>
+ 
++#ifdef __sun
++#include <pwd.h>
++#endif
++
+ #ifdef HAVE_SYS_SYSLIMITS_H
+ #include <sys/syslimits.h>
+ #endif
+@@ -548,7 +552,32 @@
+ _dbus_user_at_console (const char *username,
+                        DBusError  *error)
+ {
+-#ifdef DBUS_CONSOLE_AUTH_DIR
++#ifdef __sun
++  dbus_bool_t result;
++  struct passwd *passwd_entry;
++
++  result = FALSE;
++
++  passwd_entry = getpwnam (username);
++  if (passwd_entry != NULL)
++    {
++      struct stat st;
++      uid_t uid;
++
++      uid = passwd_entry->pw_uid;
++
++      if (stat ("/dev/vt/console_user", &st) == 0 && st.st_uid == uid)
++        {
++         /*
++          * Owner is allowed to take over. Before we have real
++          * ownership in HAL, assume it's the console owner.
++          */
++          result = TRUE;
++        }
++    }
++
++  return result;
++#elif defined(DBUS_CONSOLE_AUTH_DIR)
+   DBusString u, f;
+   dbus_bool_t result;
+ 

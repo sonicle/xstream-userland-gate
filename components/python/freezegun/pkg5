@@ -1,0 +1,31 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/flaky-37",
+        "library/python/flaky-39",
+        "library/python/python-dateutil-37",
+        "library/python/python-dateutil-39",
+        "runtime/python-27",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby"
+    ],
+    "fmris": [
+        "library/python/freezegun-37",
+        "library/python/freezegun-39",
+        "library/python/freezegun"
+    ],
+    "name": "freezegun"
+}

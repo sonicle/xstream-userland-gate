@@ -1,0 +1,33 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/setuptools-35",
+        "library/python/setuptools-37",
+        "library/python/setuptools-39",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/pyrsistent-35",
+        "library/python/pyrsistent-37",
+        "library/python/pyrsistent-39",
+        "library/python/pyrsistent"
+    ],
+    "name": "pyrsistent"
+}

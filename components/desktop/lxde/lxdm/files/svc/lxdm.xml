@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<!--
+    Copyright 2013 Sonicle S.r.l.  All rights reserved.
+    Use is subject to license terms.
+-->
+
+<service_bundle type='manifest' name='SNCLlxdm:lxdm'>
+
+<service
+    name='system/display-manager/lxdm'
+    type='service'
+    version='1'>
+
+        <dependency
+            name='filesystem'
+            grouping='require_all'
+            restart_on='none'
+            type='service'>
+                <service_fmri value='svc:/system/filesystem/local'/>
+        </dependency>
+
+        <dependency
+            name='dbus'
+            type='service'
+            grouping='require_all'
+            restart_on='none'>
+                <service_fmri value='svc:/system/dbus' />
+        </dependency>
+
+        <dependency
+            name='multiuser'
+            type='service'
+            grouping='require_all'
+            restart_on='none'>
+                <service_fmri value='svc:/milestone/multi-user' />
+        </dependency>
+
+        <exec_method
+            type='method'
+            name='start'
+            exec='/usr/sbin/lxdm -d'
+            timeout_seconds='60' />
+
+        <exec_method
+            type='method'
+            name='stop'
+            exec=':kill'
+            timeout_seconds='60' />
+
+        <instance name='default' enabled='false' />
+
+        <stability value='Unstable' />
+
+</service>
+
+</service_bundle>
+

@@ -1,0 +1,50 @@
+This module holds sound files for a default GNOME set. Stick them in the
+'sounds' directory here, or a subdirectory thereof - the whole tree will be
+copied over into $(gnome_prefix)/share/sounds.
+
+Please remember to add these sound files with the '-kb' option (to tell
+CVS to treat them as binary files rather than text files).
+
+The criteria for sound inclusion:
+. No licensing issues
+. Appropriate length
+	. Shorter than 1 second for any sound that denotes a specific event
+	. Shorter than 5 seconds for a background sound (basically, 
+	startup/shutdown)
+. Appropriate sound
+	. Volume
+		. Normalized between samples
+		. 
+	. Spectral range
+		. No extremes
+	. Good taste
+		. KISS
+		. General common sense (hah!)
+
+Thanks,
+-- Elliot Lee <sopwith@redhat.com>
+
+
+
+Attribution
+-----------
+
+- startup3.wav was 06_-_epsilon.wav
+- shutdown1.wav was 01_-_alpha.wav
+from Silvertheme by Andreas Karlsson under the Creative Commons ShareAlike 2.0
+Original location: http://kde-look.org/content/show.php/silvertheme?content=33519
+License: http://creativecommons.org/licenses/by-sa/2.0/
+
+- gtk-events/*
+from Cleanus-Gnome, by Martyn Clement under the Creative Commons - Attribution-Share Alike 2.0 Generic
+Original location: http://kde-look.org/content/show.php/Cleanus?content=61245
+License: http://creativecommons.org/licenses/by-sa/2.0/
+
+- question.wav was Popup.wav
+- generic.wav was Question_background.wav
+- error.wav was Question.wav
+from Borealis by Ivica Ico Bukvic (SlipStreamScapes) under the Creative Commons - Attribution 3.0 Unported
+Original location: http://kde-look.org/content/show.php/%22Borealis%22+sound+theme?content=12584
+Site: http://ico.bukvic.net
+License: http://creativecommons.org/licenses/by/3.0/deed
+

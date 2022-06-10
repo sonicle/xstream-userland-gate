@@ -1,0 +1,39 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/setuptools-35",
+        "library/python/setuptools-37",
+        "library/python/setuptools-39",
+        "library/python/setuptools_scm-35",
+        "library/python/setuptools_scm-37",
+        "library/python/setuptools_scm-39",
+        "library/python/six-35",
+        "library/python/six-37",
+        "library/python/six-39",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "text/gnu-patch"
+    ],
+    "fmris": [
+        "library/python/cherrypy-35",
+        "library/python/cherrypy-37",
+        "library/python/cherrypy-39",
+        "library/python/cherrypy"
+    ],
+    "name": "CherryPy"
+}

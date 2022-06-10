@@ -1,0 +1,120 @@
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/peakcan/peakcan.pro.orig	2020-04-01 08:43:19.243668208 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/peakcan/peakcan.pro	2020-04-01 08:43:31.025786865 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qtpeakcanbus
+ 
+-QT = core serialbus
++QT = core network serialport serialbus
+ 
+ HEADERS += \
+     peakcanbackend.h \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/tinycan/tinycan.pro.orig	2020-04-01 08:42:40.618025200 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/tinycan/tinycan.pro	2020-04-01 08:42:58.180358147 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qttinycanbus
+ 
+-QT = core serialbus
++QT = core network serialport serialbus
+ 
+ HEADERS += \
+     tinycanbackend.h \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/tools/canbusutil/canbusutil.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/tools/canbusutil/canbusutil.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,4 +1,4 @@
+-QT = core serialbus
++QT = core network serialport serialbus
+ 
+ SOURCES += main.cpp \
+     readtask.cpp \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/vectorcan/vectorcan.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/vectorcan/vectorcan.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qtvectorcanbus
+ 
+-QT = core serialbus
++QT = core serialport serialbus
+ 
+ HEADERS += \
+     vectorcanbackend.h.cpp \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/systeccan/systeccan.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/systeccan/systeccan.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qtsysteccanbus
+ 
+-QT = core serialbus
++QT = core serialport serialbus
+ 
+ HEADERS += \
+     systeccanbackend.h \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/passthrucan/passthrucan.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/passthrucan/passthrucan.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,4 +1,4 @@
+-QT = serialbus
++QT = network serialport serialbus
+ 
+ TARGET = qtpassthrucanbus 
+ 
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/socketcan/socketcan.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/socketcan/socketcan.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qtsocketcanbus
+ 
+-QT = core serialbus
++QT = core serialport serialbus
+ 
+ HEADERS += \
+     libsocketcan.h \
+--- qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/virtualcan/virtualcan.pro.orig	2020-04-01 08:44:37.215270069 +0100
++++ qt-everywhere-src-5.14.1/qtserialbus/src/plugins/canbus/virtualcan/virtualcan.pro	2020-04-01 08:44:52.714369839 +0100
+@@ -1,6 +1,6 @@
+ TARGET = qtvirtualcanbus
+ 
+-QT = core network serialbus
++QT = core network serialport serialbus
+ 
+ HEADERS += \
+     virtualcanbackend.h
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/gsttools/gsttools.pro	Wed Apr  1 18:24:35 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/gsttools/gsttools.pro.new	Wed Apr  1 18:25:36 2020
+@@ -3,6 +3,8 @@
+ CONFIG += internal_module
+ 
+ QT = core-private multimedia-private gui-private
++qtHaveModule(opengl): \
++   QT_PRIVATE += opengl
+ 
+ !static:DEFINES += QT_MAKEDLL
+ DEFINES += GLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_26
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/mediacapture/mediacapture.pro	Wed Apr  1 18:35:57 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/mediacapture/mediacapture.pro.new	Wed Apr  1 18:35:29 2020
+@@ -1,5 +1,8 @@
+ TARGET = gstmediacapture
+ 
++qtHaveModule(opengl): \
++   QT_PRIVATE += opengl
++
+ include(../common.pri)
+ 
+ INCLUDEPATH += $$PWD
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/mediaplayer/mediaplayer.pro	Wed Apr  1 19:40:19 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/mediaplayer/mediaplayer.pro.new	Wed Apr  1 19:40:58 2020
+@@ -1,5 +1,8 @@
+ TARGET = gstmediaplayer
+ 
++qtHaveModule(opengl): \
++   QT_PRIVATE += opengl
++
+ include(../common.pri)
+ 
+ INCLUDEPATH += $$PWD
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/audiodecoder/audiodecoder.pro	Wed Apr  1 19:42:17 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/audiodecoder/audiodecoder.pro.new	Wed Apr  1 19:43:03 2020
+@@ -1,5 +1,8 @@
+ TARGET = gstaudiodecoder
+ 
++qtHaveModule(opengl): \
++   QT_PRIVATE += opengl
++
+ include(../common.pri)
+ 
+ INCLUDEPATH += $$PWD

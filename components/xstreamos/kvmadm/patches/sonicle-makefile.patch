@@ -1,0 +1,42 @@
+--- kvmadm-0.12.3/Makefile.am	Thu Jan  2 15:41:30 2020
++++ kvmadm-0.12.3/Makefile.am.new	Thu Jan  2 16:15:29 2020
+@@ -13,6 +13,7 @@
+ #PERLTESTS := $(shell find t -name "*.t")
+ 
+ THIRDPARTY_DIR := $(shell pwd)/thirdparty
++LIB_DIR := $(shell pwd)/lib
+ 
+ EXTRA_DIST = VERSION COPYRIGHT README.md LICENSE CHANGES AUTHORS PERL_MODULES $(BIN) $(MAN) \
+ 	smf/system-kvm.xml.in
+@@ -49,8 +50,9 @@
+ 	[ "$(PERL5LIB)" == "" ] || cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# PERL5LIB}{use lib qw($(PERL5LIB)); # PERL5LIB}' $(BIN) || true
+ 	cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# LIBDIR}{use lib qw($(libdir)); # LIBDIR}' $(BIN)
+ 	cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{^#!.*perl.*}{#!$(PERL)};' $(BIN)
+-	cd "$(DESTDIR)$(libdir)/KVMadm" && $(PERL) -i -p -e 's{^my .*# RUNPATH}{my \$$RUN_PATH = "$(localstatedir)/run"; # RUNPATH};' Config.pm
++	mkdir -p $(DESTDIR)$(libdir)/KVMadm
+ 	[ ! -d $(THIRDPARTY_DIR)/lib/perl5 ] || cp -fr $(THIRDPARTY_DIR)/lib/perl5/* $(DESTDIR)$(libdir)
++	[ ! -d $(LIB_DIR) ] || cp -fr $(LIB_DIR)/KVMadm $(DESTDIR)$(libdir)
+ 
+ #test:
+ #	$(PERL) "-MExtUtils::Command::MM" "-e" "test_harness(0, 'lib','thirdparty/lib/perl5')" t/*.t
+--- kvmadm-0.12.3/Makefile.in	Thu Jan  2 15:41:27 2020
++++ kvmadm-0.12.3/Makefile.in.new	Thu Jan  2 16:16:49 2020
+@@ -322,6 +322,7 @@
+ 
+ #PERLTESTS := $(shell find t -name "*.t")
+ THIRDPARTY_DIR := $(shell pwd)/thirdparty
++LIB_DIR := $(shell pwd)/lib
+ EXTRA_DIST = VERSION COPYRIGHT README.md LICENSE CHANGES AUTHORS PERL_MODULES $(BIN) $(MAN) \
+ 	smf/system-kvm.xml.in
+ 
+@@ -896,8 +897,9 @@
+ 	[ "$(PERL5LIB)" == "" ] || cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# PERL5LIB}{use lib qw($(PERL5LIB)); # PERL5LIB}' $(BIN) || true
+ 	cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# LIBDIR}{use lib qw($(libdir)); # LIBDIR}' $(BIN)
+ 	cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{^#!.*perl.*}{#!$(PERL)};' $(BIN)
+-	cd "$(DESTDIR)$(libdir)/KVMadm" && $(PERL) -i -p -e 's{^my .*# RUNPATH}{my \$$RUN_PATH = "$(localstatedir)/run"; # RUNPATH};' Config.pm
++	mkdir -p $(DESTDIR)$(libdir)/KVMadm
+ 	[ ! -d $(THIRDPARTY_DIR)/lib/perl5 ] || cp -fr $(THIRDPARTY_DIR)/lib/perl5/* $(DESTDIR)$(libdir)
++	[ ! -d $(LIB_DIR) ] || cp -fr $(LIB_DIR)/KVMadm $(DESTDIR)$(libdir)
+ 
+ #test:
+ #	$(PERL) "-MExtUtils::Command::MM" "-e" "test_harness(0, 'lib','thirdparty/lib/perl5')" t/*.t

@@ -1,0 +1,92 @@
+set name=pkg.fmri \
+    value=pkg:/compatibility/packages/SUNWxwplt@0.5.11,5.11-2020.1.1.2
+set name=pkg.summary \
+    value="X Window System core client libraries and applications group"
+set name=pkg.description \
+    value="A group package that provides the same core set of X11 client programs and libraries as the SUNWxwplt and SUNWxorg-client-programs packages for prior Solaris releases"
+set name=com.oracle.info.name value=x11-compatibility
+set name=com.oracle.info.version value=0.5.11
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+legacy pkg=SUNWxorg-client-programs arch=i386 category=system \
+    desc="X Window System client programs based on X.Org Foundation open source release" \
+    hotline="Please contact your local service provider" \
+    name="X.Org Foundation X Client Programs" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+legacy pkg=SUNWxorg-clientlibs arch=i386 category=system \
+    desc="X Window System client libraries based on X.Org Foundation open source release" \
+    hotline="Please contact your local service provider" \
+    name="X.Org Foundation X Client Libraries" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+legacy pkg=SUNWxwplt arch=i386 category=system \
+    desc="X Window System platform software (required & common client libraries and applications)" \
+    hotline="Please contact your local service provider" \
+    name="X Window System platform software" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+depend type=require fmri=pkg:/benchmark/x11perf
+depend type=require fmri=pkg:/diagnostic/constype
+depend type=require fmri=pkg:/system/keyboard/kbd_mode
+depend type=require fmri=pkg:/terminal/fbconsole
+depend type=require fmri=pkg:/terminal/luit
+depend type=require fmri=pkg:/terminal/xterm
+depend type=require fmri=pkg:/x11/colormap-utilities
+depend type=require fmri=pkg:/x11/data/workspace-patterns
+depend type=require fmri=pkg:/x11/data/xbitmaps
+depend type=require fmri=pkg:/x11/demo
+depend type=require fmri=pkg:/x11/diagnostic/x11-info-clients
+depend type=require fmri=pkg:/x11/font-utilities
+depend type=require fmri=pkg:/x11/keyboard/xkb-utilities
+depend type=require fmri=pkg:/x11/library/dps
+depend type=require fmri=pkg:/x11/library/libdga
+depend type=require fmri=pkg:/x11/library/libfs
+depend type=require fmri=pkg:/x11/library/libsm
+depend type=require fmri=pkg:/x11/library/libx11
+depend type=require fmri=pkg:/x11/library/libxau
+depend type=require fmri=pkg:/x11/library/libxcomposite
+depend type=require fmri=pkg:/x11/library/libxcursor
+depend type=require fmri=pkg:/x11/library/libxdamage
+depend type=require fmri=pkg:/x11/library/libxdmcp
+depend type=require fmri=pkg:/x11/library/libxevie
+depend type=require fmri=pkg:/x11/library/libxext
+depend type=require fmri=pkg:/x11/library/libxfixes
+depend type=require fmri=pkg:/x11/library/libxi
+depend type=require fmri=pkg:/x11/library/libxinerama
+depend type=require fmri=pkg:/x11/library/libxkbfile
+depend type=require fmri=pkg:/x11/library/libxmu
+depend type=require fmri=pkg:/x11/library/libxmuu
+depend type=require fmri=pkg:/x11/library/libxp
+depend type=require fmri=pkg:/x11/library/libxpm
+depend type=require fmri=pkg:/x11/library/libxrandr
+depend type=require fmri=pkg:/x11/library/libxrender
+depend type=require fmri=pkg:/x11/library/libxres
+depend type=require fmri=pkg:/x11/library/libxscrnsaver
+depend type=require fmri=pkg:/x11/library/libxtst
+depend type=require fmri=pkg:/x11/library/libxv
+depend type=require fmri=pkg:/x11/library/libxvmc
+depend type=require fmri=pkg:/x11/library/libxxf86misc
+depend type=require fmri=pkg:/x11/library/libxxf86vm
+depend type=require fmri=pkg:/x11/library/toolkit/libxaw4
+depend type=require fmri=pkg:/x11/library/toolkit/libxaw5
+depend type=require fmri=pkg:/x11/library/toolkit/libxaw7
+depend type=require fmri=pkg:/x11/library/toolkit/libxt
+depend type=require fmri=pkg:/x11/library/xtrans
+depend type=require fmri=pkg:/x11/session/sessreg
+depend type=require fmri=pkg:/x11/session/smproxy
+depend type=require fmri=pkg:/x11/session/winsysck
+depend type=require fmri=pkg:/x11/session/xauth
+depend type=require fmri=pkg:/x11/session/xinit
+depend type=require fmri=pkg:/x11/trusted/libxtsol
+depend type=require fmri=pkg:/x11/x11-server-utilities
+depend type=require fmri=pkg:/x11/x11-window-dump
+depend type=require fmri=pkg:/x11/xcalc
+depend type=require fmri=pkg:/x11/xfd
+depend type=require fmri=pkg:/x11/xfs/xfs-utilities
+depend type=require fmri=pkg:/x11/xkill
+depend type=require fmri=pkg:/x11/xlock
+depend type=require fmri=pkg:/x11/xmag
+depend type=require fmri=pkg:/x11/xvidtune

@@ -1,0 +1,11 @@
+--- qt-everywhere-src-5.14.1/qtbase/src/corelib/global/qconfig-bootstrapped.h	Wed Apr  1 08:43:50 2020
++++ qt-everywhere-src-5.14.1/qtbase/src/corelib/global/qconfig-bootstrapped.h.new	Wed Apr  1 08:44:46 2020
+@@ -81,7 +81,7 @@
+ #define QT_FEATURE_datetimeparser -1
+ #define QT_FEATURE_easingcurve -1
+ #define QT_FEATURE_etw -1
+-#define QT_FEATURE_getauxval (__has_include(<sys/auxv.h>) ? 1 : -1)
++#define QT_FEATURE_getauxval -1
+ #define QT_FEATURE_getentropy -1
+ #define QT_NO_GEOM_VARIANT
+ #define QT_FEATURE_hijricalendar -1

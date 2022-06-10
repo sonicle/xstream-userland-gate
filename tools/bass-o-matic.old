@@ -1,0 +1,277 @@
+#!/usr/bin/python3.5
+#
+# CDDL HEADER START
+#
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License (the "License").
+# You may not use this file except in compliance with the License.
+#
+# You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+# or http://www.opensolaris.org/os/licensing.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+# If applicable, add the following below this CDDL HEADER, with the
+# fields enclosed by brackets "[]" replaced with your own identifying
+# information: Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
+#
+# Copyright (c) 2010, Oracle and/or it's affiliates.  All rights reserved.
+#
+#
+# bass-o-matic.py
+#  A simple program to enumerate components in the userland gate and report
+#  on dependency related information.
+#
+
+import os
+import sys
+import re
+import glob
+import subprocess
+import argparse
+import logging
+
+try:
+    from scandir import walk
+except ImportError:
+    from os import walk
+
+logger = logging.getLogger('bass-o-matic')
+
+# Locate SCM directories containing Userland components by searching from
+# from a supplied top of tree for .p5m files.  Once a .p5m file is located,
+# that directory is added to the list and no children are searched.
+def FindComponentPaths(path, debug=False, subdir='components',
+                       incremental=False, begin_commit=None, end_commit=None):
+    expression = re.compile(r'.+\.p5m$', re.IGNORECASE)
+
+    paths = []
+
+    if debug:
+        logger.debug('searching %s for component directories', path)
+
+    workspace_path = os.path.join(path, subdir)
+
+    if incremental:
+        cmd = ['git', 'log', '--diff-filter=AMR', '--name-only', '--pretty=format:',
+               '..'.join([begin_commit, end_commit])]
+
+        proc = subprocess.Popen(cmd,
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                universal_newlines=True
+                                )
+
+        proc.wait()
+        if debug:
+            if proc.returncode != 0:
+                logger.debug('exit: %d, %s', proc.returncode, proc.stderr.read())
+
+        for line in proc.stdout:
+            line = line.rstrip()
+            # git output might contain empty lines, so we skip them.
+            if not line:
+                continue
+
+            # Every time component is added, modified or moved, Makefile has to be
+            # present. However, this does not yet guarantee that the line is a
+            # real component.
+            filename = os.path.basename(line)
+            dirname = os.path.dirname(line).rsplit(subdir + '/')[-1]
+
+            if filename == 'Makefile':
+                if glob.glob(os.path.join(workspace_path, dirname, '*.p5m')):
+                    paths.append(dirname)
+                    
+        # Some components are using SCM checkout as a source code download method and
+        # COMPONENT_REVISION is not bumped. With this, we will never rebuild them.
+        # In order to rebuild them, we will look for such components and build them
+        # every run. These components are located in openindiana category and we care
+        # only about that category. One exception to this rule is meta-packages/history
+        # component, which holds obsoleted components. We add it to paths manually for 
+        # that reason.
+        cmd = ['git', 'grep', '-l', 'GIT_REPO *=']
+
+        proc = subprocess.Popen(cmd,
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                cwd=workspace_path,
+                                universal_newlines=True
+                                )
+
+        proc.wait()
+        if debug:
+            if proc.returncode != 0:
+                logger.debug('exit: %d, %s', proc.returncode, proc.stderr.read())
+
+        for line in proc.stdout:
+            line = line.rstrip()
+
+            # Only 'openindiana' category.
+            category = line.split('/')[0]
+            if category is 'openindiana':
+                continue
+
+            filename = os.path.basename(line)
+            dirname = os.path.dirname(line)
+
+            if filename == 'Makefile':
+                if glob.glob(os.path.join(workspace_path, dirname, '*.p5m')):
+                    paths.append(os.path.dirname(line))
+
+        # Add meta-packages/history only if we build the main repository, where
+        # subdir is equal to 'components'.
+        if subdir is 'components':
+            paths.append('meta-packages/history')
+        # Add encumbered/meta-packages/history only if we build the encumbered repository
+        if subdir is 'components/encumbered':
+            paths.append('encumbered/meta-packages/history')
+                    
+        paths = list(set(paths))
+
+    else:
+        for dirpath, dirnames, filenames in walk(workspace_path):
+            for name in filenames:
+                if expression.match(name):
+                    if debug:
+                        logger.debug('found %s', dirpath)
+                    paths.append(dirpath)
+                    del dirnames[:]
+                    break
+
+    return sorted(paths)
+
+
+class BassComponent(object):
+    def __init__(self, path=None, debug=False):
+        self.debug = debug
+        self.path = path
+        if path:
+            # get supplied packages    (cd path ; gmake print-package-names)
+            self.supplied_packages = self.run_make(path, 'print-package-names')
+
+            # get supplied paths    (cd path ; gmake print-package-paths)
+            self.supplied_paths = self.run_make(path, 'print-package-paths')
+
+            # get required paths    (cd path ; gmake print-required-paths)
+            self.required_paths = self.run_make(path, 'print-required-paths')
+
+    def required(self, component):
+        result = False
+
+        s1 = set(self.required_paths)
+        s2 = set(component.supplied_paths)
+        if s1.intersection(s2):
+            result = True
+
+        return result
+
+    def run_make(self, path, targets):
+
+        result = []
+
+        if self.debug:
+            logger.debug('Executing \'gmake %s\' in %s', targets, path)
+
+        proc = subprocess.Popen(['gmake', targets],
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                cwd=path,
+                                universal_newlines=True)
+        for out in proc.stdout:
+            result.append(out)
+
+        proc.wait()
+        if self.debug:
+            if proc.returncode != 0:
+                logger.debug('exit: %d, %s', proc.returncode, proc.stderr.read())
+
+        return result
+
+    def __str__(self):
+        result = 'Component:\n\tPath: %s\n' % self.path
+        result = result + '\tProvides Package(s):\n\t\t%s\n' % '\t\t'.join(self.supplied_packages)
+        result = result + '\tProvides Path(s):\n\t\t%s\n' % '\t\t'.join(self.supplied_paths)
+        result = result + '\tRequired Path(s):\n\t\t%s\n' % '\t\t'.join(self.required_paths)
+
+        return result
+
+
+def main():
+    sys.stdout.flush()
+
+    components = {}
+
+    COMPONENTS_ALLOWED_PATHS = ['path', 'paths', 'dir', 'dirs', 'directories']
+    COMPONENTS_ALLOWED_DEPENDENCIES = ['depend', 'dependencies']
+    COMPONENTS_ALLOWED_KEYWORDS = COMPONENTS_ALLOWED_PATHS + COMPONENTS_ALLOWED_DEPENDENCIES
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-w', '--workspace', default=os.getenv('WS_TOP'), help='Path to workspace')
+    parser.add_argument('-l', '--components', default=None, choices=COMPONENTS_ALLOWED_KEYWORDS)
+    parser.add_argument('--make', help='Makefile target to invoke')
+    parser.add_argument('--subdir', default='components', help='Directory holding components')
+    parser.add_argument('-d', '--debug', action='store_true', default=False)
+    parser.add_argument('--begin-commit', default=os.getenv('GIT_PREVIOUS_SUCCESSFUL_COMMIT', 'HEAD~1'))
+    parser.add_argument('--end-commit', default='HEAD')
+
+    args = parser.parse_args()
+
+    workspace = args.workspace
+    components_arg = args.components
+    subdir = args.subdir
+    make_arg = args.make
+    begin_commit = args.begin_commit
+    end_commit = args.end_commit
+    debug = args.debug
+    log_level = logging.WARNING
+
+    if debug:
+        log_level = logging.DEBUG
+
+    logging.basicConfig(level=log_level,
+                        format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',)
+
+    incremental = False
+    if os.getenv('BASS_O_MATIC_MODE') == 'incremental':
+        incremental = True
+
+    if incremental:
+        component_paths = FindComponentPaths(path=workspace, debug=debug, subdir=subdir,
+                                             incremental=incremental, begin_commit=begin_commit, end_commit=end_commit)
+    else:
+        component_paths = FindComponentPaths(path=workspace, debug=debug, subdir=subdir)
+
+    if make_arg:
+        proc = subprocess.Popen(['gmake'] + [make_arg])
+        rc = proc.wait()
+        sys.exit(rc)
+
+    if components_arg:
+        if components_arg in COMPONENTS_ALLOWED_PATHS:
+            for path in component_paths:
+                print('{0}'.format(path))
+
+        elif components_arg in COMPONENTS_ALLOWED_DEPENDENCIES:
+            for path in component_paths:
+                components[path] = BassComponent(path, debug)
+
+            for c_path in components.keys():
+                component = components[c_path]
+
+                for d_path in components.keys():
+                    if (c_path != d_path and
+                            component.required(components[d_path])):
+                        print('{0}: {1}'.format(c_path, d_path))
+
+        sys.exit(0)
+
+    sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()

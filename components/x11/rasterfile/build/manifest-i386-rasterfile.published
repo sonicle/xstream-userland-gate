@@ -1,0 +1,17 @@
+set name=pkg.fmri value=pkg:/x11/header/rasterfile@7.5,5.11-2020.1.1.0
+set name=pkg.summary value="rasterfile - Sun file format for raster images"
+set name=com.oracle.info.name value=rasterfile
+set name=com.oracle.info.version value=7.5
+set name=info.classification value=org.opensolaris.category.2008:Development/X11
+set name=info.upstream-url value=https://hg.java.net/hg/solaris-x11~x-s12-clone
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+file path=usr/include/pixrect/rasterfile.h owner=root group=bin mode=0444 \
+    facet.devel=all
+file path=usr/share/man/man5/rasterfile.5 owner=root group=bin mode=0444 \
+    facet.doc.man=all
+license rasterfile.license license=Oracle

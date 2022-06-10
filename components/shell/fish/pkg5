@@ -1,0 +1,30 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/documentation-tool/doxygen",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/pcre2",
+        "library/python/pexpect-39",
+        "runtime/python-27",
+        "runtime/ruby",
+        "system/library",
+        "system/library/g++-6-runtime",
+        "system/library/math",
+        "text/gnu-patch"
+    ],
+    "fmris": [
+        "shell/fish"
+    ],
+    "name": "fish"
+}

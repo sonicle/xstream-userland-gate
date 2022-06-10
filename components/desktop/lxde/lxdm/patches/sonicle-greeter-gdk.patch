@@ -1,0 +1,20 @@
+--- lxdm-0.4.1/src/greeter-gdk.c	Mon Oct  7 11:34:07 2013
++++ lxdm-0.4.1/src/greeter-gdk.c	Mon Oct  7 11:36:06 2013
+@@ -145,6 +145,8 @@
+ 		printf("reboot\n");
+     else if(!strcmp(user, "shutdown"))
+         printf("shutdown\n");
++    else if(!strcmp(user, "exitdm"))
++        printf("exitdm\n");
+     else
+     {
+ 		char *temp;
+@@ -184,7 +186,7 @@
+             return;
+         stage++;
+         if( stage == 1 )
+-            if( !strcmp(user, "reboot") || !strcmp(user, "shutdown") )
++            if( !strcmp(user, "reboot") || !strcmp(user, "shutdown") || !strcmp(user, "exitdm"))
+                 stage = 2;
+     }
+     else if( key >= 0x20 && key <= 0x7e )

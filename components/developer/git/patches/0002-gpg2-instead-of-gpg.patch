@@ -1,0 +1,11 @@
+--- git-2.19.0/gpg-interface.c	2018-09-24 10:54:55.534993521 +0000
++++ git-2.19.0/gpg-interface.c.new	2018-09-24 10:54:22.597240615 +0000
+@@ -33,7 +33,7 @@ static const char *x509_sigs[] = {
+ };
+ 
+ static struct gpg_format gpg_format[] = {
+-	{ .name = "openpgp", .program = "gpg",
++	{ .name = "openpgp", .program = "gpg2",
+ 	  .verify_args = openpgp_verify_args,
+ 	  .sigs = openpgp_sigs
+ 	},

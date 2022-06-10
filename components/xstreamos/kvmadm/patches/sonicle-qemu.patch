@@ -1,0 +1,11 @@
+--- kvmadm-0.12.0/lib/KVMadm/Config.pm	Mon Mar 11 22:57:26 2019
++++ kvmadm-0.12.0/lib/KVMadm/Config.pm.new	Mon Mar 11 22:57:47 2019
+@@ -15,7 +15,7 @@
+ my ($BASEDIR)   = dirname($FindBin::RealBin);
+ 
+ # constants/programs
+-my $QEMU_KVM = '/usr/bin/qemu-system-x86_64';
++my $QEMU_KVM = '/usr/bin/qemu-kvm';
+ my $DLADM    = '/usr/sbin/dladm';
+ my $FMRI     = 'svc:/system/kvm';
+ my $PGRP     = 'kvmadm';

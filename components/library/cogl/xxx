@@ -1,0 +1,229 @@
+    depend type=require fmri=__TBD \
+        pkg.debug.depend.file=libpangocairo-1.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libcairo.so.2 \
+        pkg.debug.depend.reason=usr/lib/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libglib-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXext.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXfixes.so.1 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libglib-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXext.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD \
+        pkg.debug.depend.file=libgdk_pixbuf-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgmodule-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgobject-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD \
+        pkg.debug.depend.file=libgdk_pixbuf-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libX11.so.4 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libpango-1.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libX11.so.4 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libglib-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgobject-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libpango-1.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libglib-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXfixes.so.1 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgmodule-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXdamage.so.1 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libm.so.2 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgobject-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD \
+        pkg.debug.depend.file=libpangocairo-1.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libXdamage.so.1 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libgobject-2.0.so.0 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libcairo.so.2 \
+        pkg.debug.depend.reason=usr/lib/amd64/libcogl-pango.so.0.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib/64 \
+        pkg.debug.depend.path=usr/gcc/6/lib/amd64 \
+        pkg.debug.depend.path=usr/lib/64 \
+        pkg.debug.depend.path=usr/lib/xorg/amd64'.
+/data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/manifest-i386-cogl.depend has unresolved dependency '
+    depend type=require fmri=__TBD pkg.debug.depend.file=libm.so.2 \
+        pkg.debug.depend.reason=usr/lib/libcogl.so.9.0.0 \
+        pkg.debug.depend.type=elf \
+        pkg.debug.depend.path=lib \
+        pkg.debug.depend.path=usr/gcc/6/lib \
+        pkg.debug.depend.path=usr/lib \
+        pkg.debug.depend.path=usr/lib/xorg'.
+gmake: *** [/data/sources/sonicle/xstream-userland-gate/make-rules/ips.mk:441: /data/sources/sonicle/xstream-userland-gate/components/library/cogl/build/.resolved-i386] Error 1
+

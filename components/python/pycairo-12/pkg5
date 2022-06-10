@@ -1,0 +1,29 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/desktop/cairo",
+        "runtime/python-27",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/pycairo-37",
+        "library/python/pycairo-39",
+        "library/python/pycairo"
+    ],
+    "name": "pycairo"
+}

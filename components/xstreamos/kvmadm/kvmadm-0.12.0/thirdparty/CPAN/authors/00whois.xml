@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpan-whois>
+  <cpanid>
+    <id>HADFL</id>
+    <type>author</type>
+    <has_cpandir>1</has_cpandir>
+  </cpanid>
+  <cpanid>
+    <id>HADFL</id>
+    <type>author</type>
+    <has_cpandir>1</has_cpandir>
+  </cpanid>
+  <cpanid>
+    <id>ISHIGAKI</id>
+    <type>author</type>
+    <has_cpandir>1</has_cpandir>
+  </cpanid>
+  <cpanid>
+    <id>MIYAGAWA</id>
+    <type>author</type>
+    <has_cpandir>1</has_cpandir>
+  </cpanid>
+  <cpanid>
+    <id>MBP</id>
+    <type>author</type>
+    <has_cpandir>1</has_cpandir>
+  </cpanid>
+</cpan-whois>

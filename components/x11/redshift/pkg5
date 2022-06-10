@@ -1,0 +1,34 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "image/editor/inkscape",
+        "library/glib2",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/ruby",
+        "system/header/header-drm",
+        "system/library",
+        "system/library/math",
+        "text/gnu-patch",
+        "x11/library/libdrm",
+        "x11/library/libx11",
+        "x11/library/libxcb",
+        "x11/library/libxxf86vm"
+    ],
+    "fmris": [
+        "x11/redshift"
+    ],
+    "name": "redshift"
+}

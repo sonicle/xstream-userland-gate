@@ -1,0 +1,29 @@
+--- polkit-0.110/src/programs/pkexec.c	Wed Jul 24 18:41:27 2013
++++ polkit-0.110/src/programs/pkexec.c	Wed Jul 24 18:43:26 2013
+@@ -97,7 +97,7 @@
+     {
+       openlog ("pkexec",
+                LOG_PID,
+-               LOG_AUTHPRIV); /* security/authorization messages (private) */
++               LOG_AUTH); /* security/authorization messages (private) */
+       is_log_open = TRUE;
+     }
+ 
+@@ -207,7 +207,7 @@
+ }
+ 
+ static gboolean
+-fdwalk (FdCallback callback,
++pkfdwalk (FdCallback callback,
+         gpointer   user_data)
+ {
+   gint fd;
+@@ -855,7 +855,7 @@
+     }
+ 
+   /* set close_on_exec on all file descriptors except stdin, stdout, stderr */
+-  if (!fdwalk (set_close_on_exec, GINT_TO_POINTER (3)))
++  if (!pkfdwalk (set_close_on_exec, GINT_TO_POINTER (3)))
+     {
+       g_printerr ("Error setting close-on-exec for file desriptors\n");
+       goto out;

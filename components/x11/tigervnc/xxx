@@ -1,0 +1,1172 @@
+Makefile:54: warning: overriding recipe for target '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/tigervnc-1.8.0/.prep'
+/sonicle/home/sources/sonicle/xstream-userland-gate/make-rules/prep.mk:41: warning: ignoring old recipe for target '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/tigervnc-1.8.0/.prep'
+(cd /sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix; /usr/bin/env LD_OPTIONS="-M /usr/lib/ld/map.noexstk -M /usr/lib/ld/map.noexdata -M /usr/lib/ld/map.pagealign -Bdirect -z ignore -L/usr/lib/amd64/gnutls-3 -R/usr/lib/amd64/gnutls-3" LD_EXEC_OPTIONS="-z aslr=disable"  \
+/usr/gnu/bin/make   -j16 \
+)
+make[1]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix'
+make[2]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+[  1%] Built target Xregion
+[  2%] Built target tx
+[  4%] Built target network
+[  9%] Built target os
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+[ 22%] Built target rdr
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+[ 84%] Built target rfb
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+[ 86%] Built target vncpasswd
+[ 90%] Built target vncconfig
+[100%] Built target x0vncserver
+make[2]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64'
+make[1]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix'
+(cd /sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver; /usr/bin/env LD_OPTIONS="-M /usr/lib/ld/map.noexstk -M /usr/lib/ld/map.noexdata -M /usr/lib/ld/map.pagealign -Bdirect -z ignore -L/usr/lib/amd64/gnutls-3 -R/usr/lib/amd64/gnutls-3" LD_EXEC_OPTIONS="-z aslr=disable"  \
+/usr/gnu/bin/make   -j16 \
+)
+make[1]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver'
+Making all in doc
+make[2]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc'
+Making all in dtrace
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc/dtrace'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc/dtrace'
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc'
+make[2]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/doc'
+Making all in man
+make[2]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/man'
+Making all in include
+make[2]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/include'
+/usr/gnu/bin/make  all-am
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/include'
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/include'
+make[2]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/include'
+Making all in dix
+make[2]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/dix'
+/usr/gnu/bin/make  all-am
+make[3]: Entering directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/dix'
+  CC       colormap.lo
+  CC       devices.lo
+  CC       dispatch.lo
+  CC       main.lo
+  CC       dixutils.lo
+  CC       enterleave.lo
+  CC       events.lo
+  CC       extension.lo
+  CC       gc.lo
+  CC       getevents.lo
+  CC       globals.lo
+  CC       grabs.lo
+  CC       initatoms.lo
+  CC       inpututils.lo
+  CC       pixmap.lo
+  CC       privates.lo
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from events.c:112:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from events.c:112:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from events.c:112:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from events.c:112:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from grabs.c:56:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from grabs.c:56:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from pixmap.c:37:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from pixmap.c:37:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from grabs.c:56:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from grabs.c:56:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from /usr/include/xorg/panoramiX.h:45:0,
+                 from events.c:120:
+/usr/include/xorg/gcstruct.h:81:25: error: unknown type name 'pointer'
+                         pointer /*pvalue */ ,
+                         ^~~~~~~
+/usr/include/xorg/gcstruct.h:219:28: error: unknown type name 'pointer'
+                            pointer /*pglyphBase */ );
+                            ^~~~~~~
+/usr/include/xorg/gcstruct.h:227:27: error: unknown type name 'pointer'
+                           pointer /*pglyphBase */ );
+                           ^~~~~~~
+/usr/include/xorg/gcstruct.h:276:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+In file included from events.c:121:0:
+/usr/include/xorg/panoramiXsrv.h:21:54: error: expected ')' before 'XID'
+ extern _X_EXPORT int XineramaDeleteResource(pointer, XID);
+                                                      ^~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from devices.c:56:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dispatch.c:109:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from devices.c:56:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dixutils.c:90:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from gc.c:57:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dispatch.c:109:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dixutils.c:90:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from colormap.c:63:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from gc.c:57:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+In file included from events.c:149:0:
+/usr/include/xorg/mi.h:274:38: error: unknown type name 'pointer'
+                                      pointer    /*pglyphBase */
+                                      ^~~~~~~
+/usr/include/xorg/mi.h:283:39: error: unknown type name 'pointer'
+                                       pointer   /*pglyphBase */
+                                       ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from colormap.c:63:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/mi.h:390:44: error: unknown type name 'pointer'
+                                            pointer      /*pPixData */
+                                            ^~~~~~~
+/usr/include/xorg/mi.h:398:46: error: unknown type name 'pointer'
+                                              pointer    /*pbits */
+                                              ^~~~~~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from globals.c:54:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from devices.c:56:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/mi.h:402:36: error: unknown type name 'pointer'
+                                    pointer /*pbits */ ,
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from devices.c:56:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+In file included from /usr/include/xorg/xace.h:31:0,
+                 from extension.c:61:
+/usr/include/xorg/property.h:67:46: error: unknown type name 'pointer'
+                                              pointer /*value */ ,
+                                              ^~~~~~~
+/usr/include/xorg/property.h:76:43: error: unknown type name 'pointer'
+                                           pointer /*value */ ,
+                                           ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dispatch.c:109:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from globals.c:54:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from dixutils.c:90:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from dispatch.c:109:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from dixutils.c:90:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from gc.c:57:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from gc.c:57:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from main.c:90:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+events.c: In function 'ConfineCursorToWindow':
+events.c:899:21: error: 'struct _Screen' has no member named 'CursorConfinedTo'
+         if (*pScreen->CursorConfinedTo)
+                     ^~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+events.c:900:22: error: 'struct _Screen' has no member named 'CursorConfinedTo'
+             (*pScreen->CursorConfinedTo) (pDev, pScreen, pWin);
+                      ^~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from enterleave.c:36:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from main.c:90:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+  CC       property.lo
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from globals.c:54:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from enterleave.c:36:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from globals.c:54:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from privates.c:56:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from privates.c:56:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from enterleave.c:36:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from /usr/include/xorg/xace.h:31:0,
+                 from gc.c:65:
+/usr/include/xorg/property.h:67:46: error: unknown type name 'pointer'
+                                              pointer /*value */ ,
+                                              ^~~~~~~
+/usr/include/xorg/property.h:76:43: error: unknown type name 'pointer'
+                                           pointer /*value */ ,
+                                           ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from enterleave.c:36:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+Makefile:765: recipe for target 'grabs.lo' failed
+make[3]: *** [grabs.lo] Error 1
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+make[3]: *** Waiting for unfinished jobs....
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+Makefile:765: recipe for target 'extension.lo' failed
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+make[3]: *** [extension.lo] Error 1
+In file included from pixmap.c:45:0:
+/usr/include/xorg/randrstr.h:95:5: error: unknown type name 'pointer'
+     pointer data;               /* private to client */
+     ^~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from privates.c:56:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+/usr/include/xorg/randrstr.h:874:24: error: unknown type name 'pointer'
+                        pointer value, Bool sendevent, Bool pending);
+                        ^~~~~~~
+/usr/include/xorg/randrstr.h:951:24: error: unknown type name 'pointer'
+                        pointer value, Bool sendevent, Bool pending);
+                        ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from privates.c:56:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+pixmap.c: In function 'PixmapDirtyCompositeRotate':
+pixmap.c:351:5: warning: implicit declaration of function 'FreePicture' [-Wimplicit-function-declaration]
+     FreePicture(src, None);
+     ^~~~~~~~~~~
+pixmap.c:351:5: warning: nested extern declaration of 'FreePicture' [-Wnested-externs]
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+In file included from /usr/include/xorg/xace.h:31:0,
+                 from inpututils.c:35:
+/usr/include/xorg/property.h:67:46: error: unknown type name 'pointer'
+                                              pointer /*value */ ,
+                                              ^~~~~~~
+/usr/include/xorg/property.h:76:43: error: unknown type name 'pointer'
+                                           pointer /*value */ ,
+                                           ^~~~~~~
+events.c: In function 'XYToWindow':
+events.c:2882:21: error: 'struct _Screen' has no member named 'XYToWindow'; did you mean 'CopyWindow'?
+     return (*pScreen->XYToWindow)(pScreen, pSprite, x, y);
+                     ^~
+Makefile:765: recipe for target 'pixmap.lo' failed
+make[3]: *** [pixmap.lo] Error 1
+dixutils.c: In function 'BlockHandler':
+dixutils.c:391:10: error: invalid type argument of unary '*' (have 'int')
+         (*screenInfo.gpuscreens[i]->BlockHandler) (screenInfo.gpuscreens[i], pTimeout);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dixutils.c:394:10: error: invalid type argument of unary '*' (have 'int')
+         (*screenInfo.screens[i]->BlockHandler) (screenInfo.screens[i], pTimeout);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dixutils.c: In function 'WakeupHandler':
+dixutils.c:422:10: error: invalid type argument of unary '*' (have 'int')
+         (*screenInfo.screens[i]->WakeupHandler) (screenInfo.screens[i], result);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dixutils.c:424:10: error: invalid type argument of unary '*' (have 'int')
+         (*screenInfo.gpuscreens[i]->WakeupHandler) (screenInfo.gpuscreens[i], result);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Makefile:765: recipe for target 'gc.lo' failed
+make[3]: *** [gc.lo] Error 1
+In file included from getevents.c:52:0:
+/usr/include/xorg/mi.h:274:38: error: unknown type name 'pointer'
+                                      pointer    /*pglyphBase */
+                                      ^~~~~~~
+/usr/include/xorg/mi.h:283:39: error: unknown type name 'pointer'
+                                       pointer   /*pglyphBase */
+                                       ^~~~~~~
+/usr/include/xorg/mi.h:390:44: error: unknown type name 'pointer'
+                                            pointer      /*pPixData */
+                                            ^~~~~~~
+/usr/include/xorg/mi.h:398:46: error: unknown type name 'pointer'
+                                              pointer    /*pbits */
+                                              ^~~~~~~
+/usr/include/xorg/mi.h:402:36: error: unknown type name 'pointer'
+                                    pointer /*pbits */ ,
+                                    ^~~~~~~
+Makefile:765: recipe for target 'globals.lo' failed
+make[3]: *** [globals.lo] Error 1
+In file included from main.c:113:0:
+/usr/include/xorg/panoramiXsrv.h:21:54: error: expected ')' before 'XID'
+ extern _X_EXPORT int XineramaDeleteResource(pointer, XID);
+                                                      ^~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from getevents.c:53:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+events.c: In function 'ProcWarpPointer':
+events.c:3617:19: error: 'struct _Screen' has no member named 'CursorWarpedTo'
+     if (*newScreen->CursorWarpedTo)
+                   ^~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from getevents.c:53:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+events.c:3618:20: error: 'struct _Screen' has no member named 'CursorWarpedTo'
+         (*newScreen->CursorWarpedTo) (dev, newScreen, client,
+                    ^~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+main.c: In function 'SetupXauthFile':
+main.c:147:21: warning: unused variable 'buf' [-Wunused-variable]
+         struct stat buf;
+                     ^~~
+main.c: At top level:
+main.c:158:1: warning: no previous prototype for 'RemoveXauthSymFile' [-Wmissing-prototypes]
+ RemoveXauthSymFile(void)
+ ^~~~~~~~~~~~~~~~~~
+main.c:164:1: warning: no previous prototype for 'SetPrivileges' [-Wmissing-prototypes]
+ SetPrivileges(void)
+ ^~~~~~~~~~~~~
+main.c: In function 'dix_main':
+main.c:221:15: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     xauthfile = GetAuthFilename();
+               ^
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+Makefile:765: recipe for target 'dixutils.lo' failed
+make[3]: *** [dixutils.lo] Error 1
+In file included from devices.c:66:0:
+/usr/include/xorg/mi.h:274:38: error: unknown type name 'pointer'
+                                      pointer    /*pglyphBase */
+                                      ^~~~~~~
+/usr/include/xorg/mi.h:283:39: error: unknown type name 'pointer'
+                                       pointer   /*pglyphBase */
+                                       ^~~~~~~
+/usr/include/xorg/mi.h:390:44: error: unknown type name 'pointer'
+                                            pointer      /*pPixData */
+                                            ^~~~~~~
+/usr/include/xorg/mi.h:398:46: error: unknown type name 'pointer'
+                                              pointer    /*pbits */
+                                              ^~~~~~~
+/usr/include/xorg/mi.h:402:36: error: unknown type name 'pointer'
+                                    pointer /*pbits */ ,
+                                    ^~~~~~~
+Makefile:765: recipe for target 'main.lo' failed
+make[3]: *** [main.lo] Error 1
+Makefile:765: recipe for target 'enterleave.lo' failed
+make[3]: *** [enterleave.lo] Error 1
+In file included from /usr/include/xorg/panoramiX.h:45:0,
+                 from getevents.c:59:
+/usr/include/xorg/gcstruct.h:81:25: error: unknown type name 'pointer'
+                         pointer /*pvalue */ ,
+                         ^~~~~~~
+/usr/include/xorg/gcstruct.h:219:28: error: unknown type name 'pointer'
+                            pointer /*pglyphBase */ );
+                            ^~~~~~~
+/usr/include/xorg/gcstruct.h:227:27: error: unknown type name 'pointer'
+                           pointer /*pglyphBase */ );
+                           ^~~~~~~
+/usr/include/xorg/gcstruct.h:276:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+In file included from getevents.c:60:0:
+/usr/include/xorg/panoramiXsrv.h:21:54: error: expected ')' before 'XID'
+ extern _X_EXPORT int XineramaDeleteResource(pointer, XID);
+                                                      ^~~
+Makefile:765: recipe for target 'privates.lo' failed
+make[3]: *** [privates.lo] Error 1
+Makefile:765: recipe for target 'inpututils.lo' failed
+make[3]: *** [inpututils.lo] Error 1
+Makefile:765: recipe for target 'colormap.lo' failed
+make[3]: *** [colormap.lo] Error 1
+In file included from /usr/include/xorg/scrnintstr.h:52:0,
+                 from /usr/include/xorg/picturestr.h:27,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from property.c:53:
+/usr/include/xorg/colormap.h:86:35: error: expected ')' before 'XID'
+                                   XID /*mid */ );
+                                   ^~~
+/usr/include/xorg/colormap.h:89:34: error: unknown type name 'pointer'
+                                  pointer /* Colormap *pmid */ );
+                                  ^~~~~~~
+/usr/include/xorg/colormap.h:92:36: error: unknown type name 'pointer'
+                                    pointer /* Colormap *pmid */ );
+                                    ^~~~~~~
+/usr/include/xorg/colormap.h:130:39: error: expected ')' before 'XID'
+                                       XID /*fakeid */ );
+                                       ^~~
+In file included from /usr/include/xorg/picturestr.h:27:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from property.c:53:
+/usr/include/xorg/scrnintstr.h:263:44: error: unknown type name 'pointer'
+                                            pointer /*pTimeout */ ,
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:264:44: error: unknown type name 'pointer'
+                                            pointer /*pReadmask */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:268:45: error: unknown type name 'pointer'
+                                             pointer /*pReadMask */ );
+                                             ^~~~~~~
+/usr/include/xorg/scrnintstr.h:278:44: error: unknown type name 'pointer'
+                                            pointer /*pPixData */ );
+                                            ^~~~~~~
+/usr/include/xorg/scrnintstr.h:378:5: error: unknown type name 'pointer'
+     pointer devPrivate;
+     ^~~~~~~
+/usr/include/xorg/scrnintstr.h:453:5: error: unknown type name 'ScreenBlockHandlerProcPtr'
+     ScreenBlockHandlerProcPtr BlockHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:454:5: error: unknown type name 'ScreenWakeupHandlerProcPtr'
+     ScreenWakeupHandlerProcPtr WakeupHandler;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/scrnintstr.h:460:5: error: unknown type name 'ModifyPixmapHeaderProcPtr'
+     ModifyPixmapHeaderProcPtr ModifyPixmapHeader;
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/xorg/picturestr.h:28:0,
+                 from ../include/pixmapstr.h:55,
+                 from ../include/windowstr.h:51,
+                 from property.c:53:
+/usr/include/xorg/glyphstr.h:134:15: error: unknown type name 'pointer'
+  FreeGlyphSet(pointer value, XID gid);
+               ^~~~~~~
+In file included from ../include/pixmapstr.h:55:0,
+                 from ../include/windowstr.h:51,
+                 from property.c:53:
+/usr/include/xorg/picturestr.h:148:5: error: unknown type name 'pointer'
+     pointer clientClip;
+     ^~~~~~~
+/usr/include/xorg/picturestr.h:192:56: error: unknown type name 'pointer'
+                                          int clipType, pointer value, int n);
+                                                        ^~~~~~~
+/usr/include/xorg/picturestr.h:290:5: error: unknown type name 'ChangePictureClipProcPtr'
+     ChangePictureClipProcPtr ChangePictureClip;
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/xorg/picturestr.h:485:14: error: unknown type name 'pointer'
+  FreePicture(pointer pPicture, XID pid);
+              ^~~~~~~
+/usr/include/xorg/picturestr.h:488:17: error: unknown type name 'pointer'
+  FreePictFormat(pointer pPictFormat, XID pid);
+                 ^~~~~~~
+dispatch.c: In function 'init_screen':
+dispatch.c:3847:28: error: 'struct _Screen' has no member named 'slave_list'; did you mean 'output_slave_list'?
+     xorg_list_init(&pScreen->slave_list);
+                            ^~
+dispatch.c: In function 'AttachUnboundGPU':
+dispatch.c:4016:23: error: 'struct _Screen' has no member named 'slave_head'
+     xorg_list_add(&new->slave_head, &pScreen->slave_list);
+                       ^~
+Makefile:765: recipe for target 'getevents.lo' failed
+make[3]: *** [getevents.lo] Error 1
+dispatch.c:4016:45: error: 'struct _Screen' has no member named 'slave_list'; did you mean 'output_slave_list'?
+     xorg_list_add(&new->slave_head, &pScreen->slave_list);
+                                             ^~
+In file included from ../include/misc.h:186:0,
+                 from ../include/window.h:50,
+                 from ../include/windowstr.h:50,
+                 from dispatch.c:109:
+dispatch.c: In function 'DetachUnboundGPU':
+dispatch.c:4024:18: error: 'struct _Screen' has no member named 'is_output_slave'; did you mean 'output_head'?
+     assert(!slave->is_output_slave);
+                  ^
+dispatch.c:4025:18: error: 'struct _Screen' has no member named 'is_offload_slave'; did you mean 'offload_head'?
+     assert(!slave->is_offload_slave);
+                  ^
+dispatch.c:4026:25: error: 'struct _Screen' has no member named 'slave_head'
+     xorg_list_del(&slave->slave_head);
+                         ^~
+In file included from ../include/misc.h:186:0,
+                 from ../include/window.h:50,
+                 from ../include/windowstr.h:50,
+                 from dispatch.c:109:
+dispatch.c: In function 'AttachOutputGPU':
+dispatch.c:4034:16: error: 'struct _Screen' has no member named 'is_output_slave'; did you mean 'output_head'?
+     assert(!new->is_output_slave);
+                ^
+dispatch.c:4036:8: error: 'struct _Screen' has no member named 'is_output_slave'; did you mean 'output_head'?
+     new->is_output_slave = TRUE;
+        ^~
+dispatch.c:4037:24: error: 'struct _Screen' has no member named 'output_slaves'; did you mean 'output_slave_list'?
+     new->current_master->output_slaves++;
+                        ^~
+In file included from ../include/misc.h:186:0,
+                 from ../include/window.h:50,
+                 from ../include/windowstr.h:50,
+                 from dispatch.c:109:
+dispatch.c: In function 'DetachOutputGPU':
+dispatch.c:4044:17: error: 'struct _Screen' has no member named 'is_output_slave'; did you mean 'output_head'?
+     assert(slave->is_output_slave);
+                 ^
+dispatch.c:4045:26: error: 'struct _Screen' has no member named 'output_slaves'; did you mean 'output_slave_list'?
+     slave->current_master->output_slaves--;
+                          ^~
+dispatch.c:4046:10: error: 'struct _Screen' has no member named 'is_output_slave'; did you mean 'output_head'?
+     slave->is_output_slave = FALSE;
+          ^~
+In file included from ../include/misc.h:186:0,
+                 from ../include/window.h:50,
+                 from ../include/windowstr.h:50,
+                 from dispatch.c:109:
+dispatch.c: In function 'AttachOffloadGPU':
+dispatch.c:4053:16: error: 'struct _Screen' has no member named 'is_offload_slave'; did you mean 'offload_head'?
+     assert(!new->is_offload_slave);
+                ^
+dispatch.c:4055:8: error: 'struct _Screen' has no member named 'is_offload_slave'; did you mean 'offload_head'?
+     new->is_offload_slave = TRUE;
+        ^~
+In file included from ../include/misc.h:186:0,
+                 from ../include/window.h:50,
+                 from ../include/windowstr.h:50,
+                 from dispatch.c:109:
+dispatch.c: In function 'DetachOffloadGPU':
+dispatch.c:4062:17: error: 'struct _Screen' has no member named 'is_offload_slave'; did you mean 'offload_head'?
+     assert(slave->is_offload_slave);
+                 ^
+dispatch.c:4063:10: error: 'struct _Screen' has no member named 'is_offload_slave'; did you mean 'offload_head'?
+     slave->is_offload_slave = FALSE;
+          ^~
+Makefile:765: recipe for target 'property.lo' failed
+make[3]: *** [property.lo] Error 1
+Makefile:765: recipe for target 'devices.lo' failed
+make[3]: *** [devices.lo] Error 1
+events.c: In function 'XYToWindow':
+events.c:2883:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Makefile:765: recipe for target 'dispatch.lo' failed
+make[3]: *** [dispatch.lo] Error 1
+Makefile:765: recipe for target 'events.lo' failed
+make[3]: *** [events.lo] Error 1
+make[3]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/dix'
+Makefile:645: recipe for target 'all' failed
+make[2]: *** [all] Error 2
+make[2]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver/dix'
+Makefile:788: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/amd64/unix/xserver'
+Makefile:176: recipe for target '/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/.built_Xvnc' failed
+gmake: *** [/sonicle/home/sources/sonicle/xstream-userland-gate/components/x11/tigervnc/build/.built_Xvnc] Error 2

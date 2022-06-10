@@ -1,0 +1,42 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/glib2",
+        "library/python/pyparsing-35",
+        "library/python/pyparsing-37",
+        "library/python/pyparsing-39",
+        "library/python/pytest-35",
+        "library/python/pytest-37",
+        "library/python/pytest-39",
+        "library/python/pytest-benchmark-35",
+        "library/python/pytest-benchmark-37",
+        "library/python/pytest-benchmark-39",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library",
+        "system/library/libdbus",
+        "text/gnu-patch"
+    ],
+    "fmris": [
+        "library/python/python-dbus-35",
+        "library/python/python-dbus-37",
+        "library/python/python-dbus-39",
+        "library/python/python-dbus"
+    ],
+    "name": "dbus-python"
+}

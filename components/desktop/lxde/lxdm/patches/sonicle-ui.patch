@@ -1,0 +1,11 @@
+--- lxdm-0.4.1/src/ui.c	Mon Oct  7 11:36:27 2013
++++ lxdm-0.4.1/src/ui.c	Mon Oct  7 11:36:58 2013
+@@ -145,6 +145,8 @@
+ 		lxdm_do_reboot();
+ 	else if( !strncmp(str, "shutdown", 6) )
+ 		lxdm_do_shutdown();
++	else if( !strncmp(str, "exitdm", 6) )
++		lxdm_do_exitdm();
+ 	else if( !strncmp(str, "log ", 4) )
+ 		g_message(str + 4);
+ 	else if( !strncmp(str, "login ", 6) )

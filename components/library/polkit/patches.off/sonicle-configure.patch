@@ -1,0 +1,15 @@
+--- polkit-0.110/configure	Wed Jul 24 17:27:47 2013
++++ polkit-0.110/configure	Wed Jul 24 17:28:06 2013
+@@ -13517,9 +13517,9 @@
+ done
+ 
+ 
+-if test "x$GCC" = "xyes"; then
+-  LDFLAGS="-Wl,--as-needed $LDFLAGS"
+-fi
++#if test "x$GCC" = "xyes"; then
++#  LDFLAGS="-Wl,--as-needed $LDFLAGS"
++#fi
+ 
+ 
+ have_libsystemd_login=no

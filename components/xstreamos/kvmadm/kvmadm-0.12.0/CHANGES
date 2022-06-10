@@ -1,0 +1,1028 @@
+commit bb52d69753abd70f4513a80d32af4a5778631fbb
+Author: Dominik Hassler <hadfl@omniosce.org>
+Date:   Wed Sep 27 12:38:19 2017 +0200
+
+    commands can now be sent to qemu monitor
+
+commit 2b4f6a44c16744495c47e305850172ea6f9660e1
+Author: Dominik Hassler <hadfl@omniosce.org>
+Date:   Wed Aug 30 20:03:10 2017 +0200
+
+    default cpu to qemu64
+
+commit 70604e3a27924c3392468e7e40037efdf55420e5
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Nov 23 02:29:53 2016 +0100
+
+    - purge zone last
+
+commit 813e662a9de91c62c5b4a9c250670986ff43dfee
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 6 13:49:19 2016 +0200
+
+    ready for 0.11.0
+
+commit abba6417912afc65c363b9d8147784f217115ca8
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 6 13:37:45 2016 +0200
+
+    - warn if block_size is changed after creation
+
+commit 5407a103b934d380355f0c3d6537f03910e32099
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue May 3 16:26:41 2016 +0200
+
+    - block_size property implemented
+
+commit e79032a7b90721a45827a77276c31e7032802c4a
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 20:48:26 2016 +0100
+
+    - need make to build dependencies
+
+commit 1a017074695b09d2fae5319e2e43d95ae7340616
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 16:17:32 2016 +0100
+
+    ready for 0.10.3
+
+commit c8d29d1b7eecdab79a8b5f1108ab001527100ddd
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 15:49:53 2016 +0100
+
+    - use JSON instead of JSON::PP
+
+commit 01750570fb84df9905a45985974f00908001f0de
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 16:11:02 2016 +0100
+
+    - add perl 5.20
+
+commit f85a1855372f3153b4c1af6d83b43ac0c65fdcb4
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 12:44:43 2016 +0100
+
+    ready for 0.10.2
+
+commit ae897b6ef59c356d70eeb94ef850ef96c521f2f2
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Feb 16 12:30:39 2016 +0100
+
+    - sitch to new automake setup. include mini cpan locally. this allows to build kvmadm without internet access.
+
+commit 9eaf12428fede002965727e6022cc9c3fa9192be
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Sat Feb 6 16:23:42 2016 +0100
+
+    ready for 0.10.1
+
+commit eec3effb1ec09650c061ae90d58ddfbe24bdd103
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Fri Feb 5 23:24:40 2016 +0100
+
+    updated installer to install probes into bin directory
+
+commit 44cf746c44447bc4e178a968e111bdbff95dad14
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Sat Feb 6 15:04:03 2016 +0100
+
+    - bugfix getPid
+
+commit c540788370c4704756dc59726571c007b4eb5748
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Feb 5 18:27:02 2016 +0100
+
+    - cleanup
+
+commit 894773f4d93cbc73f9777cfdd2e79ecd6e865a28
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Feb 5 16:31:57 2016 +0100
+
+    - example probes for pre_start_cmd added
+
+commit 9f918a70ce129e9fc801662b357ab7ef36e5fe4d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Feb 5 15:22:09 2016 +0100
+
+    ready for 0.10.0
+
+commit 349078a241760edd27f6d19894a48ef70d97c512
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Feb 5 15:05:58 2016 +0100
+
+    - pre_start_cmd implemented
+
+commit 0d296225fb5982980201ed1f2b62292563adc826
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Feb 5 13:29:44 2016 +0100
+
+    - updated Illumos::SMF to latest version
+
+commit 78bab41063c0de9e5230bfa427a81022c5f235e3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Sun Oct 4 12:24:19 2015 +0200
+
+    - Illumos::SMF version 0.1.3
+
+commit 74bc7e6df163fc2556a88668d3df5097023942ca
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Sep 28 15:58:07 2015 +0200
+
+    ready for 0.9.3
+
+commit 98fd429ca349b94ae226b569c7bbbf275f10016d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Sep 28 15:48:53 2015 +0200
+
+    - resolve all links to bin
+
+commit f4bc9d3f5880e717acddd5bf902616a7c0fdb5dc
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Sep 25 12:15:53 2015 +0200
+
+    ready for 0.9.2
+
+commit b5547c531fb05dcb5e86d6ecd0f64172ef3eb3e5
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Sep 25 12:14:00 2015 +0200
+
+    - shell quote fix when using zlogin
+
+commit 1b1a2e1778c45b44c8b86ac46b8e494f190834b2
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Sep 25 11:10:12 2015 +0200
+
+    ready for 0.9.1
+
+commit caa53851d67674d47cb2351642487db70de45584
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Sep 25 11:06:31 2015 +0200
+
+    - more time to start/stop kvm
+
+commit 7f15d221d1ab80c01fc61ac8229aadb6e767fa10
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Jun 3 16:16:27 2015 +0200
+
+    - one more kvmcli leftover...
+
+commit 41a9ac0c8c8d60d64bbe218610b636d198eb81ea
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Jun 3 16:00:39 2015 +0200
+
+    - purge fix for zvols and vnics
+
+commit 9869d9e94231a45ee7b76aab72a0368e6a0c7e02
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 22 21:39:01 2015 +0200
+
+    - more time to start kvm
+
+commit 19979bf2e1a569a0764c9e2cba0e2d24021b676c
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed May 13 13:10:09 2015 +0200
+
+    ready for 0.9.0
+
+commit 4e2d7baace26a24f2eb89086a0020a4ab8527891
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 8 13:22:10 2015 +0200
+
+    - update pod
+
+commit 4f44264988e9434b128ffe57326e576a6c92c8d4
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu May 7 14:09:31 2015 +0200
+
+    - make it ready for Illumos::SMF cpan module
+
+commit 03a5cf0b3c97c18e8e727831cc57be61374a53c5
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu May 7 10:21:59 2015 +0200
+
+    - a bit of clenaup
+
+commit 6359f8a184c213d98796abf49a323e184deda4fd
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue May 5 15:36:14 2015 +0200
+
+    ready for 0.9.0-rc5
+
+commit ec31690135d6bd582ed1b2d6237f07da383491aa
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue May 5 14:43:40 2015 +0200
+
+    - print warning if SMF is used in zones but zonesupport is not enabled
+
+commit e15a5d525b1673051be02a87f597d9bf934f2d17
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue May 5 14:27:49 2015 +0200
+
+    - svccfg commands improved if zone is running
+
+commit 61b05eb6f9b9d31008e9feb6304ce0eb97fe81f7
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon May 4 14:37:09 2015 +0200
+
+    - remove kvmcli leftovers
+
+commit 69244a714a403d8037200534b47f6abc103d2528
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon May 4 14:32:10 2015 +0200
+
+    ready for 0.9.0-rc4
+
+commit 9567e46ca430061580db40359c47ac2e5c9ef846
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon May 4 14:13:41 2015 +0200
+
+    - delete --purge option now supports zone cleanup
+
+commit 1d0d4936f4ac9ca44e6c7780865bd955c0f3c6e6
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Fri May 1 17:47:28 2015 +0200
+
+    make this work without smf
+
+commit d321f30c658a0030099d46157f4e4f400b69ba71
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Fri May 1 17:23:24 2015 +0200
+
+    update generated files
+
+commit 5afa497a85e1f2bd77dad74fd277aafbcafa4c6c
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Fri May 1 10:39:06 2015 +0200
+
+    fix install order to make svc import work
+
+commit e235ecd19f9342ce499b4c4ab6ba0c5a78ce2453
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 1 09:50:57 2015 +0200
+
+    ready for 0.9.0-rc3
+
+commit b49b1ebf680079c7730f4a93e889bb53053a9522
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri May 1 09:43:24 2015 +0200
+
+    - fix missing @MON_INFO
+
+commit 5cc481d363ea83f3581a3a2d8c1d4587d9240739
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 23:31:36 2015 +0200
+
+    - fix libdir for symlinks
+
+commit c7bf559b4d6cc1f25516d87d76f11448f33db01e
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 14:37:54 2015 +0200
+
+    - suffixes are case insensitive
+
+commit 9d9e84783ad4cfaba6db263678c1324d9fa00bed
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 14:01:58 2015 +0200
+
+    - remove kvmcli pod and man
+
+commit 9b74aeb7410ffd98d02184dfe3023a431d57e4da
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 13:49:50 2015 +0200
+
+    ready for 0.9.0-rc2
+
+commit c719fcb4ebcb64468405aafa2e55331cd74e6c26
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 13:04:19 2015 +0200
+
+    - remove kvmcli
+
+commit f33801870d11ed55d04fe20ca9addd070919a9f2
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 12:34:48 2015 +0200
+
+    - remove kvmcli
+
+commit a93c853ef78ccc6e358c5bdbf91ef3c1877078ce
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 12:14:15 2015 +0200
+
+    - state option added
+
+commit 48a55c821ee9d6ee55bb8bcdf1f0f9841e910a0f
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 11:35:42 2015 +0200
+
+    - start, stop, restart pod
+
+commit 759e964da1d6d7f7cdb8027bb90baf73c0b61368
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 29 11:08:56 2015 +0200
+
+    - merge kvmcli -> kvmadm; adding start, stop, restart option
+
+commit 6c1ff41ba8bd73ce193bedb390214880c08d84bb
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Apr 28 22:21:02 2015 +0200
+
+    - cleanup
+
+commit cb9ce0dadacbdb4295802b739553f1ed3d6f6936
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Apr 28 14:24:05 2015 +0200
+
+    ready for 0.9.0-rc1
+
+commit 09bf6065bbad7d7554097f5960cff86e3a5c9af3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Apr 28 11:51:49 2015 +0200
+
+    - readme
+
+commit 686791986feb93471e4e970b25fe9c7fe8c8c201
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Apr 28 10:59:58 2015 +0200
+
+    - ready to merge
+
+commit 4b77786f3cb38509baa512b91aaf81d698a68865
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Apr 10 12:04:36 2015 +0200
+
+    - almost there
+
+commit 52263ce48771e3a822875215bbeb0a1f7681e6ac
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Sat Apr 4 10:35:38 2015 +0200
+
+    - fix uninitialized string warning if boot is not set
+
+commit b7ab7da16341f71e78eb86ea57245a2b15109d52
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Apr 1 09:40:11 2015 +0200
+
+    ready for 0.8.2
+
+commit 631bd08b8ed12103b17bc30198b0be7cc9d8b0bf
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Mar 31 16:31:36 2015 +0200
+
+    - fix boot parameter
+
+commit 3bb0d15cb3abe967876970af99ae1bd9bb5d611a
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Mar 31 16:22:03 2015 +0200
+
+    - allow dashes for kvm instance name
+
+commit 87a9d601b924e65ebaaea43db1439c80516088f9
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Sun Jan 18 14:32:23 2015 +0100
+
+    forward port fix from znapzend configure
+
+commit 3a78d1f53b3343b8bad06d24c46f38e581488aab
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 20:29:25 2015 +0100
+
+    ready for 0.8.1
+
+commit 94d1b4c732f48d91538d7093c28b4bec08c57a35
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 20:09:57 2015 +0100
+
+    - console option deprecated
+
+commit a4256c21e1e086e2b2e0e6090b928b838aef9cee
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 16:38:17 2015 +0100
+
+    ready for 0.8.0
+
+commit fa51f4a21ae587446486267a60d71c850f0c40d6
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 16:05:28 2015 +0100
+
+    - kvmcli it shall be
+
+commit 435a488c2fc4b6048bb2b49498205bde21cc66a3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 15:04:24 2015 +0100
+
+    - build kvmmon
+
+commit 7c85133f0de4551aebd68e4adeefece2570b2428
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Jan 5 14:46:01 2015 +0100
+
+    - kvmmon initial release
+
+commit 26e3886a4c29812a4eea22495554c40c1529888d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Jan 2 18:44:13 2015 +0100
+
+    ready for 0.7.0
+
+commit 5796db65460fc8a87893c41e705be4748356cf71
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Jan 2 18:28:51 2015 +0100
+
+    - vnic mtu option added
+
+commit ba7e02c63f8a74bb06a0584fbd292670aa187be3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Jan 2 17:51:05 2015 +0100
+
+    - purge vnic, zvol option
+
+commit 23b2ef802821b8870a433a1cfebf11e81572f18c
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Jan 2 16:26:00 2015 +0100
+
+    - qemu_extra_opts added
+
+commit 4f9c80cfc324ccef1b0bba9fb80679cc9abb8dac
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Dec 23 11:26:26 2014 +0100
+
+    - regex fix
+
+commit ec17d925df9cba9ab00609cd5110410857b3abd9
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Dec 23 10:30:22 2014 +0100
+
+    - anchor regex
+
+commit d02374770ef6b1870ce4d138050c44ab06bc6d19
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Dec 23 10:15:37 2014 +0100
+
+    - cpu type instruction set support
+
+commit 0fad1cc5d4cdff72a37b224d11ac47fd0bd20987
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 16:39:40 2014 +0100
+
+    - add link to man page
+
+commit 6cc6beeb8b9f68b37347a4f96e3f6f8571ad69e8
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 14:33:52 2014 +0100
+
+    - check if FMRI exists before getting state
+
+commit ff34ae00baf15b0259cbb5b8ccd28eb97cf54e86
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 14:03:25 2014 +0100
+
+    getting ready for 0.6.0
+
+commit 04f8a671d1753294d93f5fe5d069c1d2a13b3602
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 13:05:51 2014 +0100
+
+    - kvmadm info added
+
+commit fc94f6a70ea164d6f76524635fa81be4c33ac973
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 11:09:07 2014 +0100
+
+    getting ready for 0.5.6
+
+commit 7178de88918e6024e5fc89d71638f69c34dfc909
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Dec 15 11:04:57 2014 +0100
+
+    - show-cmd functionality added
+
+commit b973d0d0d1f75dfd67e0b1c28441118d3ebd8c92
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Dec 9 13:35:42 2014 +0100
+
+    getting ready for 0.5.4
+
+commit dd3d198db58f421f9567d879ae31e6c227a823ab
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Dec 9 13:28:09 2014 +0100
+
+    - nic name is 'netX'
+
+commit 4e97b43abac6b29396722919044c07bdb357da46
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 18 16:10:17 2014 +0100
+
+    - no extra newline
+    
+    - disk cache options
+
+commit 42cd98544791c28f7f2ee9ae186357f064a44b38
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 18 16:05:22 2014 +0100
+
+    - check if vlan 'over' and 'vlan_id' properties are valid
+
+commit e479a863a5686e86dc3c7a44634220fac9deff0d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 17 20:22:09 2014 +0100
+
+    getting ready for 0.5.2
+
+commit b5c849f8b48bd3c5255613c29078b5be0604ca1e
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 17 16:50:28 2014 +0100
+
+    - perldoc pager fix
+
+commit 29c169bac11f4dfe47891dda94b22652bd8c0f46
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 17 15:33:31 2014 +0100
+
+    - vlan support added
+
+commit a7e80b2ffe6249c4525a4da27870234b06b44360
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Nov 12 17:09:24 2014 +0100
+
+    getting ready for 0.5.0
+
+commit 42e0b7bd097758e4b01ab29e39fb16eaf9257877
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Nov 12 13:01:44 2014 +0100
+
+    - password support for VNC added
+
+commit bd96f4423982a873f05075783f0d32ea0d920929
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Nov 12 11:02:47 2014 +0100
+
+    - vnc can be bound to an IP address now
+
+commit 511dc351a6988e32fe21893f3276a52e98d0309e
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 11 23:35:01 2014 +0100
+
+    - kb_layout option added
+
+commit 5dedd39fe1ba406dfe9449205059c9c737b81ac0
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 11 21:38:40 2014 +0100
+
+    - set directory permissions properly
+      (prevent unprivileged users from accessing sockets)
+
+commit f2c1d53756916cfae1ad34212daded757a69819c
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 11 13:19:47 2014 +0100
+
+    getting ready for v0.4.2
+
+commit bb095b808119ab8654b5a399942836d8c75faab2
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 11 13:02:43 2014 +0100
+
+    - generate a random uuid on creation
+
+commit fac0f3575bc508aa614c78581d42a92ef230ce79
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Nov 11 10:43:19 2014 +0100
+
+    - uuid option added
+
+commit 70fb8e9b32b9501662ac743a44a955ec5145a81f
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 23:25:44 2014 +0100
+
+    - vga none when nographic
+
+commit cb605a0e8dfd2d8af13bfea4e81a8ca5b01adaed
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 23:16:36 2014 +0100
+
+    - vnc is now optional
+
+commit f994cc16298d9b9a49f7dce85db3b07ef7f7cb1f
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 19:47:35 2014 +0100
+
+    - import added. create checks if instance already exists
+
+commit 6c1a14047ea98e0ea6f49986f292ba2ab7fdef69
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 18:54:32 2014 +0100
+
+    - config retry includes JSON parsing
+
+commit aabfb2755b32d67cbb02f3f5ea8c3114c3190240
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 16:09:49 2014 +0100
+
+    getting ready for 0.4.0
+
+commit 68d08c762763dece40116e28fd20308649516476
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 15:58:08 2014 +0100
+
+    - changed 'tag' -> 'name'
+
+commit d242ef185804ba752b22fb9061a2c7133537b406
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 15:53:25 2014 +0100
+
+    - bugfix: cleanup timeout
+
+commit c3b97e146a3c1f5d9b1180a640c8b62e70170de2
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 15:24:51 2014 +0100
+
+    - cleanup RUN_PATH on stop as option
+
+commit 295ffc43957cf01222f3fb83ebc6ada55e8f22dc
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 14:30:28 2014 +0100
+
+    - shutdown method can be specified
+
+commit e77a04979bf3dc096491b38f466747173bb1ba03
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 13:01:39 2014 +0100
+
+    - disk cache option added
+
+commit 0cb03c4e73ca34b37c09afb74c2d9b41d05c97dc
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Mon Nov 10 12:31:28 2014 +0100
+
+    fixes based on hadfls comments
+
+commit 35c1ceff183df8b4105c6e040ef6e278d6479e78
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Sun Nov 9 14:54:07 2014 +0100
+
+    Implement cpu_type as requested in issue #20
+
+commit 0875be1785ec08b5b1cf8a6a4c1cdb625594ff0d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Nov 10 12:16:52 2014 +0100
+
+    - complex cpu topology fix
+
+commit e216183aa8b41b535442497b4ec2fc2c2feb370e
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Sun Nov 9 15:39:08 2014 +0100
+
+    minor cleanup
+
+commit d8da8ba1fca0a2e663d25981735e6b61b860f9a2
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Mon Nov 10 11:20:20 2014 +0100
+
+    small change as sugested by hadfl
+
+commit 385a257b3faf6a98375633cd81876965a48bb8a8
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Sun Nov 9 17:20:40 2014 +0100
+
+    also exclude pid as a serial_tag
+
+commit ae78b36ffdcb8f77dc352f51ddbaaf2dcedc6111
+Author: hal9k <hal9k-illumos@skynet.be>
+Date:   Sun Nov 9 13:49:13 2014 +0100
+
+    avoid collision with serial tag names with vnc and monitor.
+
+commit 670415d89fa352ed4e05f3d63d92c30d5a2cb136
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 20:35:11 2014 +0100
+
+    - cui honorem, honorem
+
+commit 4ae129b96d8f9a4fb3ae8a3752e96184a1306159
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 16:50:55 2014 +0100
+
+    getting ready for 0.3.1
+
+commit 6bf987beb438aa57a78ebed66978da93c375c732
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 16:45:20 2014 +0100
+
+    - FMRI: proper handling of special characters (e.g. '=')
+
+commit ab712dca9e548a0c78d3097c0e47923cba5a927c
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 14:20:23 2014 +0100
+
+    - getting ready for 0.3.0
+
+commit 8e54ccadecb4271bedb04ad18b64178aa234d838
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 13:13:58 2014 +0100
+
+    - serial support added
+
+commit 61d4b6be94243c4d2b11a0ac57a02dd9a826fc7d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 11:31:07 2014 +0100
+
+    - usbdevice tablet option added
+
+commit 4a1948537f05c65e26857165a902dd5fdfd8a19d
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 10:48:55 2014 +0100
+
+    - sockets for vnc supported
+
+commit 3ac1090c7967273f949d9350701140c443fb44b6
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Nov 7 09:05:23 2014 +0100
+
+    - hpet can now be set to [true, false]
+
+commit 5aaf53ca72bfe3342bec5d2de77744be824d5dd4
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 19:59:19 2014 +0100
+
+    - corrected vnc port
+
+commit 63c7daa9a345177a8577b5126cd7868a2cc644df
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 16:48:01 2014 +0100
+
+    - readme wording
+
+commit b9fafc56f089ec94701a565df0dc0b511d39e3d1
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 16:30:39 2014 +0100
+
+    - added license and copyright for system-kvm
+
+commit 7b58c091d6a99e196a9fdb364ee4da122263daa5
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 16:20:38 2014 +0100
+
+    - documentation syntax correction
+
+commit 027e93c22d571333e1a35f80c8ae493187921ff3
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 16:17:40 2014 +0100
+
+    be more careful with replacement strings in service manifest
+
+commit 390fae936c1fbd6178789f82614ab866bf465d4d
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 16:11:05 2014 +0100
+
+    fix readme version
+
+commit cc42724d1ecb8851432f040c542e1114a50427d8
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 16:00:47 2014 +0100
+
+    sync generated files for 0.2.1
+
+commit 288ca53524eb2af34e93b29a8dfd132ce77542d7
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 15:56:59 2014 +0100
+
+    getting ready for 0.2.1
+
+commit 410faa1d2e33ddb322cd4305d7202a9ae1c799da
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 15:56:21 2014 +0100
+
+    fix mandir replacement in manifest
+
+commit eab92860aa36efedeec1856987200d0b25c88b0d
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 15:26:54 2014 +0100
+
+    get ready for 0.2.0 release
+
+commit f5671567d1c0c82e451ce598e6d5d8c93ea28ada
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 15:05:58 2014 +0100
+
+    - make travis work
+
+commit 3681f9818ceb7e19abdb14e0473038cb201d46e9
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 14:53:47 2014 +0100
+
+    - available KVM instance properties added
+
+commit 49ef8e5ccd877d84be3586b6b138a33dc62023ce
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 14:42:01 2014 +0100
+
+    - little documentation added
+
+commit 7fa6c2f89fbc2b56c7f9e8baf983ed082f2b1066
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 14:23:30 2014 +0100
+
+    fix redundant redundancy
+
+commit 5f7741ec141b550be1a0148bc56df88204f58826
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Thu Nov 6 14:19:38 2014 +0100
+
+    tweak datarootdir, exec_prefix and mandir to work directly without shell replacement, fixing the generated smf in the process
+
+commit fa072a12c1226481f69ee69c8143e0be2886f071
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 10:48:14 2014 +0100
+
+    - complex cpu setting is now possible
+
+commit acaabae62601210b4ca119359a074debb261d467
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Nov 6 10:05:17 2014 +0100
+
+    - display not port
+
+commit 9ae1d411ebca7501604dac2f21e83f9a66360a8a
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Sat Oct 18 17:40:04 2014 +0200
+
+    ready for 0.1.0
+
+commit 40775fa380b6c8cad8ab44f31565c3b258e99480
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Sat Oct 18 17:31:45 2014 +0200
+
+    - merge code cleanup
+
+commit f11d9d43a516665d0ecfd642993acde88def4578
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 16:31:43 2014 +0200
+
+    - refresh method added
+
+commit ec96a82f783c1cca52e91c81cb6150470463beea
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 14:32:08 2014 +0200
+
+    - minimise refresh FMRI
+
+commit 7d5a28e2381cea8fa596c8e156d9ef28f3424556
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 14:17:32 2014 +0200
+
+    - bugfix
+
+commit a586aad3da8da7e9731bf73309f9616bf86a5430
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 13:36:28 2014 +0200
+
+    - kvmadm
+
+commit 8a4eae49384df49cbddf2217d3260400f781f7c8
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Sat Oct 18 15:46:49 2014 +0200
+
+    it is --disable-svcimport!
+
+commit 40fa4b0d34b21964542a3d1d63494780d51e0ddc
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Sat Oct 18 15:43:22 2014 +0200
+
+    get kvm ready for release
+
+commit bbd097b015b2c0ca13838d50eb2314a934ef8140
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 13:23:54 2014 +0200
+
+    - bugfix: missing brackets
+
+commit 08c120b79ca93a37f48b3907832e36eba4c9df93
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Fri Oct 17 13:06:21 2014 +0200
+
+    - ready for v0.1
+
+commit 2bafb239eacacc47147d776b11be94d551fa8bb0
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Wed Oct 15 09:57:59 2014 +0200
+
+    - bugfixes
+
+commit c83427e7c66f652e8033c01b036e60d7ff0915f3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Thu Oct 9 15:18:20 2014 +0200
+
+    - chomp user input
+
+commit 4dc078cc64da1dc71e74052fe6874d1f281b2b4c
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 19:58:48 2014 +0200
+
+    - check config implemented
+
+commit d6426b04616d7dc761b7d1ff6b02d7ed085bf98e
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 19:36:52 2014 +0200
+
+    - cosmetics
+
+commit b4b9fa4a0e326952349877cb9351b9c0360f15df
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 19:32:57 2014 +0200
+
+    - export
+
+commit 636ab232029992548aac94881fd78535f4949bbf
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 19:30:45 2014 +0200
+
+    - check if config was edited
+
+commit 50a538f642eb85b54cc50ae91feac110f1aa7c46
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 16:53:19 2014 +0200
+
+    - export all or a specific kvm config
+
+commit da2804cd880d953202ccbe33f535eb8e354b28a3
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 16:46:12 2014 +0200
+
+    - typo
+
+commit b34c1636a09f5562f74be1b4e9a40e3e621dd0df
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 16:28:17 2014 +0200
+
+    - no need for a regex
+
+commit 8f23a6c21c4f0476abf84078b12644b987a85343
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 16:21:12 2014 +0200
+
+    - fix index
+
+commit 2bb0c89be5c3021d4f6a150d8387bb5d345bb512
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 16:08:34 2014 +0200
+
+    - baseline
+
+commit 1c354f3830dfc01191834933a7a117160a82322a
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Oct 6 20:10:20 2014 +0200
+
+    - fixing manifest
+
+commit 83c83a78a86037f0959087ea4bf37ffa76502139
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Tue Oct 7 06:29:34 2014 +0200
+
+    - system-kvm added
+
+commit 5fa7c384a83d58881e71772472e1d8167e72228e
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Oct 6 11:10:57 2014 +0200
+
+    - smf manifest
+
+commit 759a20b8699b5882024bf30977471f0a93861f5b
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Oct 6 10:49:58 2014 +0200
+
+    - kvmadm it shall be
+
+commit ab2494f33ab2680c572af6d8025530b5d555352f
+Author: Dominik Hassler <hadfl@cpan.org>
+Date:   Mon Oct 6 10:44:35 2014 +0200
+
+    - perllib comment
+
+commit 6a5fd14760fc76f39158daea450564f061237945
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Mon Oct 6 10:00:58 2014 +0200
+
+    initial COPYRIGHT
+
+commit b3bf887fd97a83d8f62e251d15e6e05cb4108465
+Author: Tobias Oetiker <tobi@oetiker.ch>
+Date:   Mon Oct 6 09:59:57 2014 +0200
+
+    initial build support added
+
+commit edf0d0d3565f95456cd2acb2a97b6eb9a0f63a51
+Author: Dominik Hassler <hadfl.oss@gmail.com>
+Date:   Sat Oct 4 14:08:25 2014 +0200
+
+    - remove line feeds
+
+commit 0ca7c96d5ed4c22d994a2d7737e3a976586f0f8d
+Author: Dominik Hassler <hadfl.oss@gmail.com>
+Date:   Sat Oct 4 13:59:27 2014 +0200
+
+    - export
+
+commit 9bf9cf9ea5a3f3865f35f5e74b77840245616e49
+Author: Dominik Hassler <hadfl.oss@gmail.com>
+Date:   Sat Oct 4 11:16:13 2014 +0200
+
+    Initial commit

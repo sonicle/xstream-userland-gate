@@ -1,0 +1,14 @@
+--- polkit-0.110/test/mocklibc/src/netdb.c	Wed Jul 24 18:53:07 2013
++++ polkit-0.110/test/mocklibc/src/netdb.c	Wed Jul 24 18:53:50 2013
+@@ -51,9 +51,10 @@
+   return 1;
+ }
+ 
+-void endnetgrent(void) {
++int endnetgrent(void) {
+   netgroup_free_all(global_netgroup_head);
+   global_netgroup_head = NULL;
++  return 0;
+ }
+ 
+ int getnetgrent(char **host, char **user, char **domain) {

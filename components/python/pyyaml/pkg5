@@ -1,0 +1,32 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/libyaml",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/pyyaml-27",
+        "library/python/pyyaml-35",
+        "library/python/pyyaml-37",
+        "library/python/pyyaml-39",
+        "library/python/pyyaml"
+    ],
+    "name": "PyYAML"
+}

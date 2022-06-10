@@ -1,0 +1,309 @@
+--- lxdm-0.4.1/src/lxcom.c	Tue Oct  8 15:12:12 2013
++++ lxdm-0.4.1/src/lxcom.c	Wed Mar 12 15:55:03 2014
+@@ -12,26 +12,43 @@
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <sys/stat.h>
++
++#if defined(__sun)
++#include <ucred.h>
++#include <sys/filio.h>
++/* GB #define _XPG4_2 */
++#elif !defined(linux) && !defined(__NetBSD__)
++#include <sys/ucred.h>
++#endif
++
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ #include <sys/ioctl.h>
+-#if !defined(linux) && !defined(__NetBSD__)
+-#include <sys/ucred.h>
+-#endif
+ 
+ #ifndef SCM_CREDS
+-#define SCM_CREDS SCM_CREDENTIALS
++  #if defined(SCM_CREDENTIALS)
++    #define SCM_CREDS SCM_CREDENTIALS
++  #elif defined(SCM_UCRED)
++    #define SCM_CREDS SCM_UCRED
++  #else
++    #error not support unix socket creds
++  #endif
+ #endif
+ 
+ #ifndef linux
+-#  ifndef __NetBSD__
++#  if defined(__sun)
++#    define LXDM_PEER_UID(c)   ucred_geteuid(c)
++#    define LXDM_PEER_GID(c)   ucred_getegid(c)
++#    define LXDM_PEER_PID(c)   ucred_getpid(c)
++#  elif !defined(__NetBSD__)
+ #    define LXDM_PEER_UID(c)   ((c)->cr_uid)
+ #    define LXDM_PEER_GID(c)   ((c)->cr_groups[0])
++#    define LXDM_PEER_PID -1
+ #  else
+ #    define LXDM_PEER_UID(c)   ((c)->sc_uid)
+ #    define LXDM_PEER_GID(c)   ((c)->sc_gid)
++#    define LXDM_PEER_PID -1
+ #  endif
+-#  define LXDM_PEER_PID -1
+ #else
+ #  define LXDM_PEER_UID(c)   ((c)->uid)
+ #  define LXDM_PEER_GID(c)   ((c)->gid)
+@@ -38,11 +55,14 @@
+ #  define LXDM_PEER_PID(c)   ((c)->pid)
+ #endif
+ 
+-#ifdef __NetBSD__
++#if defined(__NetBSD__)
+ typedef struct sockcred LXDM_CRED;
++#elif defined(__sun)
++typedef ucred_t LXDM_CRED;
+ #else
+ typedef struct ucred LXDM_CRED;
+ #endif
++
+ #include <glib.h>
+ #include "lxcom.h"
+ 
+@@ -89,13 +109,13 @@
+ 
+ static gboolean lxcom_check(GSource *source)
+ {
+-	return TRUE;
++	return (((LXComSource*)source)->poll.revents&G_IO_IN)?TRUE:FALSE;
+ }
+ 
+ static gboolean lxcom_dispatch (GSource *source,GSourceFunc callback,gpointer user_data)
+ {
+ 	char buf[4096];
+-	char ctrl[CMSG_SPACE(sizeof(struct ucred))];
++	char ctrl[/*CMSG_SPACE(sizeof(LXDM_CRED))*/1024];
+ 	struct sockaddr_un peer;
+ 	struct iovec v={buf,sizeof(buf)};
+ 	struct msghdr h={&peer,sizeof(peer),&v,1,ctrl,sizeof(ctrl),0};
+@@ -118,12 +138,15 @@
+ 			char **argv;
+ 			GString *res;
+ 
+-			#ifndef __NetBSD__
+-			size = sizeof(LXDM_CRED);
+-			#else
+-			if (cmptr->cmsg_len < SOCKCREDSIZE(0)) break;
+-			size = SOCKCREDSIZE(((cred *)CMSG_DATA(cmptr))->sc_ngroups);
+-			#endif
++                        #if defined(__sun)
++                         size = ucred_size();
++                        #elif defined(__NetBSD__)
++                         if (cmptr->cmsg_len < SOCKCREDSIZE(0)) break;
++                         size = SOCKCREDSIZE(((cred *)CMSG_DATA(cmptr))->sc_ngroups);
++                        #else
++                         size = sizeof(LXDM_CRED);
++                        #endif
++
+ 			if (cmptr->cmsg_len != CMSG_LEN(size)) break;
+                         if (cmptr->cmsg_level != SOL_SOCKET) break;
+                         if (cmptr->cmsg_type != SCM_CREDS) break;
+@@ -130,7 +153,7 @@
+                         c=(LXDM_CRED*)CMSG_DATA(cmptr);
+ 			if(g_shell_parse_argv(buf,&argc,&argv,NULL))
+ 			{
+-				res=((LXComFunc)callback)(user_data,LXDM_PEER_UID(c),LXDM_PEER_PID(c),argc,argv);
++				res=((LXComFunc)callback)(user_data,ucred_geteuid(c),ucred_getpid(c),argc,argv);
+ 				g_strfreev(argv);
+ 				if(res)
+ 				{
+@@ -164,12 +187,17 @@
+ 	assert(argc>0 && argv!=NULL);
+ 
+ 	do{
++	g_message("lxcom_func: arg 0 = %s\n",argv[0]);
+ 	if(!strcmp(argv[0],"SIGNAL"))
+ 	{
+ 		if(argc!=2) break;
+-		if((pid==-1 && uid==0) || pid==getpid())
++		g_message("lxcom_func: arg 1 = %s\n",argv[1]);
++		g_message("lxcom_func: pid = %d, uid=%d, getpid()=%d\n",pid,uid,getpid());
++/*		if((pid==-1 && uid==0) || pid==getpid())*/
++		if(uid==0 || pid==getpid() || pid==0)
+ 		{
+ 			int sig=atoi(argv[1]);
++			g_message("lxcom_func: sig = %d\n",sig);
+ 			if(sig==SIGCHLD)
+ 			{
+ 				for(p=child_watch_list;p!=NULL;p=n)
+@@ -177,9 +205,11 @@
+ 					ChildWatch *item=p->data;
+ 					int status;
+ 					n=p->next;
++					g_message("lxcom_func: waitpid = %d\n",item->pid);
+ 					if(waitpid(item->pid,&status,WNOHANG)>0)
+ 					{
+ 						child_watch_list=g_slist_delete_link(child_watch_list,p);
++						g_message("lxcom_func: waitpid found, calling callback\n");
+ 						item->func(item->data,item->pid,status);
+ 						g_free(item);
+ 					}
+@@ -192,6 +222,7 @@
+ 					SignalHandler *item=p->data;
+ 					if(item->signal==sig)
+ 					{
++						g_message("lxcom_func: found signal handler for %d, calling callback\n",sig);
+ 						item->func(item->data,sig);
+ 						break;
+ 					}
+@@ -259,7 +290,11 @@
+ 	strcpy(su.sun_path,sock);
+ 	self_server_fd=socket(AF_UNIX,SOCK_DGRAM,0);
+ 	assert(self_server_fd!=-1);
+-	ret=setsockopt(self_server_fd,SOL_SOCKET,SO_PASSCRED,&on,sizeof(on));
++#if defined(__sun)
++        ret=setsockopt(self_server_fd,SOL_SOCKET,SO_RECVUCRED,&on,sizeof(on));
++#else
++        ret=setsockopt(self_server_fd,SOL_SOCKET,SO_PASSCRED,&on,sizeof(on));
++#endif
+ 	assert(ret==0);
+ 	fcntl(self_server_fd,F_SETFL,O_NONBLOCK|fcntl(self_server_fd,F_GETFL));
+ 	ret=bind(self_server_fd,(struct sockaddr*)&su,sizeof(su));
+@@ -290,8 +325,16 @@
+ {
+ 	struct iovec iov[1] ={{(void*)buf,count,}};
+         struct msghdr msg = { 0, 0, iov, 1, 0, 0, 0 };
++/* GB #if !defined(linux) && !defined(__NetBSD__) && !defined(__sun) */
+ #if !defined(linux) && !defined(__NetBSD__)
+-        char ctrl[CMSG_SPACE(sizeof(LXDM_CRED))];
++
++        #if defined(__sun)
++         int size = ucred_size();
++	#else
++	 int size = sizeof(LXDM_CRED);
++	#endif
++
++        char ctrl[CMSG_SPACE(size)];
+         struct cmsghdr  *cmptr;
+ 	char *p;
+ 	int i;
+@@ -300,11 +343,11 @@
+         msg.msg_controllen = sizeof(ctrl);
+ 
+         cmptr = CMSG_FIRSTHDR(&msg);
+-        cmptr->cmsg_len   = CMSG_LEN(sizeof(LXDM_CRED));
++        cmptr->cmsg_len   = CMSG_LEN(size);
+         cmptr->cmsg_level = SOL_SOCKET;
+         cmptr->cmsg_type  = SCM_CREDS;
+ 	p=(char*)CMSG_DATA(cmptr);
+-	for(i=0;i<sizeof(LXDM_CRED);i++)
++	for(i=0;i<ucred_size();i++)
+ 		p[i]=0;
+ #endif
+ 	return sendmsg(s,&msg,0);
+@@ -322,7 +365,8 @@
+ 
+ gboolean lxcom_send(const char *sock,const char *buf,char **res)
+ {
+-	int s;
++	int sr;
++	int sw;
+ 	int ret;
+ 	struct sockaddr_un su;
+ 	int count=strlen(buf)+1;
+@@ -330,45 +374,47 @@
+ 	
+ 	memset(&su,0,sizeof(su));
+ 	su.sun_family=AF_UNIX;
+-	s=socket(AF_UNIX,SOCK_DGRAM,0);
+-	assert(s!=-1);
+-	fcntl(s,F_SETFL,O_NONBLOCK|fcntl(self_server_fd,F_GETFL));
+-	s=socket(AF_UNIX,SOCK_DGRAM,0);
+-	assert(s!=-1);
+-	fcntl(s,F_SETFL,O_NONBLOCK|fcntl(self_client_fd,F_GETFL));
++	sr=socket(AF_UNIX,SOCK_DGRAM,0);
++	assert(sr!=-1);
++	fcntl(sr,F_SETFL,O_NONBLOCK|fcntl(self_server_fd,F_GETFL));
++	sw=socket(AF_UNIX,SOCK_DGRAM,0);
++	assert(sw!=-1);
++	fcntl(sw,F_SETFL,O_NONBLOCK|fcntl(self_client_fd,F_GETFL));
+ 	strcpy(su.sun_path,sock);
+-	ret=connect(s,(struct sockaddr*)&su,sizeof(su));
++	ret=connect(sw,(struct sockaddr*)&su,sizeof(su));
+ 	if(ret!=0)
+ 	{
+ 		perror("connect");
+-		close(s);
++		close(sw);
++		close(sr);
+ 		return -1;
+ 	}
+ 
+ 	if(res)
+ 	{
+-#ifdef __linux__
+-		su.sun_path[0]=0;
+-		sprintf(su.sun_path+1,"/var/run/lxdm/lxdm-%d.sock",getpid());
+-#else
+-		addr=g_strdup_printf("/var/run/lxdm/lxdm-%d.sock",getpid());
+-		unlink(addr);
+-		strcpy(su.sun_path,addr);
+-#endif
+-		ret=bind(s,(struct sockaddr*)&su,sizeof(su));
++                addr=g_strdup_printf("/var/run/lxdm/lxdm-%d.sock",getpid());
++                unlink(addr);
++                strcpy(su.sun_path,addr);
++		g_message("binding on %s\n",su.sun_path);
++		ret=bind(sr,(struct sockaddr*)&su,sizeof(su));
++
+ 		if(ret!=0)
+ 		{
+-			close(s);
++			close(sr);
++			close(sw);
+ 			g_free(addr);
+-			perror("bind");
++			addr=g_strdup_printf("---bind---errno=%d!!! ",errno);
++			perror(addr);
++			g_free(addr);
+ 			return FALSE;
+ 		}
+ 	}
+ 
+-	ret=lxcom_write(s,buf,count);
++	ret=lxcom_write(sw,buf,count);
+ 	if(ret!=count)
+ 	{
+-		close(s);
++		close(sw);
++		close(sr);
+ 		if(addr) unlink(addr);
+ 		g_free(addr);
+ 		return FALSE;
+@@ -377,17 +423,17 @@
+ 	{
+ 		struct pollfd pf;
+ 		*res=NULL;
+-		pf.fd=s;
++		pf.fd=sr;
+ 		pf.events=POLLIN;
+ 		pf.revents=0;
+ 		ret=poll(&pf,1,3000);
+ 		if(ret==1 && (pf.revents & POLLIN))
+ 		{
+-			ret=ioctl(s,FIONREAD,&count);
++			ret=ioctl(sr,FIONREAD,&count);
+ 			if(ret==0)
+ 			{
+ 				char *p=g_malloc(count+1);
+-				ret=recv(s,p,count,0);
++				ret=recv(sr,p,count,0);
+ 				if(ret>=0)
+ 				{
+ 					p[ret]=0;
+@@ -400,7 +446,8 @@
+ 			}
+ 		}
+ 	}
+-	close(s);
++	close(sr);
++	close(sw);
+ 	if(addr) unlink(addr);
+ 	g_free(addr);
+ 	return TRUE;

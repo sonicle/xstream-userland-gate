@@ -1,0 +1,44 @@
+--- lxdm-0.4.1/src/xconn.c	Thu Sep 26 12:31:04 2013
++++ lxdm-0.4.1/src/xconn.c	Tue Oct  1 14:24:57 2013
+@@ -172,25 +172,24 @@
+ 	free(c);
+ }
+ 
+-#if 0
+ static xcb_window_t xconn_get_root(xconn_t c)
+ {
+ 	const xcb_setup_t *setup;
++	g_message("xconn_get_root\n");
+ 	setup=xcb_get_setup(c->c);
+ 	xcb_screen_iterator_t iter = xcb_setup_roots_iterator (setup);
+ 	xcb_screen_t *screen = iter.data;
+ 	return screen->root;
+ }
+-#endif
+ 
+ void xconn_clean(xconn_t c)
+ {
+-#if 0
+ 	xcb_query_tree_cookie_t wintree;
+ 	xcb_query_tree_reply_t *rep;
+ 	xcb_window_t *children;
+ 	xcb_window_t root;
+ 	int i,len;
++	g_message("xconn_clean\n");
+ 	if(!c) return;
+ 	root=xconn_get_root(c);
+ 	wintree = xcb_query_tree(c->c, root);
+@@ -197,12 +196,12 @@
+ 	rep = xcb_query_tree_reply(c->c, wintree, 0);
+ 	if(!rep) return;
+ 	len = xcb_query_tree_children_length(rep);
++	g_message("killing %d children\n",len);
+ 	children = xcb_query_tree_children(rep);
+ 	for(i=0;i<len;i++)
+ 		xcb_kill_client(c->c,children[i]);
+ 	free(rep);
+ 	xcb_flush(c->c);
+-#endif
+ }
+ 
+ #endif

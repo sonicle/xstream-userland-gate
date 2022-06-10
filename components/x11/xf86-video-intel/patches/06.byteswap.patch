@@ -1,0 +1,18 @@
+--- a/src/sna/sna_video.c.orig	Wed Jan 15 01:39:46 2020
++++ b/src/sna/sna_video.c	Wed Jan 15 01:41:19 2020
+@@ -68,9 +68,15 @@
+ #define bswap_32 bswap32
+ #endif
+ #else
++
++#if defined (sun)
++#define bswap_32 BSWAP_32
++#else
+ #include <byteswap.h>
+ #endif
+ 
++#endif
++
+ #ifdef SNA_XVMC
+ #define _SNA_XVMC_SERVER_
+ #include "sna_video_hwmc.h"

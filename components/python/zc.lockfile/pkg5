@@ -1,0 +1,30 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby"
+    ],
+    "fmris": [
+        "library/python/zc.lockfile-27",
+        "library/python/zc.lockfile-35",
+        "library/python/zc.lockfile-37",
+        "library/python/zc.lockfile-39",
+        "library/python/zc.lockfile"
+    ],
+    "name": "zc.lockfile"
+}

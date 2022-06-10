@@ -1,0 +1,22 @@
+--- polkit-0.110/src/polkitbackend/Makefile.in	Thu Apr  3 09:36:41 2014
++++ polkit-0.110/src/polkitbackend/Makefile.in	Thu Apr  3 09:37:11 2014
+@@ -425,7 +425,7 @@
+ rules_DATA = 50-default.rules
+ 
+ # ----------------------------------------------------------------------------------------------------
+-libprivdir = $(prefix)/lib/polkit-1
++libprivdir = $(libdir)/polkit-1
+ polkitd_SOURCES = \
+ 					polkitd.c			\
+ 	$(NULL)
+--- polkit-0.110/src/polkitagent/Makefile.in	Thu Apr  3 09:37:45 2014
++++ polkit-0.110/src/polkitagent/Makefile.in	Thu Apr  3 09:38:16 2014
+@@ -430,7 +430,7 @@
+         $(NULL)
+ 
+ libpolkit_agent_1_la_LDFLAGS = -export-symbols-regex '(^polkit_.*)'
+-libprivdir = $(prefix)/lib/polkit-1
++libprivdir = $(libdir)/polkit-1
+ polkit_agent_helper_1_SOURCES = polkitagenthelperprivate.c \
+ 	polkitagenthelperprivate.h $(NULL) $(am__append_1) \
+ 	$(am__append_2)

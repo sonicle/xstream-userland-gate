@@ -1,0 +1,2219 @@
+Build started at 2020-03-12T22:43:19.022113
+Main binary: /usr/bin/python3.5
+Python system: SunOS
+The Meson build system
+Version: 0.51.2
+Source dir: /data/sources/sonicle/xstream-userland-gate/components/library/elogind/elogind-243.7
+Build dir: /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86
+Build type: native build
+Project name: elogind
+Project version: 243.7
+Appending CFLAGS from environment: '-m32 -O3'
+Appending LDFLAGS from environment: '-m32'
+Appending CPPFLAGS from environment: '-m32'
+Sanity testing C compiler: /usr/gcc/6/bin/gcc
+Is cross compiler: False.
+Sanity check compiler command line: /usr/gcc/6/bin/gcc -m32 -O3 -m32 -pipe /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.c -o /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.exe
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.exe
+Appending CFLAGS from environment: '-m32 -O3'
+Appending LDFLAGS from environment: '-m32'
+Appending CPPFLAGS from environment: '-m32'
+Sanity testing C compiler: /usr/gcc/6/bin/gcc
+Is cross compiler: False.
+Sanity check compiler command line: /usr/gcc/6/bin/gcc -m32 -O3 -m32 -pipe /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.c -o /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.exe
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86/meson-private/sanitycheckc.exe
+C compiler for the host machine: /usr/gcc/6/bin/gcc (gcc 6.5.0 "gcc (XStreamOS 6.5.0-oi-2) 6.5.0")
+Build machine cpu family: x86
+Build machine cpu: i686
+Running command: /usr/bin/realpath --relative-to=/data/sources/sonicle/xstream-userland-gate/components/library/elogind/build/i86 /data/sources/sonicle/xstream-userland-gate/components/library/elogind/elogind-243.7
+--- stdout ---
+../../elogind-243.7
+
+--- stderr ---
+
+
+Running command: /usr/bin/test -L /bin
+--- stdout ---
+
+--- stderr ---
+
+
+Running command: /usr/bin/test -L /usr/sbin
+--- stdout ---
+
+--- stderr ---
+
+
+Running command: /usr/bin/test -L /var/run
+--- stdout ---
+
+--- stderr ---
+
+
+Message: Setting VARRUN_IS_SYMLINK to: false
+Program tools/meson-check-compilation.sh found: YES (/data/sources/sonicle/xstream-userland-gate/components/library/elogind/elogind-243.7/tools/meson-check-compilation.sh)
+Program tools/meson-build.sh found: YES (/data/sources/sonicle/xstream-userland-gate/components/library/elogind/elogind-243.7/tools/meson-build.sh)
+Running compile:
+Working directory:  /tmp/tmp6zo4u9oo
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp6zo4u9oo/testfile.c -o /tmp/tmp6zo4u9oo/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wextra 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wextra: YES 
+Running compile:
+Working directory:  /tmp/tmp0agjauzt
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp0agjauzt/testfile.c -o /tmp/tmp0agjauzt/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=undef 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=undef: YES 
+Running compile:
+Working directory:  /tmp/tmphhdjmyzl
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmphhdjmyzl/testfile.c -o /tmp/tmphhdjmyzl/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wlogical-op 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wlogical-op: YES 
+Running compile:
+Working directory:  /tmp/tmpgn3jg0m1
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpgn3jg0m1/testfile.c -o /tmp/tmpgn3jg0m1/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wmissing-include-dirs 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Running compile:
+Working directory:  /tmp/tmpfdw2fevy
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfdw2fevy/testfile.c -o /tmp/tmpfdw2fevy/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wold-style-definition 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Running compile:
+Working directory:  /tmp/tmp2s4fazwi
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp2s4fazwi/testfile.c -o /tmp/tmp2s4fazwi/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wpointer-arith 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Running compile:
+Working directory:  /tmp/tmp_fkcv4gq
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp_fkcv4gq/testfile.c -o /tmp/tmp_fkcv4gq/output.obj -pipe -c -m32 -O3 -m32 -O0 -Winit-self 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Winit-self: YES 
+Running compile:
+Working directory:  /tmp/tmpbf66aul4
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpbf66aul4/testfile.c -o /tmp/tmpbf66aul4/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wfloat-equal 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Running compile:
+Working directory:  /tmp/tmpq31dtxb_
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpq31dtxb_/testfile.c -o /tmp/tmpq31dtxb_/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wsuggest-attribute=noreturn 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES 
+Running compile:
+Working directory:  /tmp/tmpfcp_mp04
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfcp_mp04/testfile.c -o /tmp/tmpfcp_mp04/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=missing-prototypes 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Running compile:
+Working directory:  /tmp/tmpfuwx_b50
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfuwx_b50/testfile.c -o /tmp/tmpfuwx_b50/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=implicit-function-declaration 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Running compile:
+Working directory:  /tmp/tmp_97fajtm
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp_97fajtm/testfile.c -o /tmp/tmp_97fajtm/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=missing-declarations 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Running compile:
+Working directory:  /tmp/tmpdvlyn3ay
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpdvlyn3ay/testfile.c -o /tmp/tmpdvlyn3ay/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=return-type 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=return-type: YES 
+Running compile:
+Working directory:  /tmp/tmpb6tuqymm
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpb6tuqymm/testfile.c -o /tmp/tmpb6tuqymm/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=incompatible-pointer-types 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=incompatible-pointer-types: YES 
+Running compile:
+Working directory:  /tmp/tmpxmccluyf
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpxmccluyf/testfile.c -o /tmp/tmpxmccluyf/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=format=2 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=format=2: YES 
+Running compile:
+Working directory:  /tmp/tmpgtfvoqbx
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpgtfvoqbx/testfile.c -o /tmp/tmpgtfvoqbx/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wstrict-prototypes 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Running compile:
+Working directory:  /tmp/tmperr66gby
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmperr66gby/testfile.c -o /tmp/tmperr66gby/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wredundant-decls 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Running compile:
+Working directory:  /tmp/tmp73lpn520
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp73lpn520/testfile.c -o /tmp/tmp73lpn520/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wmissing-noreturn 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Running compile:
+Working directory:  /tmp/tmp9wt_nsnt
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp9wt_nsnt/testfile.c -o /tmp/tmp9wt_nsnt/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wimplicit-fallthrough=5 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ gcc: error: unrecognized command line option '-Wimplicit-fallthrough=5'; did you mean '-Wno-fallthrough'?
+
+Compiler for C supports arguments -Wimplicit-fallthrough=5: NO 
+Running compile:
+Working directory:  /tmp/tmpq_f46sn0
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpq_f46sn0/testfile.c -o /tmp/tmpq_f46sn0/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wshadow 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wshadow: YES 
+Running compile:
+Working directory:  /tmp/tmp4zxvisjb
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp4zxvisjb/testfile.c -o /tmp/tmp4zxvisjb/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wendif-labels 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wendif-labels: YES 
+Running compile:
+Working directory:  /tmp/tmpe3u5a7ia
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpe3u5a7ia/testfile.c -o /tmp/tmpe3u5a7ia/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wstrict-aliasing=2 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Running compile:
+Working directory:  /tmp/tmpnq9aob6v
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpnq9aob6v/testfile.c -o /tmp/tmpnq9aob6v/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wwrite-strings 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Running compile:
+Working directory:  /tmp/tmpskx_z4n3
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpskx_z4n3/testfile.c -o /tmp/tmpskx_z4n3/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=overflow 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=overflow: YES 
+Running compile:
+Working directory:  /tmp/tmpvkpyfevx
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpvkpyfevx/testfile.c -o /tmp/tmpvkpyfevx/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=shift-count-overflow 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=shift-count-overflow: YES 
+Running compile:
+Working directory:  /tmp/tmprda8u52a
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmprda8u52a/testfile.c -o /tmp/tmprda8u52a/output.obj -pipe -c -m32 -O3 -m32 -O0 -Werror=shift-overflow=2 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=shift-overflow=2: YES 
+Running compile:
+Working directory:  /tmp/tmpkqweq5ht
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpkqweq5ht/testfile.c -o /tmp/tmpkqweq5ht/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wdate-time 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wdate-time: YES 
+Running compile:
+Working directory:  /tmp/tmpglqo8_ti
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpglqo8_ti/testfile.c -o /tmp/tmpglqo8_ti/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wnested-externs 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wnested-externs: YES 
+Running compile:
+Working directory:  /tmp/tmpeb_gnsje
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpeb_gnsje/testfile.c -o /tmp/tmpeb_gnsje/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-unused-parameter -Wunused-parameter 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter -Wunused-parameter: YES 
+Running compile:
+Working directory:  /tmp/tmpz8yfamy7
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpz8yfamy7/testfile.c -o /tmp/tmpz8yfamy7/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-missing-field-initializers -Wmissing-field-initializers 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-field-initializers -Wmissing-field-initializers: YES 
+Running compile:
+Working directory:  /tmp/tmp6w2ln07h
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp6w2ln07h/testfile.c -o /tmp/tmp6w2ln07h/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-unused-result -Wunused-result 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-result -Wunused-result: YES 
+Running compile:
+Working directory:  /tmp/tmpcmao5dv1
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpcmao5dv1/testfile.c -o /tmp/tmpcmao5dv1/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-format-signedness -Wformat-signedness 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-format-signedness -Wformat-signedness: YES 
+Running compile:
+Working directory:  /tmp/tmpef3qfqs4
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpef3qfqs4/testfile.c -o /tmp/tmpef3qfqs4/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-error=#warnings -Werror=#warnings 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc1: error: -Werror=#warnings: no option -W#warnings
+cc1: error: -Werror=#warnings: no option -W#warnings
+
+Compiler for C supports arguments -Wno-error=#warnings -Werror=#warnings: NO 
+Running compile:
+Working directory:  /tmp/tmpfn_cq007
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfn_cq007/testfile.c -o /tmp/tmpfn_cq007/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-string-plus-int -Wstring-plus-int 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ gcc: error: unrecognized command line option '-Wstring-plus-int'; did you mean '-Wstrict-aliasing'?
+
+Compiler for C supports arguments -Wno-string-plus-int -Wstring-plus-int: NO 
+Running compile:
+Working directory:  /tmp/tmptvj0unx2
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmptvj0unx2/testfile.c -o /tmp/tmptvj0unx2/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-error=nonnull -Werror=nonnull 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-error=nonnull -Werror=nonnull: YES 
+Running compile:
+Working directory:  /tmp/tmpyzlker2a
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpyzlker2a/testfile.c -o /tmp/tmpyzlker2a/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wno-maybe-uninitialized -Wmaybe-uninitialized 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-maybe-uninitialized -Wmaybe-uninitialized: YES 
+Running compile:
+Working directory:  /tmp/tmpdkt240pm
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpdkt240pm/testfile.c -o /tmp/tmpdkt240pm/output.obj -pipe -c -m32 -O3 -m32 -O0 -ffast-math 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -ffast-math: YES 
+Running compile:
+Working directory:  /tmp/tmp_17yyebr
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp_17yyebr/testfile.c -o /tmp/tmp_17yyebr/output.obj -pipe -c -m32 -O3 -m32 -O0 -fno-common 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fno-common: YES 
+Running compile:
+Working directory:  /tmp/tmpvrkt8zck
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpvrkt8zck/testfile.c -o /tmp/tmpvrkt8zck/output.obj -pipe -c -m32 -O3 -m32 -O0 -fdiagnostics-show-option 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fdiagnostics-show-option: YES 
+Running compile:
+Working directory:  /tmp/tmpycrrwrjd
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpycrrwrjd/testfile.c -o /tmp/tmpycrrwrjd/output.obj -pipe -c -m32 -O3 -m32 -O0 -fno-strict-aliasing 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Running compile:
+Working directory:  /tmp/tmp8g2pv38u
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp8g2pv38u/testfile.c -o /tmp/tmp8g2pv38u/output.obj -pipe -c -m32 -O3 -m32 -O0 -fvisibility=hidden 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Running compile:
+Working directory:  /tmp/tmpw0cac6a7
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpw0cac6a7/testfile.c -o /tmp/tmpw0cac6a7/output.obj -pipe -c -m32 -O3 -m32 -O0 -fstack-protector 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fstack-protector: YES 
+Running compile:
+Working directory:  /tmp/tmpiufji7y_
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpiufji7y_/testfile.c -o /tmp/tmpiufji7y_/output.obj -pipe -c -m32 -O3 -m32 -O0 -fstack-protector-strong 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Running compile:
+Working directory:  /tmp/tmpqzswkyrn
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpqzswkyrn/testfile.c -o /tmp/tmpqzswkyrn/output.obj -pipe -c -m32 -O3 -m32 -O0 --param=ssp-buffer-size=4 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments --param=ssp-buffer-size=4: YES 
+Running compile:
+Working directory:  /tmp/tmphnq6q0rd
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmphnq6q0rd/testfile.c -o /tmp/tmphnq6q0rd/output.obj -pipe -c -m32 -O3 -m32 -O0 -ffunction-sections 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -ffunction-sections: YES 
+Running compile:
+Working directory:  /tmp/tmpj7iztn8c
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpj7iztn8c/testfile.c -o /tmp/tmpj7iztn8c/output.obj -pipe -c -m32 -O3 -m32 -O0 -fdata-sections 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fdata-sections: YES 
+Running compile:
+Working directory:  /tmp/tmpsi3hgzsm
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpsi3hgzsm/testfile.c -o /tmp/tmpsi3hgzsm/output.exe -pipe -m32 -O3 -m32 -O0 -Wl,--fatal-warnings 
+
+Code:
+ int main() { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Running compile:
+Working directory:  /tmp/tmp0wbtsbd3
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp0wbtsbd3/testfile.c -o /tmp/tmp0wbtsbd3/output.exe -pipe -m32 -O3 -m32 -O0 -Wl,--fatal-warnings -Wl,-z,relro 
+
+Code:
+ int main() { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ ld: fatal: option -z has illegal argument 'relro'
+ld: fatal: flags processing errors
+collect2: error: ld returned 1 exit status
+
+Compiler for C supports link arguments -Wl,-z,relro: NO 
+Running compile:
+Working directory:  /tmp/tmpgl_8138t
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpgl_8138t/testfile.c -o /tmp/tmpgl_8138t/output.exe -pipe -m32 -O3 -m32 -O0 -Wl,--fatal-warnings -Wl,-z,now 
+
+Code:
+ int main() { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports link arguments -Wl,-z,now: YES 
+Running compile:
+Working directory:  /tmp/tmpn4x2h20i
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpn4x2h20i/testfile.c -o /tmp/tmpn4x2h20i/output.exe -pipe -m32 -O3 -m32 -O0 -Wl,--fatal-warnings -fstack-protector 
+
+Code:
+ int main() { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports link arguments -fstack-protector: YES 
+Running compile:
+Working directory:  /tmp/tmpyst1_s8i
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpyst1_s8i/testfile.c -o /tmp/tmpyst1_s8i/output.exe -pipe -m32 -O3 -m32 -O0 -Wl,--fatal-warnings -Wl,--gc-sections 
+
+Code:
+ int main() { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ ld: fatal: unrecognized option '--gc-sections'
+ld: fatal: use the -z help option for usage information
+collect2: error: ld returned 1 exit status
+
+Compiler for C supports link arguments -Wl,--gc-sections: NO 
+Running compile:
+Working directory:  /tmp/tmp9z28iih7
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp9z28iih7/testfile.c -o /tmp/tmp9z28iih7/output.obj -pipe -c -m32 -O3 -m32 -O0 -std=gnu99 -Werror=shadow 
+
+Code:
+ 
+   #include <time.h>
+   #include <inttypes.h>
+   typedef uint64_t usec_t;
+   usec_t now(clockid_t clock);
+   int main(void) {
+           struct timespec now;
+           return 0;
+   }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking if "-Werror=shadow with local shadowing" compiles: YES 
+Running compile:
+Working directory:  /tmp/tmp39befjm0
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp39befjm0/testfile.c -o /tmp/tmp39befjm0/output.obj -pipe -c -m32 -O3 -m32 -O0 -Wstringop-truncation 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ gcc: error: unrecognized command line option '-Wstringop-truncation'; did you mean '-Wline-truncation'?
+
+Compiler for C supports arguments -Wstringop-truncation: NO 
+Running compile:
+Working directory:  /tmp/tmpcmtpee_4
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpcmtpee_4/testfile.c -o /tmp/tmpcmtpee_4/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/types.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(pid_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "pid_t" : 4
+Running compile:
+Working directory:  /tmp/tmpkxef1vpd
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpkxef1vpd/testfile.c -o /tmp/tmpkxef1vpd/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/types.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(uid_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "uid_t" : 4
+Running compile:
+Working directory:  /tmp/tmpbbmkq90l
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpbbmkq90l/testfile.c -o /tmp/tmpbbmkq90l/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/types.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(gid_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "gid_t" : 4
+Running compile:
+Working directory:  /tmp/tmpzdzm0gli
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpzdzm0gli/testfile.c -o /tmp/tmpzdzm0gli/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/types.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(dev_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "dev_t" : 4
+Running compile:
+Working directory:  /tmp/tmp2gnddnxy
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp2gnddnxy/testfile.c -o /tmp/tmp2gnddnxy/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/types.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(ino_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "ino_t" : 4
+Running compile:
+Working directory:  /tmp/tmpy_3wd94b
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpy_3wd94b/testfile.c -o /tmp/tmpy_3wd94b/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/time.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(time_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "time_t" : 4
+Running compile:
+Working directory:  /tmp/tmpxyh1sm7x
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpxyh1sm7x/testfile.c -o /tmp/tmpxyh1sm7x/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ #include<stdio.h>
+        #include <sys/resource.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(rlim_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+4
+
+Program stderr:
+
+
+Checking for size of "rlim_t" : 4
+Running compile:
+Working directory:  /tmp/tmp8ibwt1r8
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp8ibwt1r8/testfile.c -o /tmp/tmp8ibwt1r8/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include<stdio.h>
+        
+#if 1 /// elogind supports system where _GNU_SOURCE is not set in ENV
+# ifndef _GNU_SOURCE
+#   define _GNU_SOURCE 1
+# endif // _GNU_SOURCE
+#endif // 1
+#include <uchar.h>
+#include <sys/stat.h>
+
+        int main() {
+            printf("%ld\n", (long)(sizeof(char16_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp8ibwt1r8/testfile.c:8:19: fatal error: uchar.h: No such file or directory
+ #include <uchar.h>
+                   ^
+compilation terminated.
+
+Could not compile test file /tmp/tmp8ibwt1r8/testfile.c: 1
+
+Checking for size of "char16_t" : -1
+Running compile:
+Working directory:  /tmp/tmph8a9h8_e
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmph8a9h8_e/testfile.c -o /tmp/tmph8a9h8_e/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include<stdio.h>
+        
+#if 1 /// elogind supports system where _GNU_SOURCE is not set in ENV
+# ifndef _GNU_SOURCE
+#   define _GNU_SOURCE 1
+# endif // _GNU_SOURCE
+#endif // 1
+#include <uchar.h>
+#include <sys/stat.h>
+
+        int main() {
+            printf("%ld\n", (long)(sizeof(char32_t)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmph8a9h8_e/testfile.c:8:19: fatal error: uchar.h: No such file or directory
+ #include <uchar.h>
+                   ^
+compilation terminated.
+
+Could not compile test file /tmp/tmph8a9h8_e/testfile.c: 1
+
+Checking for size of "char32_t" : -1
+Running compile:
+Working directory:  /tmp/tmpui9g0i9v
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpui9g0i9v/testfile.c -o /tmp/tmpui9g0i9v/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include<stdio.h>
+        
+#if 1 /// elogind supports system where _GNU_SOURCE is not set in ENV
+# ifndef _GNU_SOURCE
+#   define _GNU_SOURCE 1
+# endif // _GNU_SOURCE
+#endif // 1
+#include <uchar.h>
+#include <sys/stat.h>
+
+        int main() {
+            printf("%ld\n", (long)(sizeof(struct statx)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpui9g0i9v/testfile.c:8:19: fatal error: uchar.h: No such file or directory
+ #include <uchar.h>
+                   ^
+compilation terminated.
+
+Could not compile test file /tmp/tmpui9g0i9v/testfile.c: 1
+
+Checking for size of "struct statx" : -1
+Running compile:
+Working directory:  /tmp/tmp5y9_opqp
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp5y9_opqp/testfile.c -o /tmp/tmp5y9_opqp/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include<stdio.h>
+        
+#if 1 /// elogind supports system where _GNU_SOURCE is not set in ENV
+# ifndef _GNU_SOURCE
+#   define _GNU_SOURCE 1
+# endif // _GNU_SOURCE
+#endif // 1
+#include <uchar.h>
+#include <sys/stat.h>
+#include <linux/stat.h>
+        int main() {
+            printf("%ld\n", (long)(sizeof(struct statx)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp5y9_opqp/testfile.c:8:19: fatal error: uchar.h: No such file or directory
+ #include <uchar.h>
+                   ^
+compilation terminated.
+
+Could not compile test file /tmp/tmp5y9_opqp/testfile.c: 1
+
+Checking for size of "struct statx" : -1
+Running compile:
+Working directory:  /tmp/tmpfvpty3ya
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfvpty3ya/testfile.c -o /tmp/tmpfvpty3ya/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+        #define secure_getenv meson_disable_define_of_secure_getenv
+        
+        #include <limits.h>
+        #undef secure_getenv
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char secure_getenv ();
+        
+        #if defined __stub_secure_getenv || defined __stub___secure_getenv
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main () {
+          return secure_getenv ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ Undefined			first referenced
+ symbol  			    in file
+secure_getenv                       /var/tmp//ccvmaibI.o
+ld: fatal: symbol referencing errors. No output written to /tmp/tmpfvpty3ya/output.exe
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /tmp/tmpguekl487
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpguekl487/testfile.c -o /tmp/tmpguekl487/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_secure_getenv)
+                #error "__builtin_secure_getenv not found"
+            #endif
+        #elif ! defined(secure_getenv)
+            /* Check for __builtin_secure_getenv only if no includes were added to the
+             * prefix above, which means no definition of secure_getenv can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 1
+                __builtin_secure_getenv;
+            #else
+                #error "No definition for __builtin_secure_getenv found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpguekl487/testfile.c: In function 'main':
+/tmp/tmpguekl487/testfile.c:14:17: error: '__builtin_secure_getenv' undeclared (first use in this function)
+                 __builtin_secure_getenv;
+                 ^~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmpguekl487/testfile.c:14:17: note: each undeclared identifier is reported only once for each function it appears in
+
+Checking for function "secure_getenv" : NO 
+Running compile:
+Working directory:  /tmp/tmpddm0ugt8
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpddm0ugt8/testfile.c -o /tmp/tmpddm0ugt8/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+        #define __secure_getenv meson_disable_define_of___secure_getenv
+        
+        #include <limits.h>
+        #undef __secure_getenv
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char __secure_getenv ();
+        
+        #if defined __stub___secure_getenv || defined __stub_____secure_getenv
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main () {
+          return __secure_getenv ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ Undefined			first referenced
+ symbol  			    in file
+__secure_getenv                     /var/tmp//cchoaicI.o
+ld: fatal: symbol referencing errors. No output written to /tmp/tmpddm0ugt8/output.exe
+collect2: error: ld returned 1 exit status
+
+Running compile:
+Working directory:  /tmp/tmpa139w3dm
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpa139w3dm/testfile.c -o /tmp/tmpa139w3dm/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin___secure_getenv)
+                #error "__builtin___secure_getenv not found"
+            #endif
+        #elif ! defined(__secure_getenv)
+            /* Check for __builtin___secure_getenv only if no includes were added to the
+             * prefix above, which means no definition of __secure_getenv can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 1
+                __builtin___secure_getenv;
+            #else
+                #error "No definition for __builtin___secure_getenv found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpa139w3dm/testfile.c: In function 'main':
+/tmp/tmpa139w3dm/testfile.c:14:17: error: '__builtin___secure_getenv' undeclared (first use in this function)
+                 __builtin___secure_getenv;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmpa139w3dm/testfile.c:14:17: note: each undeclared identifier is reported only once for each function it appears in
+
+Checking for function "__secure_getenv" : NO 
+Running compile:
+Working directory:  /tmp/tmpb2wzh948
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpb2wzh948/testfile.c -o /tmp/tmpb2wzh948/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/mman.h>
+#include <limits.h>
+
+        #if defined __stub_memfd_create || defined __stub___memfd_create
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &memfd_create;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpb2wzh948/testfile.c: In function 'main':
+/tmp/tmpb2wzh948/testfile.c:9:32: error: 'memfd_create' undeclared (first use in this function)
+             void *a = (void*) &memfd_create;
+                                ^~~~~~~~~~~~
+/tmp/tmpb2wzh948/testfile.c:9:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmp74lf10o5
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp74lf10o5/testfile.c -o /tmp/tmp74lf10o5/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/mman.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_memfd_create)
+                #error "__builtin_memfd_create not found"
+            #endif
+        #elif ! defined(memfd_create)
+            /* Check for __builtin_memfd_create only if no includes were added to the
+             * prefix above, which means no definition of memfd_create can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_memfd_create;
+            #else
+                #error "No definition for __builtin_memfd_create found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp74lf10o5/testfile.c: In function 'main':
+/tmp/tmp74lf10o5/testfile.c:16:18: error: #error "No definition for __builtin_memfd_create found in the prefix"
+                 #error "No definition for __builtin_memfd_create found in the prefix"
+                  ^~~~~
+
+Checking for function "memfd_create" : NO 
+Running compile:
+Working directory:  /tmp/tmpic215gze
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpic215gze/testfile.c -o /tmp/tmpic215gze/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_gettid || defined __stub___gettid
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &gettid;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpic215gze/testfile.c: In function 'main':
+/tmp/tmpic215gze/testfile.c:10:32: error: 'gettid' undeclared (first use in this function)
+             void *a = (void*) &gettid;
+                                ^~~~~~
+/tmp/tmpic215gze/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpk4t55t70
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpk4t55t70/testfile.c -o /tmp/tmpk4t55t70/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_gettid)
+                #error "__builtin_gettid not found"
+            #endif
+        #elif ! defined(gettid)
+            /* Check for __builtin_gettid only if no includes were added to the
+             * prefix above, which means no definition of gettid can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_gettid;
+            #else
+                #error "No definition for __builtin_gettid found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpk4t55t70/testfile.c: In function 'main':
+/tmp/tmpk4t55t70/testfile.c:17:18: error: #error "No definition for __builtin_gettid found in the prefix"
+                 #error "No definition for __builtin_gettid found in the prefix"
+                  ^~~~~
+
+Checking for function "gettid" : NO 
+Running compile:
+Working directory:  /tmp/tmpqwr1zz32
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpqwr1zz32/testfile.c -o /tmp/tmpqwr1zz32/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+#include <limits.h>
+
+        #if defined __stub_qsort_r || defined __stub___qsort_r
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &qsort_r;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpqwr1zz32/testfile.c: In function 'main':
+/tmp/tmpqwr1zz32/testfile.c:9:32: error: 'qsort_r' undeclared (first use in this function)
+             void *a = (void*) &qsort_r;
+                                ^~~~~~~
+/tmp/tmpqwr1zz32/testfile.c:9:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpmn0i35k1
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpmn0i35k1/testfile.c -o /tmp/tmpmn0i35k1/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_qsort_r)
+                #error "__builtin_qsort_r not found"
+            #endif
+        #elif ! defined(qsort_r)
+            /* Check for __builtin_qsort_r only if no includes were added to the
+             * prefix above, which means no definition of qsort_r can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_qsort_r;
+            #else
+                #error "No definition for __builtin_qsort_r found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpmn0i35k1/testfile.c: In function 'main':
+/tmp/tmpmn0i35k1/testfile.c:16:18: error: #error "No definition for __builtin_qsort_r found in the prefix"
+                 #error "No definition for __builtin_qsort_r found in the prefix"
+                  ^~~~~
+
+Checking for function "qsort_r" : NO 
+Running compile:
+Working directory:  /tmp/tmpjr2qlbks
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpjr2qlbks/testfile.c -o /tmp/tmpjr2qlbks/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <sys/stat.h>
+                                 #include <fcntl.h>
+#include <limits.h>
+
+        #if defined __stub_name_to_handle_at || defined __stub___name_to_handle_at
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &name_to_handle_at;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpjr2qlbks/testfile.c: In function 'main':
+/tmp/tmpjr2qlbks/testfile.c:11:32: error: 'name_to_handle_at' undeclared (first use in this function)
+             void *a = (void*) &name_to_handle_at;
+                                ^~~~~~~~~~~~~~~~~
+/tmp/tmpjr2qlbks/testfile.c:11:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmp2129gk0p
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp2129gk0p/testfile.c -o /tmp/tmp2129gk0p/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <sys/stat.h>
+                                 #include <fcntl.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_name_to_handle_at)
+                #error "__builtin_name_to_handle_at not found"
+            #endif
+        #elif ! defined(name_to_handle_at)
+            /* Check for __builtin_name_to_handle_at only if no includes were added to the
+             * prefix above, which means no definition of name_to_handle_at can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_name_to_handle_at;
+            #else
+                #error "No definition for __builtin_name_to_handle_at found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp2129gk0p/testfile.c: In function 'main':
+/tmp/tmp2129gk0p/testfile.c:18:18: error: #error "No definition for __builtin_name_to_handle_at found in the prefix"
+                 #error "No definition for __builtin_name_to_handle_at found in the prefix"
+                  ^~~~~
+
+Checking for function "name_to_handle_at" : NO 
+Running compile:
+Working directory:  /tmp/tmphbhgsszp
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmphbhgsszp/testfile.c -o /tmp/tmphbhgsszp/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sched.h>
+#include <limits.h>
+
+        #if defined __stub_setns || defined __stub___setns
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &setns;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmphbhgsszp/testfile.c: In function 'main':
+/tmp/tmphbhgsszp/testfile.c:9:32: error: 'setns' undeclared (first use in this function)
+             void *a = (void*) &setns;
+                                ^~~~~
+/tmp/tmphbhgsszp/testfile.c:9:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmp0_4erb6o
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp0_4erb6o/testfile.c -o /tmp/tmp0_4erb6o/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sched.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_setns)
+                #error "__builtin_setns not found"
+            #endif
+        #elif ! defined(setns)
+            /* Check for __builtin_setns only if no includes were added to the
+             * prefix above, which means no definition of setns can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_setns;
+            #else
+                #error "No definition for __builtin_setns found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp0_4erb6o/testfile.c: In function 'main':
+/tmp/tmp0_4erb6o/testfile.c:16:18: error: #error "No definition for __builtin_setns found in the prefix"
+                 #error "No definition for __builtin_setns found in the prefix"
+                  ^~~~~
+
+Checking for function "setns" : NO 
+Running compile:
+Working directory:  /tmp/tmp60pi_5vf
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp60pi_5vf/testfile.c -o /tmp/tmp60pi_5vf/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdio.h>
+                                 #include <fcntl.h>
+#include <limits.h>
+
+        #if defined __stub_renameat2 || defined __stub___renameat2
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &renameat2;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp60pi_5vf/testfile.c: In function 'main':
+/tmp/tmp60pi_5vf/testfile.c:10:32: error: 'renameat2' undeclared (first use in this function)
+             void *a = (void*) &renameat2;
+                                ^~~~~~~~~
+/tmp/tmp60pi_5vf/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmprv0i_5ee
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmprv0i_5ee/testfile.c -o /tmp/tmprv0i_5ee/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdio.h>
+                                 #include <fcntl.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_renameat2)
+                #error "__builtin_renameat2 not found"
+            #endif
+        #elif ! defined(renameat2)
+            /* Check for __builtin_renameat2 only if no includes were added to the
+             * prefix above, which means no definition of renameat2 can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_renameat2;
+            #else
+                #error "No definition for __builtin_renameat2 found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmprv0i_5ee/testfile.c: In function 'main':
+/tmp/tmprv0i_5ee/testfile.c:17:18: error: #error "No definition for __builtin_renameat2 found in the prefix"
+                 #error "No definition for __builtin_renameat2 found in the prefix"
+                  ^~~~~
+
+Checking for function "renameat2" : NO 
+Running compile:
+Working directory:  /tmp/tmp8soxe221
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp8soxe221/testfile.c -o /tmp/tmp8soxe221/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <linux/kcmp.h>
+#include <limits.h>
+
+        #if defined __stub_kcmp || defined __stub___kcmp
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &kcmp;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp8soxe221/testfile.c:1:24: fatal error: linux/kcmp.h: No such file or directory
+ #include <linux/kcmp.h>
+                        ^
+compilation terminated.
+
+Running compile:
+Working directory:  /tmp/tmpu73bamp0
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpu73bamp0/testfile.c -o /tmp/tmpu73bamp0/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <linux/kcmp.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_kcmp)
+                #error "__builtin_kcmp not found"
+            #endif
+        #elif ! defined(kcmp)
+            /* Check for __builtin_kcmp only if no includes were added to the
+             * prefix above, which means no definition of kcmp can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_kcmp;
+            #else
+                #error "No definition for __builtin_kcmp found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpu73bamp0/testfile.c:1:24: fatal error: linux/kcmp.h: No such file or directory
+ #include <linux/kcmp.h>
+                        ^
+compilation terminated.
+
+Checking for function "kcmp" : NO 
+Running compile:
+Working directory:  /tmp/tmp44364n5w
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp44364n5w/testfile.c -o /tmp/tmp44364n5w/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <keyutils.h>
+#include <limits.h>
+
+        #if defined __stub_keyctl || defined __stub___keyctl
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &keyctl;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp44364n5w/testfile.c:2:55: fatal error: keyutils.h: No such file or directory
+                                  #include <keyutils.h>
+                                                       ^
+compilation terminated.
+
+Running compile:
+Working directory:  /tmp/tmpqcbqlbeb
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpqcbqlbeb/testfile.c -o /tmp/tmpqcbqlbeb/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <keyutils.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_keyctl)
+                #error "__builtin_keyctl not found"
+            #endif
+        #elif ! defined(keyctl)
+            /* Check for __builtin_keyctl only if no includes were added to the
+             * prefix above, which means no definition of keyctl can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_keyctl;
+            #else
+                #error "No definition for __builtin_keyctl found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpqcbqlbeb/testfile.c:2:55: fatal error: keyutils.h: No such file or directory
+                                  #include <keyutils.h>
+                                                       ^
+compilation terminated.
+
+Checking for function "keyctl" : NO 
+Running compile:
+Working directory:  /tmp/tmpz1fd8sy1
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpz1fd8sy1/testfile.c -o /tmp/tmpz1fd8sy1/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/syscall.h>
+                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_copy_file_range || defined __stub___copy_file_range
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &copy_file_range;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpz1fd8sy1/testfile.c: In function 'main':
+/tmp/tmpz1fd8sy1/testfile.c:10:32: error: 'copy_file_range' undeclared (first use in this function)
+             void *a = (void*) &copy_file_range;
+                                ^~~~~~~~~~~~~~~
+/tmp/tmpz1fd8sy1/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpni1m9q7e
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpni1m9q7e/testfile.c -o /tmp/tmpni1m9q7e/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/syscall.h>
+                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_copy_file_range)
+                #error "__builtin_copy_file_range not found"
+            #endif
+        #elif ! defined(copy_file_range)
+            /* Check for __builtin_copy_file_range only if no includes were added to the
+             * prefix above, which means no definition of copy_file_range can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_copy_file_range;
+            #else
+                #error "No definition for __builtin_copy_file_range found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpni1m9q7e/testfile.c: In function 'main':
+/tmp/tmpni1m9q7e/testfile.c:17:18: error: #error "No definition for __builtin_copy_file_range found in the prefix"
+                 #error "No definition for __builtin_copy_file_range found in the prefix"
+                  ^~~~~
+
+Checking for function "copy_file_range" : NO 
+Running compile:
+Working directory:  /tmp/tmp5gs8ebuh
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp5gs8ebuh/testfile.c -o /tmp/tmp5gs8ebuh/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/syscall.h>
+                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_bpf || defined __stub___bpf
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &bpf;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp5gs8ebuh/testfile.c: In function 'main':
+/tmp/tmp5gs8ebuh/testfile.c:10:32: error: 'bpf' undeclared (first use in this function)
+             void *a = (void*) &bpf;
+                                ^~~
+/tmp/tmp5gs8ebuh/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpub29yp4u
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpub29yp4u/testfile.c -o /tmp/tmpub29yp4u/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/syscall.h>
+                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_bpf)
+                #error "__builtin_bpf not found"
+            #endif
+        #elif ! defined(bpf)
+            /* Check for __builtin_bpf only if no includes were added to the
+             * prefix above, which means no definition of bpf can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_bpf;
+            #else
+                #error "No definition for __builtin_bpf found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpub29yp4u/testfile.c: In function 'main':
+/tmp/tmpub29yp4u/testfile.c:17:18: error: #error "No definition for __builtin_bpf found in the prefix"
+                 #error "No definition for __builtin_bpf found in the prefix"
+                  ^~~~~
+
+Checking for function "bpf" : NO 
+Running compile:
+Working directory:  /tmp/tmpz6ue5ny2
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpz6ue5ny2/testfile.c -o /tmp/tmpz6ue5ny2/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <sys/stat.h>
+                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_statx || defined __stub___statx
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &statx;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpz6ue5ny2/testfile.c: In function 'main':
+/tmp/tmpz6ue5ny2/testfile.c:11:32: error: 'statx' undeclared (first use in this function)
+             void *a = (void*) &statx;
+                                ^~~~~
+/tmp/tmpz6ue5ny2/testfile.c:11:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpsrd_disj
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpsrd_disj/testfile.c -o /tmp/tmpsrd_disj/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/types.h>
+                                 #include <sys/stat.h>
+                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_statx)
+                #error "__builtin_statx not found"
+            #endif
+        #elif ! defined(statx)
+            /* Check for __builtin_statx only if no includes were added to the
+             * prefix above, which means no definition of statx can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_statx;
+            #else
+                #error "No definition for __builtin_statx found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpsrd_disj/testfile.c: In function 'main':
+/tmp/tmpsrd_disj/testfile.c:18:18: error: #error "No definition for __builtin_statx found in the prefix"
+                 #error "No definition for __builtin_statx found in the prefix"
+                  ^~~~~
+
+Checking for function "statx" : NO 
+Running compile:
+Working directory:  /tmp/tmppobjn7vn
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmppobjn7vn/testfile.c -o /tmp/tmppobjn7vn/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <string.h>
+#include <limits.h>
+
+        #if defined __stub_explicit_bzero || defined __stub___explicit_bzero
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &explicit_bzero;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "explicit_bzero" : YES 
+Running compile:
+Working directory:  /tmp/tmpzvqgejp7
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpzvqgejp7/testfile.c -o /tmp/tmpzvqgejp7/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <malloc.h>
+#include <limits.h>
+
+        #if defined __stub_reallocarray || defined __stub___reallocarray
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &reallocarray;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpzvqgejp7/testfile.c: In function 'main':
+/tmp/tmpzvqgejp7/testfile.c:9:32: error: 'reallocarray' undeclared (first use in this function)
+             void *a = (void*) &reallocarray;
+                                ^~~~~~~~~~~~
+/tmp/tmpzvqgejp7/testfile.c:9:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpl9ncoauz
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpl9ncoauz/testfile.c -o /tmp/tmpl9ncoauz/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <malloc.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_reallocarray)
+                #error "__builtin_reallocarray not found"
+            #endif
+        #elif ! defined(reallocarray)
+            /* Check for __builtin_reallocarray only if no includes were added to the
+             * prefix above, which means no definition of reallocarray can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_reallocarray;
+            #else
+                #error "No definition for __builtin_reallocarray found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpl9ncoauz/testfile.c: In function 'main':
+/tmp/tmpl9ncoauz/testfile.c:16:18: error: #error "No definition for __builtin_reallocarray found in the prefix"
+                 #error "No definition for __builtin_reallocarray found in the prefix"
+                  ^~~~~
+
+Checking for function "reallocarray" : NO 
+Running compile:
+Working directory:  /tmp/tmpoj7rolud
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpoj7rolud/testfile.c -o /tmp/tmpoj7rolud/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+//                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_set_mempolicy || defined __stub___set_mempolicy
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &set_mempolicy;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpoj7rolud/testfile.c: In function 'main':
+/tmp/tmpoj7rolud/testfile.c:10:32: error: 'set_mempolicy' undeclared (first use in this function)
+             void *a = (void*) &set_mempolicy;
+                                ^~~~~~~~~~~~~
+/tmp/tmpoj7rolud/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpfzt5cd9b
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpfzt5cd9b/testfile.c -o /tmp/tmpfzt5cd9b/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+//                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_set_mempolicy)
+                #error "__builtin_set_mempolicy not found"
+            #endif
+        #elif ! defined(set_mempolicy)
+            /* Check for __builtin_set_mempolicy only if no includes were added to the
+             * prefix above, which means no definition of set_mempolicy can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_set_mempolicy;
+            #else
+                #error "No definition for __builtin_set_mempolicy found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpfzt5cd9b/testfile.c: In function 'main':
+/tmp/tmpfzt5cd9b/testfile.c:17:18: error: #error "No definition for __builtin_set_mempolicy found in the prefix"
+                 #error "No definition for __builtin_set_mempolicy found in the prefix"
+                  ^~~~~
+
+Checking for function "set_mempolicy" : NO 
+Running compile:
+Working directory:  /tmp/tmp0gk9ayic
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp0gk9ayic/testfile.c -o /tmp/tmp0gk9ayic/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+                                 #include <unistd.h>
+#include <limits.h>
+
+        #if defined __stub_get_mempolicy || defined __stub___get_mempolicy
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &get_mempolicy;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmp0gk9ayic/testfile.c: In function 'main':
+/tmp/tmp0gk9ayic/testfile.c:10:32: error: 'get_mempolicy' undeclared (first use in this function)
+             void *a = (void*) &get_mempolicy;
+                                ^~~~~~~~~~~~~
+/tmp/tmp0gk9ayic/testfile.c:10:32: note: each undeclared identifier is reported only once for each function it appears in
+
+Running compile:
+Working directory:  /tmp/tmpn__2qxl5
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpn__2qxl5/testfile.c -o /tmp/tmpn__2qxl5/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+                                 #include <unistd.h>
+        int main() {
+        #ifdef __has_builtin
+            #if !__has_builtin(__builtin_get_mempolicy)
+                #error "__builtin_get_mempolicy not found"
+            #endif
+        #elif ! defined(get_mempolicy)
+            /* Check for __builtin_get_mempolicy only if no includes were added to the
+             * prefix above, which means no definition of get_mempolicy can be found.
+             * We would always check for this, but we get false positives on
+             * MSYS2 if we do. Their toolchain is broken, but we can at least
+             * give them a workaround. */
+            #if 0
+                __builtin_get_mempolicy;
+            #else
+                #error "No definition for __builtin_get_mempolicy found in the prefix"
+            #endif
+        #endif
+        return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpn__2qxl5/testfile.c: In function 'main':
+/tmp/tmpn__2qxl5/testfile.c:17:18: error: #error "No definition for __builtin_get_mempolicy found in the prefix"
+                 #error "No definition for __builtin_get_mempolicy found in the prefix"
+                  ^~~~~
+
+Checking for function "get_mempolicy" : NO 
+Running compile:
+Working directory:  /tmp/tmp5i269gyr
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp5i269gyr/testfile.c -o /tmp/tmp5i269gyr/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 -D_GNU_SOURCE 
+
+Code:
+ #include <sys/random.h>
+#include <limits.h>
+
+        #if defined __stub_getrandom || defined __stub___getrandom
+        fail fail fail this function is not going to work
+        #endif
+        
+int main() {
+            void *a = (void*) &getrandom;
+            long b = (long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "getrandom" : YES 
+Running compile:
+Working directory:  /tmp/tmpyadzt1dx
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmpyadzt1dx/testfile.c -o /tmp/tmpyadzt1dx/output.exe -pipe -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+  #define _GNU_SOURCE 1
+  #include <errno.h>
+  int main(void) {
+          if (program_invocation_name && program_invocation_short_name)
+                  return 0;
+          return 1;
+  }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmpyadzt1dx/testfile.c: In function 'main':
+/tmp/tmpyadzt1dx/testfile.c:5:15: error: 'program_invocation_name' undeclared (first use in this function)
+           if (program_invocation_name && program_invocation_short_name)
+               ^~~~~~~~~~~~~~~~~~~~~~~
+/tmp/tmpyadzt1dx/testfile.c:5:15: note: each undeclared identifier is reported only once for each function it appears in
+/tmp/tmpyadzt1dx/testfile.c:5:42: error: 'program_invocation_short_name' undeclared (first use in this function)
+           if (program_invocation_name && program_invocation_short_name)
+                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Checking if "program_invocation[_short]_name test" links: NO 
+Program sed found: YES (/usr/bin/sed)
+Program awk found: YES (/usr/bin/awk)
+Program m4 found: YES (/usr/bin/m4)
+Program stat found: YES (/usr/bin/stat)
+Program git found: YES (/usr/bin/git)
+Program env found: YES (/usr/bin/env)
+Program perl found: YES (/usr/bin/perl)
+Program halt found: YES (/usr/sbin/halt)
+Program kexec found: NO
+Program /usr/sbin/kexec found: NO
+Program /sbin/kexec found: NO
+Program poweroff found: YES (/usr/sbin/poweroff)
+Program reboot found: YES (/usr/sbin/reboot)
+Program nologin found: NO
+Program /usr/sbin/nologin found: NO
+Program /sbin/nologin found: NO
+Program gperf found: YES (/usr/bin/gperf)
+Running command: /usr/bin/sh -c echo foo,bar | /usr/bin/gperf -L ANSI-C
+--- stdout ---
+/* ANSI-C code produced by gperf version 3.1 */
+/* Command-line: /usr/bin/gperf -L ANSI-C  */
+/* Computed positions: -k'' */
+
+
+#define TOTAL_KEYWORDS 1
+#define MIN_WORD_LENGTH 3
+#define MAX_WORD_LENGTH 3
+#define MIN_HASH_VALUE 0
+#define MAX_HASH_VALUE 0
+/* maximum key range = 1, duplicates = 0 */
+
+#ifdef __GNUC__
+__inline
+#else
+#ifdef __cplusplus
+inline
+#endif
+#endif
+/*ARGSUSED*/
+static unsigned int
+hash (register const char *str, register size_t len)
+{
+  return 0;
+}
+
+const char *
+in_word_set (register const char *str, register size_t len)
+{
+  static const char * wordlist[] =
+    {
+      "foo"
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      register unsigned int key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE)
+        {
+          register const char *s = wordlist[key];
+
+          if (*str == *s && !strcmp (str + 1, s + 1))
+            return s;
+        }
+    }
+  return 0;
+}
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /tmp/tmp11f4ls88
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmp11f4ls88/testfile.c -o /tmp/tmp11f4ls88/output.obj -pipe -c -m32 -O3 -m32 -O0 -std=gnu99 
+
+Code:
+ 
+#include <string.h>
+const char * in_word_set(const char *, size_t);
+/* ANSI-C code produced by gperf version 3.1 */
+/* Command-line: /usr/bin/gperf -L ANSI-C  */
+/* Computed positions: -k'' */
+
+
+#define TOTAL_KEYWORDS 1
+#define MIN_WORD_LENGTH 3
+#define MAX_WORD_LENGTH 3
+#define MIN_HASH_VALUE 0
+#define MAX_HASH_VALUE 0
+/* maximum key range = 1, duplicates = 0 */
+
+#ifdef __GNUC__
+__inline
+#else
+#ifdef __cplusplus
+inline
+#endif
+#endif
+/*ARGSUSED*/
+static unsigned int
+hash (register const char *str, register size_t len)
+{
+  return 0;
+}
+
+const char *
+in_word_set (register const char *str, register size_t len)
+{
+  static const char * wordlist[] =
+    {
+      "foo"
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      register unsigned int key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE)
+        {
+          register const char *s = wordlist[key];
+
+          if (*str == *s && !strcmp (str + 1, s + 1))
+            return s;
+        }
+    }
+  return 0;
+}
+
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Message: gperf len type is size_t
+Running compile:
+Working directory:  /tmp/tmplh_9ef1q
+Command line:  /usr/gcc/6/bin/gcc /tmp/tmplh_9ef1q/testfile.c -pipe -E -P -m32 -O3 -m32 -P -O0 -std=gnu99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("sys/capability.h")
+          #error "Header 'sys/capability.h' could not be found"
+         #endif
+        #else
+         #include <sys/capability.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ /tmp/tmplh_9ef1q/testfile.c:4:12: error: #error "Header 'sys/capability.h' could not be found"
+           #error "Header 'sys/capability.h' could not be found"
+            ^~~~~
+
+Has header "sys/capability.h" : NO 
+
+meson.build:738:8: ERROR: Problem encountered: POSIX caps headers not found

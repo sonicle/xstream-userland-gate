@@ -1,0 +1,39 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "database/sqlite-3",
+        "developer/java/jdk",
+        "developer/object-file",
+        "developer/xstream/os",
+        "library/database/gdbm",
+        "library/expat",
+        "library/libffi",
+        "library/ncurses",
+        "library/readline",
+        "library/security/openssl",
+        "library/zlib",
+        "runtime/python-27",
+        "runtime/ruby",
+        "runtime/tcl-8",
+        "runtime/tk-8",
+        "system/header/header-audio",
+        "system/library",
+        "system/library/math",
+        "text/gnu-patch"
+    ],
+    "fmris": [
+        "library/python/tkinter-35",
+        "runtime/python-35"
+    ],
+    "name": "Python"
+}

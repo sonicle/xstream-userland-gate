@@ -1,0 +1,32 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/desktop/cairo",
+        "library/desktop/gobject/gobject-introspection",
+        "library/glib2",
+        "library/libffi",
+        "runtime/python-27",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/pygobject-3-37",
+        "library/python/pygobject-3-39",
+        "library/python/pygobject-3"
+    ],
+    "name": "pygobject"
+}

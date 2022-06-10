@@ -1,0 +1,38 @@
+--- lxdm-0.4.1/src/lxdm.c	Mon Oct  7 11:38:19 2013
++++ lxdm-0.4.1/src/lxdm.c	Tue Oct  8 15:18:44 2013
+@@ -54,6 +54,8 @@
+ 
+ #include <execinfo.h>
+ 
++extern char **environ;
++
+ #ifdef HAVE_UTMPX_H
+ #include <utmpx.h>
+ #endif
+@@ -1525,6 +1534,16 @@
+ 	lxdm_quit_self(0);
+ }
+ 
++void lxdm_do_exitdm(void)
++{
++	char *cmd;
++	cmd = g_key_file_get_string(config, "cmd", "exitdm", 0);
++	if( !cmd ) cmd = g_strdup("svcadm disable -t system/display-manager/lxdm");
++	g_spawn_command_line_async(cmd,0);
++	g_free(cmd);
++        lxdm_quit_self(0);
++}
++
+ static gboolean auto_login_future(void)
+ {
+ 	return g_key_file_get_integer(config,"base","timeout",NULL)>=5;
+--- lxdm-0.4.1/src/lxdm.h	Mon Oct  7 11:48:45 2013
++++ lxdm-0.4.1/src/lxdm.h	Mon Oct  7 11:49:14 2013
+@@ -33,6 +33,7 @@
+ void lxdm_do_login(struct passwd *pw,char *session,char *lang,char *option);
+ void lxdm_do_reboot(void);
+ void lxdm_do_shutdown(void);
++void lxdm_do_exitdm(void);
+ int lxdm_do_auto_login(void);
+ 
+ enum AuthResult

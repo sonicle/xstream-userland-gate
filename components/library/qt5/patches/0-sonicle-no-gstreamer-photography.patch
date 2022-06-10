@@ -1,0 +1,75 @@
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/multimedia/configure.json	Tue Mar 31 09:20:51 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/multimedia/configure.json.new	Tue Mar 31 09:22:23 2020
+@@ -80,24 +80,6 @@
+                 { "libs": "", "condition": "config.android && input.gstreamer != ''" }
+             ]
+         },
+-        "gstreamer_photography_0_10": {
+-            "label": "GStreamer Photography 0.10",
+-            "export": "gstreamer_photography",
+-            "test": "gstreamer_photography",
+-            "use": "gstreamer_0_10",
+-            "sources": [
+-                { "libs": "-lgstphotography-0.10" }
+-            ]
+-        },
+-        "gstreamer_photography_1_0": {
+-            "label": "GStreamer Photography 1.0",
+-            "export": "gstreamer_photography",
+-            "test": "gstreamer_photography",
+-            "use": "gstreamer_1_0",
+-            "sources": [
+-                { "libs": "-lgstphotography-1.0" }
+-            ]
+-        },
+         "gstreamer_gl_1_0": {
+             "label": "GStreamer OpenGL 1.0",
+             "export": "gstreamer_gl",
+@@ -250,11 +232,6 @@
+             "condition": "features.gstreamer && tests.gstreamer_encodingprofiles",
+             "output": [ "privateFeature" ]
+         },
+-        "gstreamer_photography": {
+-            "label": "GStreamer Photography",
+-            "condition": "(features.gstreamer_1_0 && libs.gstreamer_photography_1_0) || (features.gstreamer_0_10 && libs.gstreamer_photography_0_10)",
+-            "output": [ "privateFeature" ]
+-        },
+         "gstreamer_gl": {
+             "label": "GStreamer OpenGL",
+             "condition": "features.opengl && features.gstreamer_1_0 && libs.gstreamer_gl_1_0",
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/camerabin/camerabin.pro	Tue Mar 31 09:21:56 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/camerabin/camerabin.pro.new	Tue Mar 31 09:23:10 2020
+@@ -52,23 +52,6 @@
+     $$PWD/camerabincapturebufferformat.cpp \
+     $$PWD/camerabininfocontrol.cpp
+ 
+-qtConfig(gstreamer_photography) {
+-    HEADERS += \
+-        $$PWD/camerabinfocus.h \
+-        $$PWD/camerabinexposure.h \
+-        $$PWD/camerabinflash.h \
+-        $$PWD/camerabinlocks.h
+-
+-    SOURCES += \
+-        $$PWD/camerabinexposure.cpp \
+-        $$PWD/camerabinflash.cpp \
+-        $$PWD/camerabinfocus.cpp \
+-        $$PWD/camerabinlocks.cpp
+-
+-    QMAKE_USE += gstreamer_photography
+-    DEFINES += GST_USE_UNSTABLE_API #prevents warnings because of unstable photography API
+-}
+-
+ qtConfig(linux_v4l) {
+     HEADERS += \
+         $$PWD/camerabinv4limageprocessing.h
+--- qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/gstreamer.pro	Wed Apr  1 18:56:00 2020
++++ qt-everywhere-src-5.14.1/qtmultimedia/src/plugins/gstreamer/gstreamer.pro.new	Wed Apr  1 18:56:17 2020
+@@ -2,7 +2,6 @@
+ 
+ SUBDIRS += \
+     audiodecoder \
+-    camerabin \
+     mediaplayer \
+     mediacapture
+ 

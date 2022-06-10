@@ -1,0 +1,18 @@
+set name=pkg.fmri value=pkg:/x11/xmakemap@7.5,5.11-2020.1.1.0
+set name=pkg.summary value="xmakemap - script to generate xmodmap files"
+set name=com.oracle.info.name value=xmakemap
+set name=com.oracle.info.version value=7.5
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=info.upstream-url value=https://hg.java.net/hg/solaris-x11~x-s12-clone
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+link path=usr/X11/bin/xmakemap target=../../bin/xmakemap
+file path=usr/bin/xmakemap owner=root group=bin mode=0555
+file path=usr/share/man/man1/xmakemap.1 owner=root group=bin mode=0444 \
+    facet.doc.man=all
+license xmakemap.license license=Oracle
+depend type=require fmri=pkg:/SUNWcs@0.5.11-1.2020.1.1.0

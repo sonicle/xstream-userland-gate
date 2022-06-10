@@ -1,0 +1,95 @@
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source.  A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+#
+
+#
+# Copyright (c) 2019, Sonicle S.r.l.  All rights reserved.
+#
+
+set name=pkg.fmri value=pkg:/system/virtualization/kvmadm@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="Manage KVM instances under SMF control"
+set name=info.classification value="org.opensolaris.category.2008:System/Virtualization"
+set name=info.upstream_url value=http://www.kvmadm.org/
+set name=info.source_url value=$(COMPONENT_ARCHIVE_URL)
+set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+
+license LICENSE license="GPLv3"
+
+dir path=lib
+dir path=lib/svc
+dir path=lib/svc/manifest
+dir path=lib/svc/manifest/system
+file files/system-kvm.xml path=lib/svc/manifest/system/system-kvm.xml
+
+dir path=usr
+dir path=usr/bin
+dir path=usr/perl5
+dir path=usr/perl5/$(PERL_VERSION)
+dir path=usr/perl5/$(PERL_VERSION)/lib
+dir path=usr/perl5/$(PERL_VERSION)/lib/Data
+dir path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor
+dir path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Error
+dir path=usr/perl5/$(PERL_VERSION)/lib/Illumos
+dir path=usr/perl5/$(PERL_VERSION)/lib/JSON
+dir path=usr/perl5/$(PERL_VERSION)/lib/JSON/backportPP
+dir path=usr/perl5/$(PERL_VERSION)/lib/KVMadm
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Data-Processor-0.4.3
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-SMF-0.1.7
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-Zones-0.1.7
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/JSON-2.97001
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Data
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Data/Processor
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Illumos
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Illumos/SMF
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Illumos/Zones
+dir path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/JSON
+dir path=usr/share
+dir path=usr/share/man
+dir path=usr/share/man/man1
+file path=usr/bin/dns_probe
+file path=usr/bin/kvmadm
+file path=usr/bin/ping_probe
+file path=usr/bin/system-kvm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Error/Collection.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Error/Instance.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Generator.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/PodWriter.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Transformer.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/Validator.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Data/Processor/ValidatorFactory.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Illumos/SMF.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/Illumos/Zones.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/JSON.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/JSON/backportPP.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/JSON/backportPP/Boolean.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/JSON/backportPP/Compat5005.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/JSON/backportPP/Compat5006.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/KVMadm/Config.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/KVMadm/Monitor.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/KVMadm/Progress.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/KVMadm/Utils.pm
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Data-Processor-0.4.3/MYMETA.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Data-Processor-0.4.3/install.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-SMF-0.1.7/MYMETA.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-SMF-0.1.7/install.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-Zones-0.1.7/MYMETA.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/Illumos-Zones-0.1.7/install.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/JSON-2.97001/MYMETA.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/.meta/JSON-2.97001/install.json
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Data/Processor/.packlist
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Illumos/SMF/.packlist
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/Illumos/Zones/.packlist
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/auto/JSON/.packlist
+file path=usr/perl5/$(PERL_VERSION)/lib/i86pc-solaris-64int/perllocal.pod
+file path=usr/share/man/man1/kvmadm.1

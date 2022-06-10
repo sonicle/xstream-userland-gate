@@ -1,0 +1,28 @@
+--- gcc-4.9.4/gcc/config/sol2.h	Thu Feb 24 12:35:38 2022
++++ gcc-4.9.4/gcc/config/sol2.h.new	Thu Feb 24 12:37:27 2022
+@@ -154,9 +154,10 @@
+   "%{G:-G} \
+    %{YP,*} \
+    %{R*} \
+-   %{!YP,*:%{p|pg:-Y P,%R/usr/ccs/lib/libp:%R/usr/lib/libp:%R/usr/ccs/lib:%R/lib:%R/usr/lib} \
+-	   %{!p:%{!pg:-Y P,%R/usr/ccs/lib:%R/lib:%R/usr/lib}}}"
++   %{!YP,*:%{p|pg:-Y P,%R/usr/gcc/4.9/lib:%R/lib:%R/usr/lib -R %R/usr/gcc/4.9/lib -L %R/usr/gcc/4.9/lib} \
++          %{!p:%{!pg:-Y P,%R/usr/gcc/4.9/lib:%R/lib:%R/usr/lib -R %R/usr/gcc/4.9/lib -L %R/usr/gcc/4.9/lib}}}"
+ 
++
+ #undef LINK_ARCH32_SPEC
+ #define LINK_ARCH32_SPEC LINK_ARCH32_SPEC_BASE
+ 
+--- gcc-4.9.4/gcc/config/sol2-bi.h	Thu Feb 24 12:35:45 2022
++++ gcc-4.9.4/gcc/config/sol2-bi.h.new	Thu Feb 24 12:38:55 2022
+@@ -74,8 +74,8 @@
+   "%{G:-G} \
+    %{YP,*} \
+    %{R*} \
+-   %{!YP,*:%{p|pg:-Y P,%R/usr/lib/libp/" ARCH64_SUBDIR ":%R/lib/" ARCH64_SUBDIR ":%R/usr/lib/" ARCH64_SUBDIR "}	\
+-	   %{!p:%{!pg:-Y P,%R/lib/" ARCH64_SUBDIR ":%R/usr/lib/" ARCH64_SUBDIR "}}}"
++   %{!YP,*:%{p|pg:-Y P,%R/usr/gcc/4.9/lib/" ARCH64_SUBDIR ":%R/lib/" ARCH64_SUBDIR ":%R/usr/lib/" ARCH64_SUBDIR " -R %R/usr/gcc/4.9/lib/" ARCH64_SUBDIR " -L %R/usr/gcc/4.9/lib/" ARCH64_SUBDIR "}   \
++          %{!p:%{!pg:-Y P,%R/usr/gcc/4.9/lib/" ARCH64_SUBDIR ":%R/lib/" ARCH64_SUBDIR ":%R/usr/lib/" ARCH64_SUBDIR " -R %R/usr/gcc/4.9/lib/" ARCH64_SUBDIR " -L %R/usr/gcc/4.9/lib/" ARCH64_SUBDIR "}}}"
+ 
+ #undef LINK_ARCH64_SPEC
+ #ifndef USE_GLD

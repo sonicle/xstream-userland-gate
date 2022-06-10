@@ -1,0 +1,257 @@
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source.  A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+#
+
+#
+# Copyright 2017 Aurelien Larcher
+#
+
+# Install demos directly from the source directory
+<transform file path=usr/demo/gnuplot/(.+[.-].+)$ -> set action.hash demo/%<\1> >
+
+set name=pkg.fmri value=pkg:/$(COMPONENT_FMRI)@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="$(COMPONENT_SUMMARY)"
+set name=info.classification value="$(COMPONENT_CLASSIFICATION)"
+set name=info.upstream-url value=$(COMPONENT_PROJECT_URL)
+set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
+set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+
+license $(COMPONENT_LICENSE_FILE) license='$(COMPONENT_LICENSE)'
+
+file path=usr/bin/gnuplot
+file path=usr/lib/$(MACH64)/gnuplot/5.0/gnuplot_x11 mode=0555
+file path=usr/share/gnuplot/5.0/PostScript/8859-1.ps
+file path=usr/share/gnuplot/5.0/PostScript/8859-15.ps
+file path=usr/share/gnuplot/5.0/PostScript/8859-2.ps
+file path=usr/share/gnuplot/5.0/PostScript/8859-9.ps
+file path=usr/share/gnuplot/5.0/PostScript/aglfn.txt
+file path=usr/share/gnuplot/5.0/PostScript/cp1250.ps
+file path=usr/share/gnuplot/5.0/PostScript/cp1251.ps
+file path=usr/share/gnuplot/5.0/PostScript/cp1252.ps
+file path=usr/share/gnuplot/5.0/PostScript/cp437.ps
+file path=usr/share/gnuplot/5.0/PostScript/cp850.ps
+file path=usr/share/gnuplot/5.0/PostScript/cp852.ps
+file path=usr/share/gnuplot/5.0/PostScript/koi8r.ps
+file path=usr/share/gnuplot/5.0/PostScript/koi8u.ps
+file path=usr/share/gnuplot/5.0/PostScript/prologue.ps
+file path=usr/share/gnuplot/5.0/PostScript/utf-8.ps
+file path=usr/share/gnuplot/5.0/app-defaults/Gnuplot
+file path=usr/share/gnuplot/5.0/colors_default.gp
+file path=usr/share/gnuplot/5.0/colors_mono.gp
+file path=usr/share/gnuplot/5.0/colors_podo.gp
+file path=usr/share/gnuplot/5.0/gnuplot.gih
+file path=usr/share/gnuplot/5.0/gnuplotrc
+file path=usr/share/gnuplot/5.0/js/README
+file path=usr/share/gnuplot/5.0/js/canvasmath.js
+file path=usr/share/gnuplot/5.0/js/canvastext.js
+file path=usr/share/gnuplot/5.0/js/gnuplot_common.js
+file path=usr/share/gnuplot/5.0/js/gnuplot_dashedlines.js
+file path=usr/share/gnuplot/5.0/js/gnuplot_mouse.css
+file path=usr/share/gnuplot/5.0/js/gnuplot_mouse.js
+file path=usr/share/gnuplot/5.0/js/gnuplot_svg.js
+file path=usr/share/gnuplot/5.0/js/grid.png
+file path=usr/share/gnuplot/5.0/js/help.png
+file path=usr/share/gnuplot/5.0/js/nextzoom.png
+file path=usr/share/gnuplot/5.0/js/previouszoom.png
+file path=usr/share/gnuplot/5.0/js/return.png
+file path=usr/share/gnuplot/5.0/js/textzoom.png
+file path=usr/share/gnuplot/5.0/lua/gnuplot-tikz.lua
+file path=usr/share/man/man1/gnuplot-ja.1
+file path=usr/share/man/man1/gnuplot.1
+
+link path=usr/share/X11/app-defaults/Gnuplot target=../../gnuplot/5.0/app-defaults/Gnuplot
+
+# Demos
+file rundemo path=usr/demo/gnuplot/rundemo mode=555
+file runtcldemo path=usr/demo/gnuplot/runtcldemo mode=555
+file path=usr/demo/gnuplot/1.dat
+file path=usr/demo/gnuplot/2.dat
+file path=usr/demo/gnuplot/3.dat
+file path=usr/demo/gnuplot/GM1_bonds.r3d
+file path=usr/demo/gnuplot/GM1_sugar.pdb
+file path=usr/demo/gnuplot/airfoil.dem
+file path=usr/demo/gnuplot/all.dem
+file path=usr/demo/gnuplot/animate.dem
+file path=usr/demo/gnuplot/animate2.dem
+file path=usr/demo/gnuplot/approximate.dem
+file path=usr/demo/gnuplot/arrowstyle.dat
+file path=usr/demo/gnuplot/arrowstyle.dem
+file path=usr/demo/gnuplot/asciimat.dat
+file path=usr/demo/gnuplot/autoscale.dem
+file path=usr/demo/gnuplot/barchart_art.dem
+file path=usr/demo/gnuplot/battery.dat
+file path=usr/demo/gnuplot/big_peak.dat
+file path=usr/demo/gnuplot/binary.dem
+file path=usr/demo/gnuplot/bivariat.dem
+file path=usr/demo/gnuplot/bldg.png
+file path=usr/demo/gnuplot/blutux.rgb
+file path=usr/demo/gnuplot/bolditalic.dem
+file path=usr/demo/gnuplot/borders.dem
+file path=usr/demo/gnuplot/boxclusters.dem
+file path=usr/demo/gnuplot/boxplot.dem
+file path=usr/demo/gnuplot/callargs.dem
+file path=usr/demo/gnuplot/candlesticks.dat
+file path=usr/demo/gnuplot/candlesticks.dem
+file path=usr/demo/gnuplot/cerf.dem
+file path=usr/demo/gnuplot/charset.dem
+file path=usr/demo/gnuplot/circles.dem
+file path=usr/demo/gnuplot/cities.dat
+file path=usr/demo/gnuplot/cities.dem
+file path=usr/demo/gnuplot/clip14in.dat
+file path=usr/demo/gnuplot/clipobject.dem
+file path=usr/demo/gnuplot/colorscheme.dem
+file path=usr/demo/gnuplot/colorwheel.dem
+file path=usr/demo/gnuplot/complex_trig.dem
+file path=usr/demo/gnuplot/contours.dem
+file path=usr/demo/gnuplot/controls.dem
+file path=usr/demo/gnuplot/ctg-y2.dat
+file path=usr/demo/gnuplot/dashcolor.dem
+file path=usr/demo/gnuplot/dashtypes.dem
+file path=usr/demo/gnuplot/datastrings.dem
+file path=usr/demo/gnuplot/delaunay-edges.dat
+file path=usr/demo/gnuplot/demo.edf
+file path=usr/demo/gnuplot/density.fnc
+file path=usr/demo/gnuplot/dgrid3d.dem
+file path=usr/demo/gnuplot/discrete.dem
+file path=usr/demo/gnuplot/electron.dem
+file path=usr/demo/gnuplot/ellipse.dem
+file path=usr/demo/gnuplot/ellipses.dat
+file path=usr/demo/gnuplot/ellipses_style.dem
+file path=usr/demo/gnuplot/empty-circles.dat
+file path=usr/demo/gnuplot/energy_circles.dat
+file path=usr/demo/gnuplot/enhanced_utf8.dem
+file path=usr/demo/gnuplot/enhancedtext.dem
+file path=usr/demo/gnuplot/epslatex.dem
+file path=usr/demo/gnuplot/fillbetween.dem
+file path=usr/demo/gnuplot/fillcrvs.dem
+file path=usr/demo/gnuplot/fillstyle.dem
+file path=usr/demo/gnuplot/finance.dat
+file path=usr/demo/gnuplot/finance.dem
+file path=usr/demo/gnuplot/fit.dem
+file path=usr/demo/gnuplot/fit3.dat
+file path=usr/demo/gnuplot/fitmulti.dem
+file path=usr/demo/gnuplot/fontfile.dem
+file path=usr/demo/gnuplot/fontfile_latex.dem
+file path=usr/demo/gnuplot/gantt.dem
+file path=usr/demo/gnuplot/gen-random.inc
+file path=usr/demo/gnuplot/glass.dat
+file path=usr/demo/gnuplot/gnu-valley
+file path=usr/demo/gnuplot/gnuplot.cfg
+file path=usr/demo/gnuplot/gnuplot.rot
+file path=usr/demo/gnuplot/gpdemos.tcl mode=0555
+file path=usr/demo/gnuplot/heatmaps.dem
+file path=usr/demo/gnuplot/hemisphr.dat
+file path=usr/demo/gnuplot/hexa.fnc
+file path=usr/demo/gnuplot/hidden.dem
+file path=usr/demo/gnuplot/hidden2.dem
+file path=usr/demo/gnuplot/histerror.dat
+file path=usr/demo/gnuplot/histograms.dem
+file path=usr/demo/gnuplot/histograms2.dem
+file path=usr/demo/gnuplot/histopt.dat
+file path=usr/demo/gnuplot/hypertext.dem
+file path=usr/demo/gnuplot/image.dem
+file path=usr/demo/gnuplot/image2.dem
+file path=usr/demo/gnuplot/imageNaN.dem
+file path=usr/demo/gnuplot/immigration.dat
+file path=usr/demo/gnuplot/iterate.dem
+file path=usr/demo/gnuplot/kdensity2d.dem
+file path=usr/demo/gnuplot/key.dem
+file path=usr/demo/gnuplot/klein.dat
+file path=usr/demo/gnuplot/layout.dem
+file path=usr/demo/gnuplot/lcdemo.dat
+file path=usr/demo/gnuplot/lena-keypoints.bin
+file path=usr/demo/gnuplot/lena.rgb
+file path=usr/demo/gnuplot/line.fnc
+file path=usr/demo/gnuplot/lines_arrows.dem
+file path=usr/demo/gnuplot/linkedaxes.dem
+file path=usr/demo/gnuplot/macros.dem
+file path=usr/demo/gnuplot/margins.dem
+file path=usr/demo/gnuplot/matrix_index.dem
+file path=usr/demo/gnuplot/mgr.dem
+file path=usr/demo/gnuplot/molecule.dem
+file path=usr/demo/gnuplot/moli3.dat
+file path=usr/demo/gnuplot/mouselab_1.dem
+file path=usr/demo/gnuplot/mouselab_2.dem
+file path=usr/demo/gnuplot/mouselabels.dem
+file path=usr/demo/gnuplot/mousevariables.dem
+file path=usr/demo/gnuplot/multiaxis.dem
+file path=usr/demo/gnuplot/multimsh.dem
+file path=usr/demo/gnuplot/multipalette.dem
+file path=usr/demo/gnuplot/multiplt.dem
+file path=usr/demo/gnuplot/named_var.dem
+file path=usr/demo/gnuplot/nokey.dem
+file path=usr/demo/gnuplot/optimize.dat
+file path=usr/demo/gnuplot/orbital_elements.dat
+file path=usr/demo/gnuplot/orbits.dem
+file path=usr/demo/gnuplot/parallel.dem
+file path=usr/demo/gnuplot/param.dem
+file path=usr/demo/gnuplot/piecewise.dem
+file path=usr/demo/gnuplot/pm3d.dem
+file path=usr/demo/gnuplot/pm3dcolors.dem
+file path=usr/demo/gnuplot/pm3dgamma.dem
+file path=usr/demo/gnuplot/pointsize.dem
+file path=usr/demo/gnuplot/polar.dem
+file path=usr/demo/gnuplot/poldat.dem
+file path=usr/demo/gnuplot/prob.dem
+file path=usr/demo/gnuplot/prob2.dem
+file path=usr/demo/gnuplot/rainbow.dem
+file path=usr/demo/gnuplot/random-points
+file path=usr/demo/gnuplot/random.dem
+file path=usr/demo/gnuplot/rectangle.dem
+file path=usr/demo/gnuplot/reflect.fnc
+file path=usr/demo/gnuplot/rgb_variable.dat
+file path=usr/demo/gnuplot/rgb_variable.dem
+file path=usr/demo/gnuplot/rgba_lines.dem
+file path=usr/demo/gnuplot/rgbalpha.dem
+file path=usr/demo/gnuplot/rotate_labels.dem
+file path=usr/demo/gnuplot/rugplot.dem
+file path=usr/demo/gnuplot/running_avg.dem
+file path=usr/demo/gnuplot/scatter.dem
+file path=usr/demo/gnuplot/scatter2.bin
+file path=usr/demo/gnuplot/scatter2.dat
+file path=usr/demo/gnuplot/silver.dat
+file path=usr/demo/gnuplot/simple.dem
+file path=usr/demo/gnuplot/sine.bin
+file path=usr/demo/gnuplot/singulr.dem
+file path=usr/demo/gnuplot/smooth.dem
+file path=usr/demo/gnuplot/sound.par
+file path=usr/demo/gnuplot/sound2.par
+file path=usr/demo/gnuplot/soundvel.dat
+file path=usr/demo/gnuplot/special_chars.dem
+file path=usr/demo/gnuplot/spline.dem
+file path=usr/demo/gnuplot/srl.dat
+file path=usr/demo/gnuplot/start.par
+file path=usr/demo/gnuplot/stat.inc
+file path=usr/demo/gnuplot/stats.dem
+file path=usr/demo/gnuplot/steps.dat
+file path=usr/demo/gnuplot/steps.dem
+file path=usr/demo/gnuplot/stringvar.dem
+file path=usr/demo/gnuplot/surface1.dem
+file path=usr/demo/gnuplot/surface2.dem
+file path=usr/demo/gnuplot/table.dat
+file path=usr/demo/gnuplot/textcolor.dem
+file path=usr/demo/gnuplot/textrotate.dem
+file path=usr/demo/gnuplot/tics.dem
+file path=usr/demo/gnuplot/timedat.dat
+file path=usr/demo/gnuplot/timedat.dem
+file path=usr/demo/gnuplot/transparent.dem
+file path=usr/demo/gnuplot/transparent_solids.dem
+file path=usr/demo/gnuplot/triangle.dat
+file path=usr/demo/gnuplot/using.bin
+file path=usr/demo/gnuplot/using.dat
+file path=usr/demo/gnuplot/using.dem
+file path=usr/demo/gnuplot/utf8.dem
+file path=usr/demo/gnuplot/varcolor.dem
+file path=usr/demo/gnuplot/vector.dem
+file path=usr/demo/gnuplot/whale.dat
+file path=usr/demo/gnuplot/world.cor
+file path=usr/demo/gnuplot/world.dat
+file path=usr/demo/gnuplot/world.dem
+file path=usr/demo/gnuplot/world2.dem

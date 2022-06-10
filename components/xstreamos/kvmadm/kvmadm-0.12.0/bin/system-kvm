@@ -1,0 +1,216 @@
+#!/usr/bin/env perl
+
+use lib qw(); # PERL5LIB
+use FindBin;
+# PERL5LIB
+use lib "$FindBin::RealBin/../lib"; use lib "$FindBin::RealBin/../thirdparty/lib/perl5"; # LIBDIR
+use strict;
+use warnings;
+
+use File::Path qw(make_path);
+use File::Basename qw(basename);
+use IO::Socket::UNIX qw(SOCK_STREAM);
+use POSIX qw(SIGTERM);
+use KVMadm::Config;
+
+#SMF constants
+my %SMF_STATUS = (
+    SMF_EXIT_OK          => 0,
+    SMF_EXIT_ERR_FATAL   => 95,
+    SMF_EXIT_ERR_CONFIG  => 96,
+    SMF_EXIT_MON_DEGRADE => 97,
+    SMF_EXIT_MON_OFFLINE => 98,
+    SMF_EXIT_ERR_NOSMF   => 99,
+    SMF_EXIT_ERR_PERM    => 100,
+);
+
+my $FMRI     = KVMadm::Config->fmri();
+my $RUN_PATH = KVMadm::Config->runPath();
+my $ACPI_TO  = 120;
+
+my $sendMonitor = sub {
+    my $name = shift;
+    my $msg  = shift;
+
+    my $sock = IO::Socket::UNIX->new(
+        Type => SOCK_STREAM,
+        Peer => "$RUN_PATH/$name/$name.monitor",
+    ) || do {
+        print "Cannot open socket $!\n";
+        exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+    };
+    print $sock $msg;
+    $sock->close();
+};
+
+my $setVNCpassword = sub {
+    $sendMonitor->(shift, 'set_password vnc ' . shift . "\n");
+};
+
+my $acpiShutdown = sub {
+    $sendMonitor->(shift, "system_powerdown\n");
+};
+
+my $cleanupRunPath = sub {
+    my $name = shift;
+    my $pid  = shift;
+
+    my $counter = $ACPI_TO;
+    while($counter--){
+        kill (0, $pid) || do {
+            unlink glob "$RUN_PATH/$name/$name.*";
+            last;
+        };
+        sleep 1;
+    }
+};
+
+# check if FMRI is set
+$ENV{SMF_FMRI} || do {
+    print "SMF framework variables are not initialised.\n";
+    exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+};
+
+my ($kvmName) = $ENV{SMF_FMRI} =~ /^$FMRI:([-\w]+)$/;
+
+# check if run directory exists
+-d "$RUN_PATH/$kvmName" || make_path("$RUN_PATH/$kvmName", { mode => 0700 }) || do {
+    print "Cannot create directory $RUN_PATH/$kvmName\n";
+    exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};   
+};
+
+for (shift){
+    /^start$/ && do {
+        my $config = KVMadm::Config->new();
+        my @cmdArray;
+        my $password;
+        my $precmd;
+
+        local $@;
+        eval {
+            local $SIG{__DIE__};
+            @cmdArray = @{$config->getKVMCmdArray($kvmName)};
+            $password = $config->getVNCPassword($kvmName);
+            $precmd   = $config->getPreStartCmd($kvmName);
+        };
+        if ($@){
+            print "$@\n";
+            exit $SMF_STATUS{SMF_EXIT_ERR_CONFIG};
+        }
+
+        # check if we have to run a pre start cmd
+        $precmd && do {
+            # fork into the bg so SMF won't time out
+            defined (my $pid = fork) or die "ERROR: can't fork: $!\n";
+            # terminate parent process
+            $pid && exit $SMF_STATUS{SMF_EXIT_OK};
+
+            # clean up existing pid file for qemu process check
+            unlink "$RUN_PATH/$kvmName/$kvmName.pid";
+            system ($precmd);
+        };
+        system (@cmdArray) && do {
+            print "Cannot run KVM $kvmName\n";
+            exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+        };
+        $password && $setVNCpassword->($kvmName, $password);
+        last;
+    };
+
+    /^stop$/ && do {
+        my $config = KVMadm::Config->new();
+        my $shutdownType;
+        my $cleanup;
+
+        local $@;
+        eval {
+            local $SIG{__DIE__};
+            ($cleanup, $shutdownType) = $config->getKVMShutdown($kvmName);
+        };
+        if ($@){
+            print "$@\n";
+            exit $SMF_STATUS{SMF_EXIT_ERR_CONFIG};
+        }
+        
+        my $pid = $config->getPid($kvmName) or do {
+            print "Cannot get pid.\n";
+            exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+        };
+        for ($shutdownType){
+            /^acpi$/ && do {
+                $acpiShutdown->($kvmName);
+                $cleanup && $cleanupRunPath->($kvmName, $pid);
+                last;
+            };
+
+            /^acpi_kill$/ && do {
+                $acpiShutdown->($kvmName);
+
+                my $counter = $ACPI_TO;
+                while ($counter--){
+                    sleep 1;
+                    kill (0, $pid) || do {
+                        $cleanup && $cleanupRunPath->($kvmName, $pid); 
+                        exit $SMF_STATUS{SMF_EXIT_OK};
+                    };
+                }
+
+                kill SIGTERM, $pid;
+                $cleanup && $cleanupRunPath->($kvmName, $pid); 
+                last;
+            };
+
+            /^kill$/ && do {
+                kill SIGTERM, $pid;
+                $cleanup && $cleanupRunPath->($kvmName, $pid); 
+                last;
+            };
+
+            #should never reach here
+            exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+        };
+
+        last;
+    };
+
+    #default
+    print 'usage: ' . basename($0) . " { start | stop }\n";
+    exit $SMF_STATUS{SMF_EXIT_ERR_FATAL};
+}
+
+exit $SMF_STATUS{SMF_EXIT_OK};
+
+1;
+
+__END__
+
+=head1 COPYRIGHT
+
+Copyright (c) 2015 by OETIKER+PARTNER AG. All rights reserved.
+
+=head1 LICENSE
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see L<http://www.gnu.org/licenses/>.
+
+=head1 AUTHOR
+
+S<Tobias Oetiker E<lt>tobi@oetiker.chE<gt>>
+S<Dominik Hassler E<lt>hadfl@cpan.orgE<gt>>
+
+=head1 HISTORY
+
+2015-04-28 had Zone support
+2014-11-06 had Initial Version
+
+=cut

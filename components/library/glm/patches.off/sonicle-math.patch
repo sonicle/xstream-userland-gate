@@ -1,0 +1,59 @@
+--- glm/glm/detail/func_common.inl	Sat Jan  3 11:43:17 2015
++++ glm/glm/detail/func_common.inl.new	Sat Jan  3 11:42:55 2015
+@@ -36,6 +36,10 @@
+ #include "type_vec4.hpp"
+ #include "_vectorize.hpp"
+ #include <limits>
++
++#if (GLM_PLATFORM & GLM_PLATFORM_SOLARIS)
++#include <math.h>
++#endif
+ 
+ namespace glm{
+ namespace detail
+@@ -553,6 +557,8 @@
+ #			elif GLM_COMPILER & (GLM_COMPILER_GCC | (GLM_COMPILER_APPLE_CLANG | GLM_COMPILER_LLVM))
+ #				if GLM_PLATFORM & GLM_PLATFORM_ANDROID && __cplusplus < 201103L
+ 					return _isnan(x) != 0;
++#				elif (GLM_PLATFORM & GLM_PLATFORM_SOLARIS)
++					return isnan(x);
+ #				else
+ 					return std::isnan(x);
+ #				endif
+@@ -587,6 +593,8 @@
+ #			elif GLM_COMPILER & (GLM_COMPILER_GCC | (GLM_COMPILER_APPLE_CLANG | GLM_COMPILER_LLVM))
+ #				if(GLM_PLATFORM & GLM_PLATFORM_ANDROID && __cplusplus < 201103L)
+ 					return _isinf(x) != 0;
++#				elif (GLM_PLATFORM & GLM_PLATFORM_SOLARIS)
++					return isinf(x);
+ #				else
+ 					return std::isinf(x);
+ #				endif
+--- glm/glm/detail/setup.hpp	Sat Jan  3 11:36:36 2015
++++ glm/glm/detail/setup.hpp.new	Sat Jan  3 11:39:04 2015
+@@ -57,6 +57,7 @@
+ #define GLM_PLATFORM_UNIX			0x00400000
+ #define GLM_PLATFORM_QNXNTO			0x00800000
+ #define GLM_PLATFORM_WINCE			0x01000000
++#define GLM_PLATFORM_SOLARIS			0x02000000
+ 
+ #ifdef GLM_FORCE_PLATFORM_UNKNOWN
+ #	define GLM_PLATFORM GLM_PLATFORM_UNKNOWN
+@@ -74,6 +75,8 @@
+ #	define GLM_PLATFORM GLM_PLATFORM_ANDROID
+ #elif defined(__linux)
+ #	define GLM_PLATFORM GLM_PLATFORM_LINUX
++#elif defined(__sun)
++#	define GLM_PLATFORM GLM_PLATFORM_SOLARIS
+ #elif defined(__unix)
+ #	define GLM_PLATFORM GLM_PLATFORM_UNIX
+ #else
+@@ -99,6 +102,8 @@
+ #		pragma message("GLM: Android platform detected")
+ #	elif(GLM_PLATFORM & GLM_PLATFORM_LINUX)
+ #		pragma message("GLM: Linux platform detected")
++#	elif(GLM_PLATFORM & GLM_PLATFORM_SOLARIS)
++#		pragma message("GLM: SOLARIS platform detected")
+ #	elif(GLM_PLATFORM & GLM_PLATFORM_UNIX)
+ #		pragma message("GLM: UNIX platform detected")
+ #	elif(GLM_PLATFORM & GLM_PLATFORM_UNKNOWN)

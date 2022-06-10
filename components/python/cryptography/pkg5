@@ -1,0 +1,37 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "library/python/cffi",
+        "library/python/pytest-35",
+        "library/python/pytest-37",
+        "library/python/pytest-39",
+        "library/security/openssl",
+        "runtime/python-27",
+        "runtime/python-35",
+        "runtime/python-37",
+        "runtime/python-39",
+        "runtime/ruby",
+        "system/library",
+        "text/gnu-patch"
+    ],
+    "fmris": [
+        "library/python/cryptography-27",
+        "library/python/cryptography-35",
+        "library/python/cryptography-37",
+        "library/python/cryptography-39",
+        "library/python/cryptography"
+    ],
+    "name": "cryptography"
+}

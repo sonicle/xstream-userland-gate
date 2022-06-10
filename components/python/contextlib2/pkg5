@@ -1,0 +1,28 @@
+{
+    "dependencies": [
+        "SUNWcs",
+        "archiver/gnu-tar",
+        "compress/bzip2",
+        "compress/gzip",
+        "compress/lzip",
+        "compress/p7zip",
+        "compress/unzip",
+        "compress/xz",
+        "compress/zip",
+        "compress/zstd",
+        "crypto/gnupg",
+        "developer/java/jdk",
+        "developer/xstream/os",
+        "runtime/python-27",
+        "runtime/ruby",
+        "system/library"
+    ],
+    "fmris": [
+        "library/python/contextlib2-27",
+        "library/python/contextlib2-35",
+        "library/python/contextlib2-37",
+        "library/python/contextlib2-39",
+        "library/python/contextlib2"
+    ],
+    "name": "contextlib2"
+}

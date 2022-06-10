@@ -1,0 +1,39 @@
+set name=pkg.fmri \
+    value=pkg:/compatibility/packages/SUNWxwopt@0.5.11,5.11-2020.1.1.2
+set name=pkg.summary \
+    value="X Window System optional client libraries and applications group"
+set name=pkg.description \
+    value="A group package that provides the same core set of X11 client programs and libraries as the SUNWxwopt package for prior Solaris releases"
+set name=com.oracle.info.name value=x11-compatibility
+set name=com.oracle.info.version value=0.5.11
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+legacy pkg=SUNWxwopt arch=i386 category=system \
+    desc="X Window System Optional Clients" \
+    hotline="Please contact your local service provider" \
+    name="X Window System Optional Clients" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+depend type=require fmri=pkg:/desktop/window-manager/twm
+depend type=require fmri=pkg:/developer/build/imake
+depend type=require fmri=pkg:/developer/build/makedepend
+depend type=require fmri=pkg:/diagnostic/xload
+depend type=require fmri=pkg:/document/viewer/xditview
+depend type=require fmri=pkg:/editor/xedit
+depend type=require fmri=pkg:/image/editor/bitmap
+depend type=require fmri=pkg:/image/xcursorgen
+depend type=require fmri=pkg:/x11/colormap-utilities
+depend type=require fmri=pkg:/x11/network/x11-network-proxies
+depend type=require fmri=pkg:/x11/oclock
+depend type=require fmri=pkg:/x11/x11-server-utilities
+depend type=require fmri=pkg:/x11/xbiff
+depend type=require fmri=pkg:/x11/xclipboard
+depend type=require fmri=pkg:/x11/xclock
+depend type=require fmri=pkg:/x11/xconsole
+depend type=require fmri=pkg:/x11/xfontsel
+depend type=require fmri=pkg:/x11/xman
+depend type=require fmri=pkg:/x11/xt-resource-utilities

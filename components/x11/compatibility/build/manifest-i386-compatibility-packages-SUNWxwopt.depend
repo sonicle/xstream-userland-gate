@@ -1,0 +1,32 @@
+set name=com.oracle.info.version value=0.5.11
+set name=variant.arch value=i386
+set name=pkg.fmri value=pkg:/compatibility/packages/SUNWxwopt@0.5.11,5.11-2020.1.1.2
+set name=com.oracle.info.name value=x11-compatibility
+set name=userland.info.git-remote value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-branch value=master
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=pkg.summary value="X Window System optional client libraries and applications group"
+set name=pkg.description value="A group package that provides the same core set of X11 client programs and libraries as the SUNWxwopt package for prior Solaris releases"
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+depend fmri=pkg:/desktop/window-manager/twm type=require
+depend fmri=pkg:/developer/build/imake type=require
+depend fmri=pkg:/developer/build/makedepend type=require
+depend fmri=pkg:/diagnostic/xload type=require
+depend fmri=pkg:/document/viewer/xditview type=require
+depend fmri=pkg:/editor/xedit type=require
+depend fmri=pkg:/image/editor/bitmap type=require
+depend fmri=pkg:/image/xcursorgen type=require
+depend fmri=pkg:/x11/colormap-utilities type=require
+depend fmri=pkg:/x11/network/x11-network-proxies type=require
+depend fmri=pkg:/x11/oclock type=require
+depend fmri=pkg:/x11/x11-server-utilities type=require
+depend fmri=pkg:/x11/xbiff type=require
+depend fmri=pkg:/x11/xclipboard type=require
+depend fmri=pkg:/x11/xclock type=require
+depend fmri=pkg:/x11/xconsole type=require
+depend fmri=pkg:/x11/xfontsel type=require
+depend fmri=pkg:/x11/xman type=require
+depend fmri=pkg:/x11/xt-resource-utilities type=require
+legacy arch=i386 category=system desc="X Window System Optional Clients" hotline="Please contact your local service provider" name="X Window System Optional Clients" pkg=SUNWxwopt vendor="Project XStreamOS" version=11.11.0,REV=2010.05.25.01.00
+

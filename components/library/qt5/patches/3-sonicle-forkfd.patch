@@ -1,0 +1,19 @@
+--- qt-everywhere-src-5.14.1/qtbase/src/3rdparty/forkfd/forkfd_atomic.h	Wed Apr  1 09:31:14 2020
++++ qt-everywhere-src-5.14.1/qtbase/src/3rdparty/forkfd/forkfd_atomic.h.new	Wed Apr  1 09:30:54 2020
+@@ -25,13 +25,13 @@
+ #if !defined(FFD_ATOMIC_H) & !defined(FFD_ATOMIC_RELAXED)
+ #define FFD_ATOMIC_H
+ 
+-#if defined(__cplusplus) && __cplusplus >= 201103L
++/*#if defined(__cplusplus) && __cplusplus >= 201103L
+ #  include "forkfd_c11.h"
+ #elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
+ #  include "forkfd_c11.h"
+-#elif defined(__GNUC__)
++#elif defined(__GNUC__)*/
+ #  include "forkfd_gcc.h"
+-#endif
++/*#endif*/
+ 
+ #endif /* FFD_ATOMIC_h && FFD_ATOMIC_RELAXED */
+ #ifndef FFD_ATOMIC_RELAXED

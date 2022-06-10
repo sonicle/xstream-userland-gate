@@ -1,0 +1,68 @@
+set name=pkg.fmri \
+    value=pkg:/compatibility/packages/SUNWxwman@0.5.11,5.11-2020.1.1.2
+set name=pkg.summary value="X Window System user man pages group"
+set name=pkg.description \
+    value="A group package that provides the same core set of X11 user manual pages as the SUNWxwman & SUNWxorg-client-docs package for prior Solaris releases"
+set name=com.oracle.info.name value=x11-compatibility
+set name=com.oracle.info.version value=0.5.11
+set name=facet.doc.man value=true
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+legacy pkg=SUNWxorg-client-docs arch=i386 category=system \
+    desc="Documentation for X Window System client programs based on X.Org Foundation open source release" \
+    hotline="Please contact your local service provider" \
+    name="X.Org Foundation X client programs documentation" \
+    vendor="Project XStreamOS" version=11.11.0,REV=2010.05.25.01.00
+legacy pkg=SUNWxwman arch=i386 category=system \
+    desc="X Window System online user man pages" \
+    hotline="Please contact your local service provider" \
+    name="X Window System online user man pages" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+depend type=require fmri=pkg:/benchmark/x11perf facet.doc.man=true
+depend type=require fmri=pkg:/desktop/window-manager/twm facet.doc.man=true
+depend type=require fmri=pkg:/developer/build/imake facet.doc.man=true
+depend type=require fmri=pkg:/developer/build/makedepend facet.doc.man=true
+depend type=require fmri=pkg:/diagnostic/constype facet.doc.man=true
+depend type=require fmri=pkg:/diagnostic/xload facet.doc.man=true
+depend type=require fmri=pkg:/document/viewer/xditview facet.doc.man=true
+depend type=require fmri=pkg:/editor/xedit facet.doc.man=true
+depend type=require fmri=pkg:/image/editor/bitmap facet.doc.man=true
+depend type=require fmri=pkg:/image/xcursorgen facet.doc.man=true
+depend type=require fmri=pkg:/terminal/luit facet.doc.man=true
+depend type=require fmri=pkg:/terminal/xterm facet.doc.man=true
+depend type=require fmri=pkg:/x11/colormap-utilities facet.doc.man=true
+depend type=require fmri=pkg:/x11/demo facet.doc.man=true
+depend type=require fmri=pkg:/x11/diagnostic/x11-info-clients facet.doc.man=true
+depend type=require fmri=pkg:/x11/diagnostic/xev facet.doc.man=true
+depend type=require fmri=pkg:/x11/diagnostic/xscope facet.doc.man=true
+depend type=require fmri=pkg:/x11/documentation/xorg-docs facet.doc.man=true
+depend type=require fmri=pkg:/x11/font-utilities facet.doc.man=true
+depend type=require fmri=pkg:/x11/keyboard/xkb-utilities facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libice facet.doc.man=true
+depend type=require fmri=pkg:/x11/library/libxpm facet.doc.man=true
+depend type=require fmri=pkg:/x11/network/x11-network-proxies facet.doc.man=true
+depend type=require fmri=pkg:/x11/oclock facet.doc.man=true
+depend type=require fmri=pkg:/x11/session/sessreg facet.doc.man=true
+depend type=require fmri=pkg:/x11/session/smproxy facet.doc.man=true
+depend type=require fmri=pkg:/x11/session/xauth facet.doc.man=true
+depend type=require fmri=pkg:/x11/session/xinit facet.doc.man=true
+depend type=require fmri=pkg:/x11/x11-server-utilities facet.doc.man=true
+depend type=require fmri=pkg:/x11/x11-window-dump facet.doc.man=true
+depend type=require fmri=pkg:/x11/xbiff facet.doc.man=true
+depend type=require fmri=pkg:/x11/xcalc facet.doc.man=true
+depend type=require fmri=pkg:/x11/xclipboard facet.doc.man=true
+depend type=require fmri=pkg:/x11/xconsole facet.doc.man=true
+depend type=require fmri=pkg:/x11/xfd facet.doc.man=true
+depend type=require fmri=pkg:/x11/xfontsel facet.doc.man=true
+depend type=require fmri=pkg:/x11/xfs facet.doc.man=true
+depend type=require fmri=pkg:/x11/xfs/xfs-utilities facet.doc.man=true
+depend type=require fmri=pkg:/x11/xkill facet.doc.man=true
+depend type=require fmri=pkg:/x11/xlock facet.doc.man=true
+depend type=require fmri=pkg:/x11/xmag facet.doc.man=true
+depend type=require fmri=pkg:/x11/xman facet.doc.man=true
+depend type=require fmri=pkg:/x11/xt-resource-utilities facet.doc.man=true

@@ -1,0 +1,76 @@
+One of the tests need patching:
+
+  - Because we're doing the build in a symlink farm, one of the diff tests
+    thinks that we're changing the type of the files from symlink to file,
+    so the diffs come out wrong.  Rather than cleverly mucking around with
+    the working directory vs the repo directory, we just cat the files as
+    real files into place.
+
+Unclear whether this patch should be sent upstream.
+
+--- git-2.4.5/t/t4018-diff-funcname.sh	Thu Jun 25 12:15:40 2015
++++ git-2.4.5/t/t4018-diff-funcname.sh	Thu Jul  2 14:11:09 2015
+@@ -79,8 +79,11 @@
+ 
+ 	# add all test files to the index
+ 	(
+-		cd "$TEST_DIRECTORY"/t4018 &&
+-		git --git-dir="$TRASH_DIRECTORY/.git" add .
++		( cd "$TEST_DIRECTORY"/t4018 && printf "%s\n" * ) | while read f
++		do
++			cat "$TEST_DIRECTORY"/t4018/$f > $f
++			git add -v $f
++		done
+ 	) &&
+ 
+ 	# place modified files in the worktree
+
+
+This simply adds a couple of targets to the test Makefile which allow us to
+run the tests in parallel cleanly.  This way the results don't get cleaned
+up automatically after running the tests, and we can emit those results to
+the master file.  This might be interesting to upstream, but is really
+specific to running the tests in an external framework.
+
+--- git-2.19.0/t/Makefile	2018-09-24 10:56:27.954589694 +0000
++++ git-2.19.0/t/Makefile.new	2018-09-24 11:00:26.172819681 +0000
+@@ -48,6 +48,9 @@ failed:
+ 		sed -n 's/\.counts$$/.sh/p') && \
+ 	test -z "$$failed" || $(MAKE) $$failed
+ 
++test-noclean: pre-clean $(TEST_LINT)
++	$(MAKE) T
++
+ prove: pre-clean check-chainlint $(TEST_LINT)
+ 	@echo "*** prove ***"; $(PROVE) --exec '$(TEST_SHELL_PATH_SQ)' $(GIT_PROVE_OPTS) $(T) :: $(GIT_TEST_OPTS)
+ 	$(MAKE) clean-except-prove-cache
+@@ -93,6 +96,8 @@ test-lint-executable:
+ test-lint-shell-syntax:
+ 	@'$(PERL_PATH_SQ)' check-non-portable-shell.pl $(T) $(THELPERS)
+ 
++T: $(T)
++
+ test-lint-filenames:
+ 	@# We do *not* pass a glob to ls-files but use grep instead, to catch
+ 	@# non-ASCII characters (which are quoted within double-quotes)
+--- git-2.22.0/t/t5703-upload-pack-ref-in-want.sh	2019-06-07 20:37:32.000000000 +0000
++++ git-2.22.0/t/t5703-upload-pack-ref-in-want.sh	2019-06-11 10:23:22.233199623 +0000
+@@ -49,15 +49,15 @@ test_expect_success 'setup repository' '
+ 
+ test_expect_success 'config controls ref-in-want advertisement' '
+ 	test-tool serve-v2 --advertise-capabilities >out &&
+-	! grep -a ref-in-want out &&
++	! ggrep -a ref-in-want out &&
+ 
+ 	git config uploadpack.allowRefInWant false &&
+ 	test-tool serve-v2 --advertise-capabilities >out &&
+-	! grep -a ref-in-want out &&
++	! ggrep -a ref-in-want out &&
+ 
+ 	git config uploadpack.allowRefInWant true &&
+ 	test-tool serve-v2 --advertise-capabilities >out &&
+-	grep -a ref-in-want out
++	ggrep -a ref-in-want out
+ '
+ 
+ test_expect_success 'invalid want-ref line' '

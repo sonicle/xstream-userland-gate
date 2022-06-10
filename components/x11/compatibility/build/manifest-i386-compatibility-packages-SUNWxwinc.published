@@ -1,0 +1,50 @@
+set name=pkg.fmri \
+    value=pkg:/compatibility/packages/SUNWxwinc@0.5.11,5.11-2020.1.1.2
+set name=pkg.summary value="X Window System include files group"
+set name=pkg.description \
+    value="A group package that provides the same core set of X11 headers and developer files as the SUNWxwinc package for prior Solaris releases"
+set name=com.oracle.info.name value=x11-compatibility
+set name=com.oracle.info.version value=0.5.11
+set name=facet.devel value=true
+set name=info.classification value=org.opensolaris.category.2008:Development/X11
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+legacy pkg=SUNWxwinc arch=i386 category=system \
+    desc="X Window System header & pkgconfig files needed to build software" \
+    hotline="Please contact your local service provider" \
+    name="X Window System include files" vendor="Project XStreamOS" \
+    version=11.11.0,REV=2010.05.25.01.00
+depend type=require fmri=pkg:/developer/build/autoconf/xorg-macros \
+    facet.devel=true
+depend type=require fmri=pkg:/x11/data/xbitmaps facet.devel=true
+depend type=require fmri=pkg:/x11/header/x11-protocols facet.devel=true
+depend type=require fmri=pkg:/x11/library/libfontenc facet.devel=true
+depend type=require fmri=pkg:/x11/library/libfs facet.devel=true
+depend type=require fmri=pkg:/x11/library/libice facet.devel=true
+depend type=require fmri=pkg:/x11/library/libsm facet.devel=true
+depend type=require fmri=pkg:/x11/library/libx11 facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxau facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxcomposite facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxcursor facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxdamage facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxdmcp facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxevie facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxfixes facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxfont facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxkbfile facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxmu facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxmuu facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxp facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxpm facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxrandr facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxrender facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxres facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxtst facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxv facet.devel=true
+depend type=require fmri=pkg:/x11/library/libxvmc facet.devel=true
+depend type=require fmri=pkg:/x11/library/toolkit/libxt facet.devel=true
+depend type=require fmri=pkg:/x11/library/xtrans facet.devel=true

@@ -1,0 +1,137 @@
+#
+# This file and its contents are supplied under the terms of the
+# Common Development and Distribution License ("CDDL"), version 1.0.
+# You may only use this file in accordance with the terms of version
+# 1.0 of the CDDL.
+#
+# A full copy of the text of the CDDL should have accompanied this
+# source.  A copy of the CDDL is also available via the Internet at
+# http://www.illumos.org/license/CDDL.
+#
+
+#
+# Copyright (c) 2013, Sonicle S.r.l.  All rights reserved.
+#
+
+<transform file path=usr.*/man/.+ -> default mangler.man.stability volatile>
+
+set name=pkg.fmri value=pkg:/library/polkit@$(IPS_COMPONENT_VERSION),$(BUILD_VERSION)
+set name=pkg.summary value="Toolkit for defining and handling authorizations"
+set name=info.classification value="org.opensolaris.category.2008:System/Libraries"
+set name=info.upstream-url value="http://freedesktop.org"
+set name=info.source-url value=$(COMPONENT_ARCHIVE_URL)
+set name=org.opensolaris.consolidation value=$(CONSOLIDATION)
+
+license polkit.license license="LGPLv2"
+
+group groupname=polkitd gid=85
+user username=polkitd ftpuser=false gcos-field="Polkit Reserved UID" group=polkitd password=NP uid=85
+
+dir path=etc
+dir path=etc/dbus-1
+dir path=etc/dbus-1/system.d
+dir path=etc/pam.d
+dir path=etc/polkit-1
+dir path=etc/polkit-1/rules.d owner=polkitd mode=700
+dir path=usr
+dir path=usr/bin
+dir path=usr/bin/amd64
+dir path=usr/include
+dir path=usr/include/polkit-1
+dir path=usr/include/polkit-1/polkit
+dir path=usr/include/polkit-1/polkitagent
+dir path=usr/lib
+dir path=usr/lib/amd64
+dir path=usr/lib/amd64/pkgconfig
+dir path=usr/lib/amd64/polkit-1
+dir path=usr/lib/pkgconfig
+dir path=usr/lib/polkit-1
+dir path=usr/share
+dir path=usr/share/dbus-1
+dir path=usr/share/dbus-1/system-services
+dir path=usr/share/locale
+dir path=usr/share/locale/da
+dir path=usr/share/locale/da/LC_MESSAGES
+dir path=usr/share/man
+dir path=usr/share/man/man1
+dir path=usr/share/man/man8
+dir path=usr/share/polkit-1
+dir path=usr/share/polkit-1/actions
+dir path=usr/share/polkit-1/rules.d
+file path=etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
+file path=etc/pam.d/polkit-1
+file path=etc/polkit-1/rules.d/50-default.rules
+file path=usr/bin/amd64/pk-example-frobnicate
+file path=usr/bin/amd64/pkaction
+file path=usr/bin/amd64/pkcheck
+file path=usr/bin/amd64/pkexec owner=root mode=4755 preserve=true
+file path=usr/bin/amd64/pkttyagent
+file path=usr/bin/pk-example-frobnicate
+file path=usr/bin/pkaction
+file path=usr/bin/pkcheck
+file path=usr/bin/pkexec
+file path=usr/bin/pkttyagent
+file path=usr/include/polkit-1/polkit/polkit.h
+file path=usr/include/polkit-1/polkit/polkitactiondescription.h
+file path=usr/include/polkit-1/polkit/polkitauthority.h
+file path=usr/include/polkit-1/polkit/polkitauthorityfeatures.h
+file path=usr/include/polkit-1/polkit/polkitauthorizationresult.h
+file path=usr/include/polkit-1/polkit/polkitcheckauthorizationflags.h
+file path=usr/include/polkit-1/polkit/polkitdetails.h
+file path=usr/include/polkit-1/polkit/polkitenumtypes.h
+file path=usr/include/polkit-1/polkit/polkiterror.h
+file path=usr/include/polkit-1/polkit/polkitidentity.h
+file path=usr/include/polkit-1/polkit/polkitimplicitauthorization.h
+file path=usr/include/polkit-1/polkit/polkitpermission.h
+file path=usr/include/polkit-1/polkit/polkitprivate.h
+file path=usr/include/polkit-1/polkit/polkitsubject.h
+file path=usr/include/polkit-1/polkit/polkitsystembusname.h
+file path=usr/include/polkit-1/polkit/polkittemporaryauthorization.h
+file path=usr/include/polkit-1/polkit/polkittypes.h
+file path=usr/include/polkit-1/polkit/polkitunixgroup.h
+file path=usr/include/polkit-1/polkit/polkitunixnetgroup.h
+file path=usr/include/polkit-1/polkit/polkitunixprocess.h
+file path=usr/include/polkit-1/polkit/polkitunixsession.h
+file path=usr/include/polkit-1/polkit/polkitunixuser.h
+file path=usr/include/polkit-1/polkitagent/polkitagent.h
+file path=usr/include/polkit-1/polkitagent/polkitagentenumtypes.h
+file path=usr/include/polkit-1/polkitagent/polkitagentlistener.h
+file path=usr/include/polkit-1/polkitagent/polkitagentsession.h
+file path=usr/include/polkit-1/polkitagent/polkitagenttextlistener.h
+file path=usr/include/polkit-1/polkitagent/polkitagenttypes.h
+file path=usr/lib/amd64/libpolkit-agent-1.a
+file path=usr/lib/amd64/libpolkit-agent-1.so.0.0.0
+file path=usr/lib/amd64/libpolkit-gobject-1.a
+file path=usr/lib/amd64/libpolkit-gobject-1.so.0.0.0
+file path=usr/lib/amd64/pkgconfig/polkit-agent-1.pc
+file path=usr/lib/amd64/pkgconfig/polkit-gobject-1.pc
+file path=usr/lib/amd64/polkit-1/polkit-agent-helper-1 owner=root mode=4755 preserve=true
+file path=usr/lib/amd64/polkit-1/polkitd owner=root mode=755 preserve=true
+file path=usr/lib/libpolkit-agent-1.a
+file path=usr/lib/libpolkit-agent-1.so.0.0.0
+file path=usr/lib/libpolkit-gobject-1.a
+file path=usr/lib/libpolkit-gobject-1.so.0.0.0
+file path=usr/lib/pkgconfig/polkit-agent-1.pc
+file path=usr/lib/pkgconfig/polkit-gobject-1.pc
+file path=usr/lib/polkit-1/polkit-agent-helper-1 owner=root mode=4755 preserve=true
+file path=usr/lib/polkit-1/polkitd owner=root mode=755 preserve=true
+file sonicle/org.freedesktop.PolicyKit1.service path=usr/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
+file path=usr/share/locale/da/LC_MESSAGES/polkit-1.mo
+file path=usr/share/man/man1/pkaction.1
+file path=usr/share/man/man1/pkcheck.1
+file path=usr/share/man/man1/pkexec.1
+file path=usr/share/man/man1/pkttyagent.1
+file path=usr/share/man/man8/polkit.8
+file path=usr/share/man/man8/polkitd.8
+file path=usr/share/polkit-1/actions/org.freedesktop.policykit.examples.pkexec.policy
+file path=usr/share/polkit-1/actions/org.freedesktop.policykit.policy
+link path=usr/lib/amd64/libpolkit-agent-1.so target=libpolkit-agent-1.so.0.0.0
+link path=usr/lib/amd64/libpolkit-agent-1.so.0 target=libpolkit-agent-1.so.0.0.0
+link path=usr/lib/amd64/libpolkit-gobject-1.so target=libpolkit-gobject-1.so.0.0.0
+link path=usr/lib/amd64/libpolkit-gobject-1.so.0 target=libpolkit-gobject-1.so.0.0.0
+link path=usr/lib/libpolkit-agent-1.so target=libpolkit-agent-1.so.0.0.0
+link path=usr/lib/libpolkit-agent-1.so.0 target=libpolkit-agent-1.so.0.0.0
+link path=usr/lib/libpolkit-gobject-1.so target=libpolkit-gobject-1.so.0.0.0
+link path=usr/lib/libpolkit-gobject-1.so.0 target=libpolkit-gobject-1.so.0.0.0
+
+depend type=require fmri=pkg:/library/mozjs-185@1.8.5,5.11-1.153.0.0.0

@@ -1,0 +1,28 @@
+--- lumina-1.6.0/src-qt5/OS-detect.pri	Sun Apr  5 17:22:13 2020
++++ lumina-1.6.0/src-qt5/OS-detect.pri.new	Tue Apr  7 17:52:13 2020
+@@ -55,6 +55,16 @@
+     LIBS += -L/usr/local/lib -L/usr/lib
+     #Use the defaults for everything else
+ 
++  }else : equals(QMAKE_HOST.os, "SunOS") {
++    OS=SunOS
++    LIBS += -L/usr/lib -L/lib
++    LIBPREFIX= /usr/lib
++    L_BINDIR = /usr/bin
++    L_ETCDIR = /etc
++    L_MANDIR = /usr/share/man
++    L_SHAREDIR = /usr/share
++    L_SESSDIR= /usr/share/xsessions
++    L_INCLUDEDIR = /usr/include
+   }else : linux-*{
+     L_SESSDIR=/usr/share/xsessions
+     OS=Linux
+@@ -71,7 +81,7 @@
+       } else:exists(/etc/slackware-version){
+ 	LINUX_DISTRO = Slackware
+       }
+-   }
++    }
+     #Apply any special rules for particular distros
+     equals(LINUX_DISTRO,"Fedora"){
+       isEmpty(L_ETCDIR){ L_ETCDIR=/etc }

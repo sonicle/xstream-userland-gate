@@ -1,0 +1,11 @@
+--- polkit-0.110/src/polkitbackend/polkitbackendauthority.c	Wed Jul 24 18:15:46 2013
++++ polkit-0.110/src/polkitbackend/polkitbackendauthority.c	Wed Jul 24 18:18:39 2013
+@@ -1369,7 +1369,7 @@
+   /* then start logging to the secure log */
+   openlog ("polkitd",
+            LOG_PID,
+-           LOG_AUTHPRIV); /* security/authorization messages (private) */
++           LOG_AUTH); /* security/authorization messages (private) */
+ 
+   authority = POLKIT_BACKEND_AUTHORITY (g_object_new (POLKIT_BACKEND_TYPE_JS_AUTHORITY, NULL));
+ 

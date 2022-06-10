@@ -1,0 +1,15 @@
+set name=pkg.fmri value=pkg:/x11/compatibility/links-svid@7.7,5.11-2020.1.1.1
+set name=pkg.summary value="SVID - $(COMPONENT_SUMMMARY)"
+set name=pkg.description \
+    value="Provides the /usr/X -> X11 link required by the SVID3 ABI"
+set name=com.oracle.info.name value=compat-links
+set name=com.oracle.info.version value=7.7
+set name=info.classification value=org.opensolaris.category.2008:System/X11
+set name=org.opensolaris.arc-caseid value=PSARC/2004/187
+set name=org.opensolaris.consolidation value=sonicle.com
+set name=userland.info.git-branch value=master
+set name=userland.info.git-remote \
+    value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=variant.arch value=i386
+link path=usr/X target=./X11

@@ -1,0 +1,11 @@
+--- w3m-0.5.3/Makefile.in	Mon Feb 10 18:57:55 2020
++++ w3m-0.5.3/Makefile.in.new	Mon Feb 10 18:58:28 2020
+@@ -151,7 +151,7 @@
+ funcname.tab: $(DEFUNS)
+ 	(echo '#define DEFUN(x,y,z) x y';\
+ 	 sed -ne '/^DEFUN/{p;n;/^[ 	]/p;}' $(DEFUNS)) | $(CPP) - | \
+-	 awk '$$1 ~ /^[_A-Za-z]/ { \
++	 $(AWK) '$$1 ~ /^[_A-Za-z]/ { \
+ 	       for (i=2;i<=NF;i++) { print $$i, $$1} \
+ 	 }' > $@.tmp
+ 	@if cmp -s $@.tmp $@; then \

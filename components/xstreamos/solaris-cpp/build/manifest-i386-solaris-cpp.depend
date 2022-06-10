@@ -1,0 +1,19 @@
+set name=com.oracle.info.version value=5.11
+set name=variant.arch value=i386
+set name=pkg.fmri value=pkg:/developer/macro/cpp@5.11,5.11-2020.1.1.0
+set name=com.oracle.info.name value=solaris-cpp
+set name=userland.info.git-remote value=git@github.com:sonicle/xstream-userland-gate.git
+set name=userland.info.git-branch value=master
+set name=userland.info.git-rev value=b13ee4d1289d7d1105f6e463a91e7566696c8ed9
+set name=pkg.summary value="Solaris cpp"
+set name=pkg.description value="Solaris cpp"
+set name=info.classification value=org.opensolaris.category.2008:Development/C
+dir group=bin mode=0755 owner=root path=usr/ccs
+dir group=bin mode=0755 owner=root path=usr/ccs/bin
+dir group=bin mode=0755 owner=root path=usr/ccs/lib
+dir group=bin mode=0755 owner=root path=usr/lib
+file files/cpp group=bin mode=755 owner=root path=usr/lib/cpp pkg.depend.bypass-generate=usr/lib(.*)/libpq.so.* pkg.depend.bypass-generate=usr/lib(.*)/libruby.so.* pkg.depend.bypass-generate=usr/lib/libgcc_s\.so\.1 pkg.depend.bypass-generate=usr/lib/amd64/libgcc_s\.so\.1 pkg.depend.bypass-generate=usr/lib/libgfortran\.so\.3 pkg.depend.bypass-generate=usr/lib/amd64/libgfortran\.so\.3 pkg.depend.bypass-generate=usr/lib/libgomp\.so\.1 pkg.depend.bypass-generate=usr/lib/amd64/libgomp\.so\.1 pkg.depend.bypass-generate=usr/lib/libgobjc\.so\.4 pkg.depend.bypass-generate=usr/lib/amd64/libgobjc\.so\.4 pkg.depend.bypass-generate=usr/lib/libgobjc_gc\.so\.4 pkg.depend.bypass-generate=usr/lib/amd64/libgobjc_gc\.so\.4 pkg.depend.bypass-generate=usr/lib/libquadmath\.so\.0 pkg.depend.bypass-generate=usr/lib/amd64/libquadmath\.so\.0 pkg.depend.bypass-generate=usr/lib/libssp\.so\.0 pkg.depend.bypass-generate=usr/lib/amd64/libssp\.so\.0 pkg.depend.bypass-generate=usr/lib/libstdc\+\+\.so\.6 pkg.depend.bypass-generate=usr/lib/amd64/libstdc\+\+\.so\.6 preserve=overwrite
+link path=usr/ccs/lib/cpp target=../../lib/cpp
+license solaris-cpp.license license=cpp
+
+depend fmri=__TBD pkg.debug.depend.file=libc.so.1 pkg.debug.depend.path=lib pkg.debug.depend.path=usr/lib pkg.debug.depend.reason=usr/lib/cpp pkg.debug.depend.type=elf type=require
